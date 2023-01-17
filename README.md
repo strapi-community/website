@@ -1,10 +1,10 @@
 # 🏆 Strapi community website competition 🏆
 
-We from the @strapi-community are hosting a website development competition that you can participate in! In this readme you will find all the info you need to enter the competition and win cash prizes.
+We from the [@strapi-community](https://github.com/strapi-community) are hosting a website development competition that you can participate in! In this readme you will find all the info you need to enter the competition and win cash prizes.
 
 ## 📝 Specification
 
-We want a website to represent the @strapi-community. To help us promote our cause and represent everybody that is helping us grow. The backend API for this website will be made with Strapi (offcourse), and for the frontend we want **you** to build it! We will give away $1000 in prize money for the top three submissions, and the number one submission will actually be used as the frontend of our website.
+We want a website to represent the [@strapi-community](https://github.com/strapi-community). To help us promote our cause and represent everybody that is helping us grow. The backend API for this website will be made with Strapi (offcourse), and for the frontend we want **you** to build it! We will give away $1000 in prize money for the top three submissions, and the number one submission will actually be used as the frontend of our website.
 
 The competition will be ran for the entire month of February. Allowing you to enter your submissions up until February 28th at midnight. Afterwards we will take one week to decide on a winner before making the anouncement.
 
@@ -38,4 +38,4 @@ For the website there are no designs so you have a lot of creative freedom. Thou
 
 ### ➕ Bonus
 
-The website does not have to have any dynamic data coming in. It can all be hardcoded. Though we would love to have a dynamic page that fetches all the repo's from the @strapi-community org and showcases them in a grid of cards. It is by no means a requirement to add this feature but it can definetly be an added bonus!
+The website does not have to have any dynamic data coming in. It can all be hardcoded. Though we would love to have a dynamic page that fetches all the repo's from the [@strapi-community](https://github.com/strapi-community) org and showcases them in a grid of cards. It is by no means a requirement to add this feature but it can definetly be an added bonus!
