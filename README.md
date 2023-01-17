@@ -23,19 +23,33 @@ To enter the competition you will have to fork this repo and submit a PR with yo
 For the website there are no designs so you have a lot of creative freedom. Though, there are a couple of hard requirements.
 
 1. The website is built with ReactJS/NextJS
-2. Use some kind of css framework (Sass, Tailwind, etc.)
+2. Feel free to use any kind of CSS framework, or build it from scratch
 3. The website is responsive
-4. The readme consists of a description on how to start the app
-5. The design should align with the https://www.strapi.io website
+4. Create a `INSTALL.md` file consisting of instructions on how to run the app
+5. The design should align with the [strapi design system](https://design-system.strapi.io/) at least in terms of colors.
 6. The website should contain at least the following reusable components:
   	- Navigation/menu component
   	- A hero component to showcase featured content and click through with a button
   	- A card to show clickable content in a grid
   	- Basic form elements (input, checkbox, radio's, textarea, button)
-	- An example form using the form elements
+	  - An example form using the form elements
   	- Typography styling (h1, h2, h3, p, a)
   	- Footer component
 
-### ➕ Bonus
+### 📜 Pages
 
-The website does not have to have any dynamic data coming in. It can all be hardcoded. Though we would love to have a dynamic page that fetches all the repo's from the [@strapi-community](https://github.com/strapi-community) org and showcases them in a grid of cards. It is by no means a requirement to add this feature but it can definetly be an added bonus!
+Every submission should consist of at least three pages that implement the components listed in the requirements above. These pages are:
+
+#### The home page
+This page should consist of at least a hero component that functions as a call-to-action to click through to another page.
+The rest of the page should be used to showcase the [@strapi-community](https://github.com/strapi-community). You are open to build the rest of this page however you want.
+
+#### The about page
+This page will be used to elaborate in more detail about what the [@strapi-community](https://github.com/strapi-community) is and how we work. The contents of this page could be lorem ipsum, all we expect is a template that we can use to fill in our selfs.
+
+#### The bounty page
+The [@strapi-community](https://github.com/strapi-community) will be offering bounties for certain plugins to be built for Strapi. If a person is able to build and ship one of the plugins listed they will be paid the bounty. We want this page to be added in the submission as wel. You are open to build this page how ever you see fit.
+
+### ➕ Bonus page
+
+The website does not have to have any dynamic data coming in. It can all be hardcoded. Though we would love to have a dynamic page that fetches all the repo's from the [@strapi-community](https://github.com/strapi-community) org and showcases them in a grid of cards on it's own page. It is by no means a requirement to add this page but it can definetly be an added bonus!
