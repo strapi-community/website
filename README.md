@@ -6,6 +6,8 @@ We from the [@strapi-community](https://github.com/strapi-community) are hosting
 
 We want a website to represent the [@strapi-community](https://github.com/strapi-community). To help us promote our cause and represent everybody that is helping us grow. The backend API for this website will be made with Strapi (offcourse), and for the frontend we want **you** to build it! We will give away $1000 in prize money for the top three submissions, and the number one submission will actually be used as the frontend of our website.
 
+What we're hoping to get from this competition is a concept version of what this website could look like. It doesn't matter how you build it, and it doesn't need to be production ready. We want a static design that we can build upon.
+
 The competition will be ran for the entire month of February. Allowing you to enter your submissions up until February 28th at midnight. Afterwards we will take one week to decide on a winner before making the anouncement.
 
 ## 💸 Prize pool
@@ -13,6 +15,8 @@ The competition will be ran for the entire month of February. Allowing you to en
 1. **$500** First prize
 2. **$300** Second prize
 3. **$200** Third prize
+
+In addition to the prize money the winner will forever be mentioned in the readme of this repo as the winner of this competition and as the person who made the initial efforts to built the Strapi Community website.
 
 ## 📥 How to enter
 
@@ -22,23 +26,23 @@ To enter the competition you will have to fork this repo and submit a PR with yo
 
 For the website there are no designs so you have a lot of creative freedom. Though, there are a couple of hard requirements.
 
-1. The website is built with ReactJS/NextJS
+1. The website can be built with any kind of frontend framework, or even just plain HTML. Build it how ever you see fit.
 2. Feel free to use any kind of CSS framework, or build it from scratch
-3. The website is responsive
+3. The website should be responsive
 4. Create a `INSTALL.md` file consisting of instructions on how to run the app
 5. The design should align with the [strapi design system](https://design-system.strapi.io/) at least in terms of colors.
-6. The website should contain at least the following reusable components:
-  	- Navigation/menu component
+6. The website should contain at least the following elements:
+  	- Navigation/menu
   	- A hero component to showcase featured content and click through with a button
   	- A card to show clickable content in a grid
   	- Basic form elements (input, checkbox, radio's, textarea, button)
 	  - An example form using the form elements
   	- Typography styling (h1, h2, h3, p, a)
-  	- Footer component
+  	- Footer
 
-### 📜 Pages
+### 📜 Page implementation
 
-Every submission should consist of at least three pages that implement the components listed in the requirements above. These pages are:
+A valid submission should contain **one** of the following three pages to showcase all the components as a whole.
 
 #### The home page
 This page should consist of at least a hero component that functions as a call-to-action to click through to another page.
