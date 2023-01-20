@@ -42,7 +42,7 @@ For the website there are no designs so you have a lot of creative freedom. Thou
 
 ### 📜 Page implementation
 
-A valid submission should contain **one** of the following three pages to showcase all the components as a whole.
+A valid submission should contain all the components described below, this can be either on a single page or multiple pages.
 
 #### The home page
 This page should consist of at least a hero component that functions as a call-to-action to click through to another page.
