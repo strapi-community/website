@@ -1,0 +1,13 @@
+$primary-color: #271fe0;
+$secondary-color: #2684b8;
+$alternative-color: #8312d1;
+$success-color: #2f6846;
+$warning-color: #d9822f;
+$danger-color: #b72b1a;
+
+@import "../../../node_modules/include-media/dist/include-media";
+$breakpoints: (
+  phone: 320px,
+  tablet: 768px,
+  desktop: 1024px,
+);

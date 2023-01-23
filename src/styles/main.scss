@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables';
+
+// 2. Vendors
+@import
+  'vendors/normalize',
+  'vendors/reset';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/typography';
