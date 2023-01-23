@@ -1,3 +1,5 @@
+import { ShowcaseCard } from "./components";
+
 type CommunityRepos = Array<{
   id: number;
   node_id: string;
@@ -123,29 +125,18 @@ async function getData() {
     throw new Error("Failed to fetch data");
   }
 
+  await new Promise((r) => setTimeout(r, 2000));
+
   return res.json();
 }
 
 export default async function Showcases() {
   const data: CommunityRepos = await getData();
   return (
-    <main>
-      <div>
-        <h1 className="text-3xl font-bold underline">Showcases</h1>
-        <h1 className="scw-heading--one">Showcases</h1>
-        {data.map((repo) => (
-          <div key={repo.id}>
-            <a href={repo.html_url} target="_blank" rel="noreferrer">
-              {repo.name}
-            </a>
-            <p>{repo.description}</p>
-            <p>Last updated at: {repo.pushed_at}</p>
-            <p>Stars: {repo.stargazers_count}</p>
-            <p>Watchers: {repo.watchers_count}</p>
-            <p>Open Issues: {repo.open_issues_count}</p>
-          </div>
-        ))}
-      </div>
-    </main>
+    <>
+      {data.map((repo) => (
+        <ShowcaseCard {...repo} key={repo.id} />
+      ))}
+    </>
   );
 }
