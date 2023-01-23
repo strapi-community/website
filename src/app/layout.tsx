@@ -1,8 +1,9 @@
+import Link from "next/link";
+import { Inter } from "@next/font/google";
 import "./globals.css";
 import "../styles/main.scss";
-import { Inter } from "@next/font/google";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -17,7 +18,12 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <nav></nav>
+        <nav>
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
+          <Link href="/bounty">Bounty</Link>
+          <Link href="/showcases">Showcases</Link>
+        </nav>
         {children}
       </body>
     </html>
