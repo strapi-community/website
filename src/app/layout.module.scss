@@ -1,0 +1,49 @@
+@import "abstracts/_functions.scss";
+
+.header {
+  position: fixed;
+  display: flex;
+  height: rem(96);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.nav {
+  @apply container flex justify-between;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+  margin-right: rem(40);
+}
+
+.links {
+  @apply flex gap-4;
+}
+
+.link {
+  padding: rem(5) rem(12);
+}
+
+.footerHead {
+  @apply flex flex-col items-center relative;
+  padding: rem(175) 0 rem(100);
+}
+
+.footerDecoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.footerLink {
+  font-size: rem(17);
+  line-height: 160%;
+}
+
+.footerLinkTypography {
+  color: #4a4a6a;
+}

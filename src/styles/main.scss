@@ -6,7 +6,8 @@
 
 // 1. Configuration and helpers
 @import
-  'abstracts/variables';
+  'abstracts/variables',
+  'abstracts/functions';
 
 // 2. Vendors
 @import
@@ -17,3 +18,8 @@
 @import
   'base/base',
   'base/typography';
+
+// 4. Components
+@import 
+  'components/buttons',
+  'components/inputs';

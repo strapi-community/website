@@ -1,20 +1,35 @@
 .scw {
   &-heading {
+    color: $primary-dark-color;
+    font-weight: 600;
+
     &--one {
-      color: red
+      @extend .scw-heading;
+      font-size: rem(72);
     }
 
     &--two {
+      @extend .scw-heading;
+      font-size: rem(43);
     }
 
     &--three {
+      @extend .scw-heading;
+      font-size: rem(21);
     }
   }
 
   &-body {
-    &--highlight {}
+    &--highlight {
+      @extend .scw-body;
+    }
   }
 
   &-subtitle {
+  }
+
+  &-link {
+    color: $primary-dark-color;
+    line-height: 146%;
   }
 }

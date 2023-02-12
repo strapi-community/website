@@ -1,0 +1,24 @@
+.scw__btn {
+  @apply rounded-lg;
+  background-color: $primary-color;
+  padding: rem(18) rem(40);
+  color: #fff;
+  font-weight: 600;
+}
+
+.scw__btn--outline {
+  @extend .scw__btn;
+  color: $primary-color;
+  background-color: transparent;
+  border: 2px solid #d9d8ff;
+}
+
+.scw__btn--circular {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: rem(40);
+  width: rem(40);
+  border-radius: 50%;
+  background-color: #f6f6f9;
+}
