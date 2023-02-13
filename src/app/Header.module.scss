@@ -1,10 +1,32 @@
 @import "abstracts/_variables.scss";
 @import "abstracts/_functions.scss";
 
+.header {
+  @apply fixed flex items-center justify-center z-20;
+  height: rem(96);
+  width: 100%;
+}
+
+.nav {
+  @apply container flex justify-between;
+}
+
 .logo {
   height: 32px;
   width: auto;
   margin-right: rem(40);
+}
+
+.links {
+  @apply flex gap-4 -mr-3;
+}
+
+.link {
+  padding: rem(5) rem(12);
+  font-weight: 600;
+  & > a {
+    color: $primary-dark-color;
+  }
 }
 
 .footerHead {

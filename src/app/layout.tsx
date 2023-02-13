@@ -13,6 +13,7 @@ import {
 } from "react-icons/bs";
 import "../styles/main.scss";
 import styles from "./layout.module.scss";
+import { Header } from "./Header";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -32,32 +33,7 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <header className={styles.header}>
-          <div className={styles.nav}>
-            <Link href="/">
-              <Image
-                src="/logo-light-background.svg"
-                alt="Strapi community logo"
-                width={876}
-                height={212}
-                className={styles.logo}
-              />
-            </Link>
-            <nav>
-              <ul className={styles.links}>
-                <li className={styles.link + " sc-link"}>
-                  <Link href="/about">About</Link>
-                </li>
-                <li className={styles.link + " sc-link"}>
-                  <Link href="/bounties">Bounty</Link>
-                </li>
-                <li className={styles.link + " sc-link"}>
-                  <Link href="/showcases">Showcases</Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+        <Header />
 
         <main>{children}</main>
 
@@ -111,7 +87,10 @@ export default function RootLayout({
                   </Link>
                 </li>
                 <li className={styles.footerLink}>
-                  <Link href="/bounties" className={styles.footerLinkTypography}>
+                  <Link
+                    href="/bounties"
+                    className={styles.footerLinkTypography}
+                  >
                     Bounty
                   </Link>
                 </li>
