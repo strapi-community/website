@@ -18,6 +18,14 @@
   right: 0;
 }
 
+.footerQuickLinksTypography {
+  @apply uppercase mb-8;
+  font-size: rem(15);
+  font-weight: 600;
+  line-height: 160%;
+  color: #a5a5ba;
+}
+
 .footerLink {
   font-size: rem(17);
   line-height: 160%;
@@ -25,4 +33,14 @@
 
 .footerLinkTypography {
   color: #4a4a6a;
+}
+
+.footerHelperText {
+  font-size: rem(13);
+  line-height: 150%;
+  max-width: rem(361);
+}
+
+.footerFootLinks {
+  color: #32324d;
 }
