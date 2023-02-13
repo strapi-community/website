@@ -1,5 +1,10 @@
-.scw__input {
+.sc__input {
   @apply rounded-lg;
-  padding: rem(16) rem(13.5);
-  background-color: #F6F6F9;
+  padding: 0 rem(16);
+  height: rem(51);
+  background-color: #f6f6f9;
+
+  &.bg-white {
+    background-color: #fff;
+  }
 }

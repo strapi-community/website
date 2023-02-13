@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 // 1. Configuration and helpers
 @import
   'abstracts/variables',
@@ -17,9 +13,14 @@
 // 3. Base stuff
 @import
   'base/base',
+  'base/helpers',
   'base/typography';
 
 // 4. Components
 @import 
   'components/buttons',
   'components/inputs';
+
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;

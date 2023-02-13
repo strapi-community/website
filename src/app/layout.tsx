@@ -14,7 +14,10 @@ import {
 import "../styles/main.scss";
 import styles from "./layout.module.scss";
 
-const poppins = Poppins({ weight: ["400", "600", "700"], subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -42,13 +45,13 @@ export default function RootLayout({
             </Link>
             <nav>
               <ul className={styles.links}>
-                <li className={styles.link + " scw-link"}>
+                <li className={styles.link + " sc-link"}>
                   <Link href="/about">About</Link>
                 </li>
-                <li className={styles.link + " scw-link"}>
-                  <Link href="/bounty">Bounty</Link>
+                <li className={styles.link + " sc-link"}>
+                  <Link href="/bounties">Bounty</Link>
                 </li>
-                <li className={styles.link + " scw-link"}>
+                <li className={styles.link + " sc-link"}>
                   <Link href="/showcases">Showcases</Link>
                 </li>
               </ul>
@@ -56,7 +59,7 @@ export default function RootLayout({
           </div>
         </header>
 
-        {children}
+        <main>{children}</main>
 
         <footer>
           <div className={styles.footerHead}>
@@ -67,13 +70,13 @@ export default function RootLayout({
               height={300}
               className={styles.footerDecoration}
             />
-            <h2 className="scw-heading--two text-center mb-6">
+            <h2 className="sc-heading--two text-center mb-6">
               Help us make Strapi better
             </h2>
-            <button className="scw__btn">Join now</button>
+            <button className="sc__btn">Join now</button>
           </div>
 
-          <div className="container grid grid-cols-12 gap-6 mb-24">
+          <div className="container sc-grid mb-24">
             <div className="col-span-5">
               <Image
                 src="/logo-light-background.svg"
@@ -92,9 +95,9 @@ export default function RootLayout({
                 <input
                   type="email"
                   placeholder="What's your email?"
-                  className="scw__input flex-1"
+                  className="sc__input flex-1"
                 />
-                <button type="submit" className="scw__btn--outline">
+                <button type="submit" className="sc__btn--outline">
                   Subscribe
                 </button>
               </form>
@@ -108,7 +111,7 @@ export default function RootLayout({
                   </Link>
                 </li>
                 <li className={styles.footerLink}>
-                  <Link href="/bounty" className={styles.footerLinkTypography}>
+                  <Link href="/bounties" className={styles.footerLinkTypography}>
                     Bounty
                   </Link>
                 </li>
@@ -139,32 +142,32 @@ export default function RootLayout({
             </div>
           </div>
 
-          <div className="container grid grid-cols-12 gap-6 items-center mb-10">
+          <div className="container sc-grid items-center mb-10">
             <p className="col-span-4">© 2023, Strapi. All rights reserved</p>
 
             <div className="col-span-4 flex gap-2 justify-center">
-              <button className="scw__btn--circular">
+              <button className="sc__btn--circular">
                 <BsGithub size={20} color="#666687" />
               </button>
-              <button className="scw__btn--circular">
+              <button className="sc__btn--circular">
                 <BsDiscord size={20} color="#666687" />
               </button>
-              <button className="scw__btn--circular">
+              <button className="sc__btn--circular">
                 <BsTwitch size={20} color="#666687" />
               </button>
-              <button className="scw__btn--circular">
+              <button className="sc__btn--circular">
                 <BsTwitter size={20} color="#666687" />
               </button>
-              <button className="scw__btn--circular">
+              <button className="sc__btn--circular">
                 <BsFacebook size={20} color="#666687" />
               </button>
-              <button className="scw__btn--circular">
+              <button className="sc__btn--circular">
                 <BsLinkedin size={20} color="#666687" />
               </button>
-              <button className="scw__btn--circular">
+              <button className="sc__btn--circular">
                 <BsInstagram size={20} color="#666687" />
               </button>
-              <button className="scw__btn--circular">
+              <button className="sc__btn--circular">
                 <BsYoutube size={20} color="#666687" />
               </button>
             </div>

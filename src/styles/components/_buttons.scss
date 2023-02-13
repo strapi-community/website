@@ -1,19 +1,24 @@
-.scw__btn {
-  @apply rounded-lg;
+.sc__btn {
+  @apply flex items-center justify-center rounded-lg;
   background-color: $primary-color;
-  padding: rem(18) rem(40);
+  height: rem(51);
+  padding: 0 rem(40);
   color: #fff;
   font-weight: 600;
+
+  &.bg-secondary {
+    background-color: $secondary-color;
+  }
 }
 
-.scw__btn--outline {
-  @extend .scw__btn;
+.sc__btn--outline {
+  @extend .sc__btn;
   color: $primary-color;
   background-color: transparent;
   border: 2px solid #d9d8ff;
 }
 
-.scw__btn--circular {
+.sc__btn--circular {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -22,9 +22,23 @@ html {
 }
 
 /**
+ * Basic styles for paragraphs
+ */
+p {
+  color: #4A4A6A;
+  line-height: 160%;
+}
+/**
  * Basic styles for links
  */
 a {
   color: $primary-color;
   text-decoration: none;
+}
+
+/**
+ * Basic grid container
+ */
+.sc-grid {
+  @apply grid grid-cols-12 gap-6;
 }

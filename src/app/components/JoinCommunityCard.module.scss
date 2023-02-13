@@ -1,0 +1,13 @@
+@import "abstracts/_functions.scss";
+
+.container {
+  @apply flex flex-col;
+  max-width: rem(352);
+}
+
+.image {
+  @apply object-cover mb-8;
+  width: rem(64);
+  height: rem(64);
+  border-radius: 50%;
+}

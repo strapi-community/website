@@ -1,0 +1,21 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+
+.container {
+  @apply col-span-1 flex flex-col p-10 rounded-2xl;
+  background: #f6fafe;
+}
+
+.image {
+  @apply object-cover mb-10;
+  width: rem(120);
+  height: rem(120);
+  border-radius: 50%;
+}
+
+.link {
+  font-size: rem(17);
+  font-weight: 500;
+  line-height: 160%;
+  color: $secondary-color;
+}

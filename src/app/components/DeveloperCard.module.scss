@@ -1,0 +1,35 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+
+.image {
+  @apply object-cover mb-4;
+  max-width: rem(316);
+  height: rem(305);
+  border-radius: rem(10);
+}
+
+.body {
+  @apply flex flex-col text-center;
+  padding: rem(24) rem(24) rem(32);
+}
+
+.bounty {
+  @apply mb-4;
+  font-size: rem(17);
+  color: #181826;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+.footer {
+  padding: rem(24) 0 rem(40);
+}
+
+.link {
+  @apply flex items-center uppercase;
+  font-size: rem(13);
+  font-weight: 700;
+  line-height: 100%;
+  color: $secondary-color;
+  padding-left: rem(13);
+}

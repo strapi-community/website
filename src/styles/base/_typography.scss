@@ -1,27 +1,49 @@
-.scw {
+.sc {
   &-heading {
     color: $primary-dark-color;
     font-weight: 600;
 
     &--one {
-      @extend .scw-heading;
+      @extend .sc-heading;
       font-size: rem(72);
+      line-height: 96%;
     }
 
     &--two {
-      @extend .scw-heading;
+      @extend .sc-heading;
       font-size: rem(43);
+      line-height: 119%;
     }
 
     &--three {
-      @extend .scw-heading;
+      @extend .sc-heading;
+      font-size: rem(32);
+      line-height: 130%;
+    }
+
+    &--four {
+      @extend .sc-heading;
       font-size: rem(21);
+      line-height: 130%;
+    }
+
+    &--tag {
+      @apply uppercase;
+      font-size: rem(13);
+      font-weight: 700;
+      line-height: 100%;
+      color: $secondary-color;
     }
   }
 
   &-body {
+    &--small {
+      @extend .sc-body;
+      font-size: rem(15);
+    }
+
     &--highlight {
-      @extend .scw-body;
+      @extend .sc-body;
     }
   }
 
