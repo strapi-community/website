@@ -1,0 +1,15 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+
+.container {
+  @apply flex flex-col gap-10;
+}
+
+.title {
+  @apply uppercase mb-6;
+  font-size: rem(13);
+  font-weight: 700;
+  line-height: 100%;
+  color: $primary-dark-color;
+  letter-spacing: rem(1);
+}

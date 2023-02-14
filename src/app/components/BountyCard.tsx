@@ -40,7 +40,6 @@ export const BountyCard = ({
 
       <div className={styles.footer}>
         <Link href={linkTo} className={styles.link}>
-          {/* put 13 padding left */}
           <span className="mr-2">View Bounty</span>
           <BiRightArrowAlt size={24} />
         </Link>

@@ -13,7 +13,7 @@ export const Newsletter = () => {
       />
       <div className={styles.container}>
         <div className={styles.innerContainer}>
-          <h2 className={"sc-heading--three text-center text-white mb-2"}>
+          <h2 className={styles.title}>
             Join our newsletter
           </h2>
           <p className={styles.description}>

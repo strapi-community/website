@@ -1,0 +1,36 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+
+.container {
+  @apply flex items-center justify-between p-5;
+  border-radius: rem(10);
+  background: #f6fafe;
+}
+
+.image {
+  @apply mr-5;
+  border-radius: rem(10);
+}
+
+.body {
+  max-width: rem(357);
+}
+
+.title {
+  font-size: rem(17);
+  font-weight: 600;
+  line-height: 160%;
+  color: $primary-dark-color;
+}
+
+.description {
+  font-size: rem(15);
+}
+
+.bounty {
+  font-size: rem(17);
+  color: #181826;
+  font-weight: 500;
+  line-height: 130%;
+  min-width: rem(120);
+}

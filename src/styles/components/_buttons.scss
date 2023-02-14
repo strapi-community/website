@@ -9,6 +9,10 @@
   &.bg-secondary {
     background-color: $secondary-color;
   }
+
+  &.sm {
+    height: rem(48);
+  }
 }
 
 .sc__btn--outline {

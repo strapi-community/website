@@ -7,4 +7,30 @@
   &.bg-white {
     background-color: #fff;
   }
+
+  &__label {
+    font-size: rem(15);
+    font-weight: 600;
+    line-height: 160%;
+    color: #32324d;
+    margin-bottom: rem(6);
+  }
+}
+
+.sc__textarea {
+  @extend .sc__input;
+  padding-top: rem(16);
+  min-height: rem(96);
+  line-height: 160%;
+}
+
+.sc__dropdown {
+  @apply rounded-lg;
+  padding: 0 rem(16);
+  background-color: #f6f6f9;
+  height: rem(51);
+
+  &:invalid {
+    color: #9ca8bb;
+  }
 }

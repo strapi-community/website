@@ -215,7 +215,7 @@ export default function Home() {
         />
 
         <Image
-          src="/get-involved-decoration-2.svg"
+          src="/top-right-decor.svg"
           alt=""
           width={300}
           height={300}

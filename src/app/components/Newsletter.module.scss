@@ -1,4 +1,6 @@
+@import "abstracts/_variables.scss";
 @import "abstracts/_functions.scss";
+@import "base/_typography.scss";
 
 .wrapper {
   @apply col-span-10 col-start-2 relative;
@@ -37,6 +39,11 @@
 .innerContainer {
   @apply flex flex-col items-stretch;
   max-width: rem(400);
+}
+
+.title {
+  @apply sc-heading--three text-center mb-2;
+  color: #fff;
 }
 
 .description {
