@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { clsx } from "clsx";
 import styles from "./Newsletter.module.scss";
+import inputStyles from "@/components/TextInput/index.module.scss";
 
 export const Newsletter = () => {
   return (
@@ -13,9 +15,7 @@ export const Newsletter = () => {
       />
       <div className={styles.container}>
         <div className={styles.innerContainer}>
-          <h2 className={styles.title}>
-            Join our newsletter
-          </h2>
+          <h2 className={styles.title}>Join our newsletter</h2>
           <p className={styles.description}>
             Developers subscribed to our newsletter are more likely to earn a
             bounty
@@ -25,7 +25,7 @@ export const Newsletter = () => {
             <input
               type="email"
               placeholder="What's your email?"
-              className="sc__input bg-white mb-4"
+              className={clsx(inputStyles.input, styles.inputBgWhite, "mb-4")}
             />
             <button type="submit" className="sc__btn bg-secondary">
               Subscribe

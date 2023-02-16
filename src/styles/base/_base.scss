@@ -25,7 +25,7 @@ html {
  * Basic styles for paragraphs
  */
 p {
-  color: #4A4A6A;
+  color: #4a4a6a;
   line-height: 160%;
 }
 /**
@@ -34,4 +34,16 @@ p {
 a {
   color: $primary-color;
   text-decoration: none;
+}
+/**
+ * Remove select default icon
+ */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/* For IE10 */
+select::-ms-expand {
+  display: none;
 }

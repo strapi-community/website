@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { BountyCard, Filter } from "./components";
-import { Filters } from "./components";
+import { AnyQuestionsForm, BountyCard, Filters } from "./components";
+import type { Filter } from "./components";
 
 const BOUNTIES = [
   {
@@ -168,69 +168,13 @@ export default function Bounty() {
         <div className="container sc-grid">
           <div className="col-span-6 col-start-4">
             <h2 className="sc-heading--two text-center mb-4">Any questions</h2>
-            <p className="text-center">
+            
+            <p className="text-center mb-20">
               Vestibulum eu quam nec neque pellentesque efficitur id eget nisl.
               Proin porta est convallis lacus blandit pretium sed.
             </p>
 
-            <form className="flex flex-col gap-6 px-16">
-              <div className="flex flex-col">
-                <label htmlFor="name" className="sc__input__label">
-                  Name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Placeholder"
-                  className="sc__input"
-                />
-              </div>
-
-              <div className="flex flex-col">
-                <label htmlFor="email" className="sc__input__label">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="Placeholder"
-                  className="sc__input"
-                />
-              </div>
-
-              <div className="flex flex-col">
-                <label htmlFor="subject" className="sc__input__label">
-                  Subject
-                </label>
-                <select name="subjects" id="subject" className="sc__dropdown">
-                  <option value="" disabled selected hidden>
-                    Select
-                  </option>
-                  <option value="general-enquiry">General Enquiry</option>
-                  <option value="lorem">Lorem</option>
-                  <option value="ipsum">Ipsum</option>
-                </select>
-              </div>
-
-              <div className="flex flex-col">
-                <label htmlFor="message" className="sc__input__label">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Placeholder"
-                  className="sc__textarea"
-                  rows={3}
-                />
-              </div>
-
-              <button type="submit" className="sc__btn">
-                Submit
-              </button>
-            </form>
+            <AnyQuestionsForm />
           </div>
         </div>
       </section>
