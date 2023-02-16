@@ -35,10 +35,3 @@ a {
   color: $primary-color;
   text-decoration: none;
 }
-
-/**
- * Basic grid container
- */
-.sc-grid {
-  @apply grid grid-cols-12 gap-6;
-}

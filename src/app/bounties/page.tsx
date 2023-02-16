@@ -122,7 +122,7 @@ export default function Bounty() {
 
       <div className="relative">
         <Image
-          src="/header-decoration-2.svg"
+          src="/bottom-left-dotted-decor.svg"
           alt=""
           width={200}
           height={271.5}

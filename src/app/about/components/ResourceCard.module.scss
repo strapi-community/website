@@ -1,0 +1,20 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+
+.container {
+  @apply flex p-10 rounded-2xl gap-10;
+  background: $off-white;
+}
+
+.image {
+  height: rem(120);
+  width: rem(120);
+  border-radius: 50%;
+}
+
+.link {
+  @apply flex items-center gap-1;
+  color: $secondary-color;
+  font-size: rem(17);
+  font-weight: 500;
+}

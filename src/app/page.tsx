@@ -136,7 +136,7 @@ export default function Home() {
       <section className={styles.heroSection + " sc-header-offset"}>
         <div className="container sc-grid relative pt-20">
           <Image
-            src="/header-decoration-1.svg"
+            src="/top-right-dotted-decor.svg"
             alt=""
             width={177}
             height={151}
@@ -177,7 +177,7 @@ export default function Home() {
             </div>
           </div>
           <Image
-            src="/header-decoration-2.svg"
+            src="/bottom-left-dotted-decor.svg"
             alt=""
             width={200}
             height={273}
@@ -207,7 +207,7 @@ export default function Home() {
 
       <section className="container relative pt-24 pb-40">
         <Image
-          src="/get-involved-decoration-1.svg"
+          src="/left-sided-dots-decor.svg"
           alt=""
           width={135}
           height={42}

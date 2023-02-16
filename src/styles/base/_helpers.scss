@@ -4,3 +4,10 @@
 .sc-header-offset {
   padding-top: rem(96);
 }
+
+/**
+ * Basic grid container
+ */
+.sc-grid {
+  @apply grid grid-cols-12 gap-6;
+}

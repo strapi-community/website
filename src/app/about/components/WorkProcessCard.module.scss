@@ -1,0 +1,15 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+@import "base/_typography.scss";
+
+.image {
+  @apply w-full object-cover;
+  max-height: rem(440);
+  border-radius: rem(10);
+}
+
+.step {
+  @extend .sc-heading--tag;
+  @apply mb-4;
+  color: $warning-color;
+}
