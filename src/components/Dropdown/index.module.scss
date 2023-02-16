@@ -1,0 +1,24 @@
+@import "abstracts/_functions.scss";
+
+.container {
+  @apply flex flex-col;
+}
+
+.select {
+  @apply w-full relative rounded-lg;
+  padding: 0 rem(16);
+  background-color: #f6f6f9;
+  height: rem(51);
+
+  &:invalid {
+    color: #9ca8bb;
+  }
+}
+
+.iconContainer {
+  @apply absolute right-3 z-10 mt-4;
+}
+
+.placeholder {
+  color: #666687;
+}

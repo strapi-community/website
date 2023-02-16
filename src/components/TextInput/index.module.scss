@@ -1,0 +1,21 @@
+@import "abstracts/_functions.scss";
+
+.container {
+  @apply flex flex-col;
+}
+
+.input {
+  @apply rounded-lg;
+  padding: 0 rem(16);
+  height: rem(51);
+  background-color: #f6f6f9;
+
+  &.BgWhite {
+    background-color: #fff;
+  }
+
+  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #666687;
+    opacity: 1; /* Firefox */
+  }
+}
