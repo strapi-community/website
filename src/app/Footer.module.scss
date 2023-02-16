@@ -1,4 +1,3 @@
-@import "abstracts/_variables.scss";
 @import "abstracts/_functions.scss";
 
 .logo {
@@ -7,18 +6,18 @@
   margin-right: rem(40);
 }
 
-.footerHead {
+.head {
   @apply flex flex-col items-center relative;
   padding: rem(175) 0 rem(100);
 }
 
-.footerDecoration {
+.decoration {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.footerQuickLinksTypography {
+.quickLinksTypography {
   @apply uppercase mb-8;
   font-size: rem(15);
   font-weight: 600;
@@ -26,21 +25,21 @@
   color: #a5a5ba;
 }
 
-.footerLink {
+.link {
   font-size: rem(17);
   line-height: 160%;
 }
 
-.footerLinkTypography {
+.linkTypography {
   color: #4a4a6a;
 }
 
-.footerHelperText {
+.helperText {
   font-size: rem(13);
   line-height: 150%;
   max-width: rem(361);
 }
 
-.footerFootLinks {
+.footLinks {
   color: #32324d;
 }
