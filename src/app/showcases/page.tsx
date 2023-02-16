@@ -133,10 +133,12 @@ async function getData() {
 export default async function Showcases() {
   const data: CommunityRepos = await getData();
   return (
-    <>
-      {data.map((repo) => (
-        <ShowcaseCard {...repo} key={repo.id} />
-      ))}
-    </>
+    <div className="sc-grid">
+      {data
+        .filter((repo) => repo.name !== "website")
+        .map((repo) => (
+          <ShowcaseCard {...repo} key={repo.id} />
+        ))}
+    </div>
   );
 }

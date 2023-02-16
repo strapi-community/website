@@ -4,12 +4,11 @@ export default function ShowcaseLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main>
+    <section className="container sc-header-offset">
       <div>
-        <h1 className="text-3xl font-bold underline">Showcases</h1>
-        <h1 className="sc-heading--one">Showcases</h1>
+        <h1 className="sc-heading--two mb-8">Showcases</h1>
         {children}
       </div>
-    </main>
+    </section>
   );
 }
