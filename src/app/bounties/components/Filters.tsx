@@ -1,3 +1,4 @@
+import { Checkbox, RadioButton } from "@/components";
 import styles from "./Filters.module.scss";
 
 export type Filter = { label: string; checked: boolean };
@@ -15,25 +16,19 @@ export const Filters = ({
   onFilterSelect,
   onBountyStateSelect,
 }: Props) => {
-  const handleBountyStateSelect = (bountyState: string) => () =>
-    onBountyStateSelect(bountyState);
-
   return (
     <div className={styles.container}>
       <div>
         <h5 className={styles.title}>Workflow</h5>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 relative">
           {filters.map(({ label, checked }) => (
-            <div className="flex items-center gap-2" key={label}>
-              <input
-                id={label}
-                type="checkbox"
-                checked={checked}
-                onChange={() => onFilterSelect(label)}
-              />
-              <label htmlFor={label}>{label}</label>
-            </div>
+            <Checkbox
+              label={label}
+              checked={checked}
+              onCheck={onFilterSelect}
+              key={label}
+            />
           ))}
         </div>
       </div>
@@ -42,25 +37,19 @@ export const Filters = ({
         <h5 className={styles.title}>State</h5>
 
         <div className="flex flex-col gap-4">
-          <div className="flex gap-2">
-            <input
-              id="radio-1"
-              type="radio"
-              checked={bountyState === "ongoing"}
-              onChange={handleBountyStateSelect("ongoing")}
-            />
-            <label htmlFor="radio-1">Ongoing</label>
-          </div>
+          <RadioButton
+            id="radio-1"
+            label="ongoing"
+            checked={bountyState === "ongoing"}
+            onSelect={onBountyStateSelect}
+          />
 
-          <div className="flex gap-2">
-            <input
-              id="radio-2"
-              type="radio"
-              checked={bountyState === "completed"}
-              onChange={handleBountyStateSelect("completed")}
-            />
-            <label htmlFor="radio-2">Completed</label>
-          </div>
+          <RadioButton
+            id="radio-2"
+            label="completed"
+            checked={bountyState === "completed"}
+            onSelect={onBountyStateSelect}
+          />
         </div>
       </div>
     </div>

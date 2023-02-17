@@ -1,3 +1,4 @@
+@import "abstracts/_variables.scss";
 @import "abstracts/_functions.scss";
 
 .container {
@@ -12,6 +13,10 @@
 
   &:invalid {
     color: #9ca8bb;
+  }
+
+  &:focus, &:active {
+    outline: 2px solid $primary-color;
   }
 }
 

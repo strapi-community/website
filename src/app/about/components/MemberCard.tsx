@@ -31,13 +31,23 @@ export const MemberCard = ({
 
       <div className="flex gap-2">
         {!!twitter && (
-          <a href={twitter} target="_blank" rel="noreferrer">
-            <FaTwitter size={24} color="#8E8EA9" />
+          <a
+            href={twitter}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.socialLink}
+          >
+            <FaTwitter size={24} />
           </a>
         )}
         {!!linkedin && (
-          <a href={linkedin} target="_blank" rel="noreferrer">
-            <FaLinkedinIn size={24} color="#8E8EA9" />
+          <a
+            href={linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.socialLink}
+          >
+            <FaLinkedinIn size={24} />
           </a>
         )}
       </div>

@@ -135,7 +135,7 @@ export default function About() {
         <div className="container sc-grid relative pb-40">
           <div className="col-span-6 col-start-4">
             <h2 className="sc-heading--two text-center mb-14">
-              Headline summarizing what strapi community is
+              Summarize what strapi community is
             </h2>
 
             <p>

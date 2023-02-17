@@ -1,0 +1,8 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+
+.input {
+  accent-color: $primary-color;
+  height: rem(24);
+  width: rem(24);
+}

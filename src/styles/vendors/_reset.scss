@@ -108,6 +108,11 @@ body {
 
 * {
   scroll-padding-top: 100px;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }
 
 ol,

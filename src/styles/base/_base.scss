@@ -47,19 +47,3 @@ select {
 select::-ms-expand {
   display: none;
 }
-
-[type="checkbox"] {
-  @apply rounded cursor-pointer;
-  width: rem(24);
-  height: rem(24);
-  border: 1px solid #C0C0CF;
-  transition: all ease-in-out 300ms;
-
-  &:checked{
-    accent-color: $primary-color;
-  }
-
-  &:focus{
-    // outline: $primary-color;
-  }
-}

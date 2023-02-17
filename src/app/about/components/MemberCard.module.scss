@@ -18,3 +18,11 @@
   line-height: 130%;
   letter-spacing: -0.01em;
 }
+
+.socialLink {
+  color: #8E8EA9;
+
+  :hover {
+    color: $primary-color;
+  }
+}
