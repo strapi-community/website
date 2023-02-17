@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BiRightArrowAlt } from "react-icons/bi";
 import styles from "./GetInvolvedCard.module.scss";
 
 interface Props {
@@ -17,7 +18,12 @@ export const GetInvolvedCard = ({
   linkTo = "#",
 }: Props) => {
   return (
-    <div className={styles.container}>
+    <a
+      href={linkTo}
+      target="_blank"
+      rel="noreferrer"
+      className={styles.container}
+    >
       <Image
         src={imageSrc}
         alt={imageAlt}
@@ -28,9 +34,9 @@ export const GetInvolvedCard = ({
       <h3 className="sc-heading--four mb-4">{title}</h3>
       <p className="sc-body--small mb-6">{description}</p>
 
-      <a href={linkTo} target="_blank" rel="noreferrer" className={styles.link}>
-        Learn More 🡢
-      </a>
-    </div>
+      <span className={styles.link} >
+        Learn More <BiRightArrowAlt size={24} data-arrow/>
+      </span>
+    </a>
   );
 };

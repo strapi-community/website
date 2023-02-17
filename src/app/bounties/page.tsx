@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { AnyQuestionsForm, BountyCard, Filters } from "./components";
 import type { Filter } from "./components";
+import { Dropdown } from "@/components";
 
 const BOUNTIES = [
   {
@@ -67,7 +68,10 @@ export default function Bounty() {
     { label: "Workflow-2", checked: false },
     { label: "Workflow-3", checked: false },
   ]);
+
   const [bountyState, setBountyState] = useState("");
+
+  const [sortBy, setSortBy] = useState({ label: "Newest", value: "date-desc" });
 
   const handleFilterSelect = (label: string) => {
     setFilters((prev) =>
@@ -103,8 +107,20 @@ export default function Bounty() {
           />
 
           <div className="flex flex-grow flex-col">
-            <div className="flex mb-9">
+            <div className="flex justify-between items-center mb-9">
               <div>6 of 65 results</div>
+
+              <Dropdown
+                prefix="Sort by:"
+                value={sortBy}
+                onChange={setSortBy}
+                options={[
+                  { label: "Newest", value: "date-desc" },
+                  { label: "Oldest", value: "date-asc" },
+                  { label: "Bounty (Low to High)", value: "bounty-asc" },
+                  { label: "Bounty (High to Low)", value: "bounty-desc" },
+                ]}
+              />
             </div>
 
             <div className="flex flex-col gap-6 mb-12">
@@ -168,7 +184,7 @@ export default function Bounty() {
         <div className="container sc-grid">
           <div className="col-span-6 col-start-4">
             <h2 className="sc-heading--two text-center mb-4">Any questions</h2>
-            
+
             <p className="text-center mb-20">
               Vestibulum eu quam nec neque pellentesque efficitur id eget nisl.
               Proin porta est convallis lacus blandit pretium sed.

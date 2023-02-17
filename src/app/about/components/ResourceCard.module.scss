@@ -4,6 +4,12 @@
 .container {
   @apply flex p-10 rounded-2xl gap-10;
   background: $off-white;
+
+  &:hover {
+    [data-arrow] {
+      transform: translateX(rem(4));
+    }
+  }
 }
 
 .image {
@@ -17,4 +23,8 @@
   color: $secondary-color;
   font-size: rem(17);
   font-weight: 500;
+
+  [data-arrow] {
+    transition: all 0.15s ease-in;
+  }
 }

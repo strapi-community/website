@@ -1,3 +1,4 @@
+@import "abstracts/_variables.scss";
 @import "abstracts/_functions.scss";
 
 .logo {
@@ -32,6 +33,9 @@
 
 .linkTypography {
   color: #4a4a6a;
+  &:hover {
+    color: #000;
+  }
 }
 
 .helperText {
@@ -42,4 +46,8 @@
 
 .footLinks {
   color: #32324d;
+
+  &:hover {
+    color: #000;
+  }
 }

@@ -1,3 +1,4 @@
+@import "abstracts/_variables.scss";
 @import "abstracts/_functions.scss";
 
 .container {
@@ -14,8 +15,15 @@
     background-color: #fff;
   }
 
-  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #666687;
     opacity: 1; /* Firefox */
+  }
+
+  &:focus {
+    outline: none;
+    background-color: #fff;
+    border: 2px solid #4945ff;
   }
 }

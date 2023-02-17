@@ -4,6 +4,12 @@
 .container {
   @apply col-span-1 flex flex-col p-10 rounded-2xl;
   background: #f6fafe;
+
+  &:hover {
+    [data-arrow] {
+      transform: translateX(rem(4));
+    }
+  }
 }
 
 .image {
@@ -14,8 +20,13 @@
 }
 
 .link {
+  @apply flex items-center gap-1;
   font-size: rem(17);
   font-weight: 500;
   line-height: 160%;
   color: $secondary-color;
+
+  [data-arrow] {
+    transition: all 0.15s ease-in-out;
+  }
 }

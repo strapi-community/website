@@ -25,7 +25,7 @@ export const Filters = ({
 
         <div className="flex flex-col gap-4">
           {filters.map(({ label, checked }) => (
-            <div className="flex gap-2" key={label}>
+            <div className="flex items-center gap-2" key={label}>
               <input
                 id={label}
                 type="checkbox"

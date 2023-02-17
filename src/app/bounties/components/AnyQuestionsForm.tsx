@@ -1,15 +1,12 @@
 "use client";
 import { useState } from "react";
-import { Dropdown, TextArea, TextInput } from "@/components";
+import { SimpleDropdown, TextArea, TextInput } from "@/components";
 
 export const AnyQuestionsForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-
-  const handleSubjectSelect = (e: React.ChangeEvent<HTMLSelectElement>) =>
-    setSubject(e.target.value);
 
   const handleSubmit = () => {
     // TODO
@@ -35,10 +32,11 @@ export const AnyQuestionsForm = () => {
         onChange={setEmail}
       />
 
-      <Dropdown
+      <SimpleDropdown
         label="Subject"
+        placeholder="Select"
         value={subject}
-        onChange={handleSubjectSelect}
+        onChange={setSubject}
         options={[
           { label: "General Enquiry", value: "general-enquiry" },
           { label: "Lorem", value: "lorem" },

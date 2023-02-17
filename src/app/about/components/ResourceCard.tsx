@@ -18,7 +18,12 @@ export const ResourceCard = ({
   linkTo,
 }: Props) => {
   return (
-    <div className={styles.container}>
+    <a
+      href={linkTo}
+      target="_blank"
+      rel="noreferrer"
+      className={styles.container}
+    >
       <Image
         src={imageSrc}
         alt={imageAlt}
@@ -32,15 +37,10 @@ export const ResourceCard = ({
 
         <p className="mb-6">{description}</p>
 
-        <a
-          href={linkTo}
-          target="_blank"
-          rel="noreferrer"
-          className={styles.link}
-        >
-          Learn More <BiRightArrowAlt size={24} color="#AC56F5" />
-        </a>
+        <span className={styles.link}>
+          Learn More <BiRightArrowAlt size={24} color="#AC56F5" data-arrow/>
+        </span>
       </div>
-    </div>
+    </a>
   );
 };

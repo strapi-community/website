@@ -20,13 +20,15 @@ export const DeveloperCard = ({
 }: Props) => {
   return (
     <div className="col-span-1">
-      <Image
-        src={imageSrc}
-        alt={imageAlt}
-        width={316}
-        height={306}
-        className={styles.image}
-      />
+      <figure className={styles.imageContainer}>
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          width={316}
+          height={306}
+          className={styles.image}
+        />
+      </figure>
 
       <h3 className="sc-heading--four mb-2">{name}</h3>
 

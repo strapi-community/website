@@ -21,7 +21,7 @@ export const BountyCard = ({
   linkTo = "#",
 }: Props) => {
   return (
-    <div className={styles.container}>
+    <Link href={linkTo} className={styles.container}>
       <Image
         src={imageSrc}
         alt={imageAlt}
@@ -39,11 +39,11 @@ export const BountyCard = ({
       </div>
 
       <div className={styles.footer}>
-        <Link href={linkTo} className={styles.link}>
+        <span className={styles.link}>
           <span className="mr-2">View Bounty</span>
-          <BiRightArrowAlt size={24} />
-        </Link>
+          <BiRightArrowAlt size={24} data-arrow/>
+        </span>
       </div>
-    </div>
+    </Link>
   );
 };

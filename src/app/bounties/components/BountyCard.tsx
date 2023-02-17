@@ -41,7 +41,7 @@ export const BountyCard = ({
 
       <Link href={linkTo} className="sc__btn sm">
         <span className="mr-2">View Bounty</span>
-        <BiRightArrowAlt size={24} />
+        <BiRightArrowAlt size={24} className="transition" data-arrow/>
       </Link>
     </div>
   );

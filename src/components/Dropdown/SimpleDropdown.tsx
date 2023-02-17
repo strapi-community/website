@@ -1,24 +1,31 @@
 import { BiCaretDown } from "react-icons/bi";
 import { clsx } from "clsx";
-import styles from "./index.module.scss";
+import styles from "./SimpleDropdown.module.scss";
 
 interface Props {
   id?: string;
-  label: string;
+  label?: string;
+  placeholder?: string;
   options: { label: string; value: string }[];
   value: string;
-  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onChange: (value: string) => void;
+  containerClassName?: string;
 }
 
-export const Dropdown = ({
+export const SimpleDropdown = ({
   id = "1",
   label = "",
+  placeholder = "",
   value = "",
   options,
   onChange,
+  containerClassName = "",
 }: Props) => {
+  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) =>
+    onChange(event.target.value);
+
   return (
-    <div className={styles.container}>
+    <div className={clsx(styles.container, containerClassName)}>
       {!!label && (
         <label htmlFor={id} className="sc__input__label">
           {label}
@@ -31,12 +38,14 @@ export const Dropdown = ({
         <select
           id={id}
           value={value}
-          onChange={onChange}
+          onChange={handleChange}
           className={clsx(styles.select, value === "" && styles.placeholder)}
         >
-          <option value="" disabled selected hidden>
-            Select
-          </option>
+          {!!placeholder && (
+            <option value="" disabled selected hidden>
+              {placeholder}
+            </option>
+          )}
           {options.map(({ label, value }) => (
             <option value={value} key={value}>
               {label}
@@ -47,3 +56,5 @@ export const Dropdown = ({
     </div>
   );
 };
+
+export * from "./Dropdown";

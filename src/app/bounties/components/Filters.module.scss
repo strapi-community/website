@@ -3,6 +3,7 @@
 
 .container {
   @apply flex flex-col gap-10;
+  width: rem(224);
 }
 
 .title {

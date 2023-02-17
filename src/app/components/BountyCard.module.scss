@@ -4,6 +4,12 @@
 .container {
   @apply col-span-1 flex flex-col items-center rounded-xl;
   background: #f6fafe;
+
+  &:hover {
+    [data-arrow] {
+      transform: translateX(rem(4));
+    }
+  }
 }
 
 .image {
@@ -37,4 +43,8 @@
   line-height: 100%;
   color: $secondary-color;
   padding-left: rem(13);
+
+  [data-arrow] {
+    transition: all 0.15s ease-in;
+  }
 }
