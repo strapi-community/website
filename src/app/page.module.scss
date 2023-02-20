@@ -7,11 +7,12 @@
 }
 
 .heroTopRightDecoration {
-  @apply absolute top-8 sm:top-0 sc-decor--right;
+  @apply absolute top-10 sm:top-0 right-5;
   height: rem(102.11);
-  width: rem(120);
+  width: 32vw;
 
   @media (min-width: rem(640)) {
+    @apply sc-decor--right;
     height: rem(151);
     width: rem(177);
   }

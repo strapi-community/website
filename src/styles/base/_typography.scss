@@ -7,6 +7,7 @@
       @extend .sc-heading;
       font-size: rem(53);
       line-height: 100%;
+      letter-spacing: -0.02em;
 
       @media (min-width: rem(640)) {
         font-size: rem(72);
@@ -18,6 +19,7 @@
       @extend .sc-heading;
       font-size: rem(32);
       line-height: 119%;
+      letter-spacing: -0.03em;
 
       @media (min-width: rem(640)) {
         font-size: rem(43);
@@ -26,20 +28,26 @@
 
     &--three {
       @extend .sc-heading;
-      font-size: rem(32);
+      font-size: rem(24);
       line-height: 130%;
+      letter-spacing: -0.02em; 
+
+      @media (min-width: rem(640)) {
+        font-size: rem(32);
+      }
     }
 
     &--four {
       @extend .sc-heading;
       font-size: rem(19);
       line-height: 130%;
+      letter-spacing: -0.01em;
 
       @media (min-width: rem(640)) {
         font-size: rem(21);
       }
     }
- 
+
     &--tag {
       @apply uppercase;
       font-size: rem(13);

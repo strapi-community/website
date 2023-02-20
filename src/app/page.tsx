@@ -186,7 +186,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container flex flex-col items-start sm:items-center pt-28 sm:pt-40 pb-8 sm:pb-16">
+      <section className="container relative flex flex-col items-start sm:items-center pt-28 sm:pt-40 pb-8 sm:pb-16">
+        <Image
+          src="/left-sided-dots-decor.svg"
+          alt=""
+          width={82.77}
+          height={25.6}
+          className="absolute top-8 left-5 sm:hidden"
+        />
+
         <h2 className="sc-heading--two mb-12 sm:mb-20">
           Why join the community?
         </h2>
@@ -207,7 +215,7 @@ export default function Home() {
         </a>
       </section>
 
-      <section className="container relative pt-12 sm:pt-24 pb-32 sm:pb-40">
+      <section className="container relative pt-20 sm:pt-24 pb-32 sm:pb-40">
         <Image
           src="/left-sided-dots-decor.svg"
           alt=""
@@ -222,6 +230,14 @@ export default function Home() {
           width={300}
           height={300}
           className="absolute top-0 right-0 hidden sm:block"
+        />
+
+        <Image
+          src="/top-right-decor-mobile.svg"
+          alt=""
+          width={80}
+          height={80}
+          className="absolute top-0 right-0 sm:hidden"
         />
         <div className="sc-grid">
           <div className="col-span-12 sm:col-span-6 sm:col-start-4 mb-12 sm:mb-20">
