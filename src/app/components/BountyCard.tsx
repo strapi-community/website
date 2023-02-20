@@ -31,7 +31,7 @@ export const BountyCard = ({
       />
 
       <div className={styles.body}>
-        <h3 className="sc-heading--four mb-6">{title}</h3>
+        <h3 className="sc-heading--four mb-4 sm:mb-6">{title}</h3>
 
         <p className={styles.bounty}>${bountyAmt}</p>
 

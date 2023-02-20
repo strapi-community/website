@@ -14,14 +14,23 @@
 
 .image {
   @apply object-cover mt-10;
-  width: rem(84);
-  height: rem(84);
+  width: rem(72);
+  height: rem(72);
   border-radius: rem(10);
+
+  @media (min-width: rem(640)) {
+    width: rem(84);
+    height: rem(84);
+  }
 }
 
 .body {
   @apply flex flex-col text-center;
-  padding: rem(24) rem(24) rem(32);
+  padding: rem(24);
+
+  @media (min-width: rem(640)) {
+    padding: rem(24) rem(24) rem(32);
+  }
 }
 
 .bounty {
@@ -33,7 +42,11 @@
 }
 
 .footer {
-  padding: rem(24) 0 rem(40);
+  padding: rem(16) 0 rem(32);
+
+  @media (min-width: rem(640)) {
+    padding: rem(24) 0 rem(40);
+  }
 }
 
 .link {

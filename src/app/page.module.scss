@@ -1,8 +1,29 @@
+@import "abstracts/_functions.scss";
+@import "base/_helpers.scss";
+
 .heroSection {
   @apply relative;
   background: linear-gradient(180deg, #ffffff 0%, #f2f4ff 100%);
 }
 
 .heroTopRightDecoration {
-  @apply absolute top-0 right-4 sm:right-8 lg:right-16 xl:right-20 2xl:right-24;
+  @apply absolute top-8 sm:top-0 sc-decor--right;
+  height: rem(102.11);
+  width: rem(120);
+
+  @media (min-width: rem(640)) {
+    height: rem(151);
+    width: rem(177);
+  }
+}
+
+.getInvolvedBottomLeftDecoration {
+  @apply absolute bottom-0 sm:-bottom-10 left-0;
+  height: rem(100);
+  width: rem(107.53);
+
+  @media (min-width: rem(640)) {
+    height: rem(186);
+    width: rem(200);
+  }
 }

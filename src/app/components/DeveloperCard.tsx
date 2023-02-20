@@ -11,7 +11,7 @@ interface Props {
   pluginsDevCount: number;
 }
 
-export const DeveloperCard = ({
+export const  DeveloperCard = ({
   imageSrc,
   imageAlt = "",
   name,
@@ -19,7 +19,7 @@ export const DeveloperCard = ({
   pluginsDevCount = 1,
 }: Props) => {
   return (
-    <div className="col-span-1">
+    <div className={styles.container}>
       <figure className={styles.imageContainer}>
         <Image
           src={imageSrc}

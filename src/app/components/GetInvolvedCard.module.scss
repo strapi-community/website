@@ -2,7 +2,7 @@
 @import "abstracts/_functions.scss";
 
 .container {
-  @apply col-span-1 flex flex-col p-10 rounded-2xl;
+  @apply col-span-1 flex flex-col p-8 sm:p-10 rounded-2xl;
   background: #f6fafe;
 
   &:hover {
@@ -13,10 +13,15 @@
 }
 
 .image {
-  @apply object-cover mb-10;
-  width: rem(120);
-  height: rem(120);
+  @apply object-cover mb-8 sm:mb-10;
+  width: rem(96);
+  height: rem(96);
   border-radius: 50%;
+
+  @media (min-width: rem(640)) {
+    width: rem(120);
+    height: rem(120);
+  }
 }
 
 .link {

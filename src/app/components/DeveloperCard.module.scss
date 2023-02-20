@@ -1,6 +1,15 @@
 @import "abstracts/_variables.scss";
 @import "abstracts/_functions.scss";
 
+.container {
+  @apply col-span-1;
+  min-width: rem(240);
+
+  @media (min-width: rem(640)) {
+    max-width: unset;
+  }
+}
+
 .imageContainer {
   @apply relative w-full mb-4;
   padding-top: 104%;

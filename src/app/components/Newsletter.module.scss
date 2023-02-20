@@ -3,16 +3,20 @@
 @import "base/_typography.scss";
 
 .wrapper {
-  @apply col-span-10 col-start-2 relative;
+  @apply col-span-12 sm:col-span-10 sm:col-start-2 relative;
 }
 
 .container {
   @apply flex items-center justify-center relative;
   background-color: #1a154e;
-  border-radius: rem(24);
   overflow: hidden;
-  padding: rem(77) 0;
   isolation: isolate;
+  padding: rem(112) rem(20) rem(48);
+
+  @media (min-width: rem(640)) {
+    border-radius: rem(24);
+    padding: rem(77) 0;
+  }
 }
 
 .container::before,
@@ -53,8 +57,16 @@
 }
 
 .paperPlane {
-  position: absolute;
-  top: rem(-47);
-  left: rem(-62);
-  z-index: 10;
+  @apply absolute top-8 z-10;
+  left: 50%;
+  height: rem(48);
+  width: auto;
+  transform: translateX(-50%);
+
+  @media (min-width: rem(640)) {
+    width: rem(125);
+    height: auto;
+    top: rem(-47);
+    left: rem(-62);
+  }
 }
