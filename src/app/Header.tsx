@@ -39,7 +39,7 @@ export const Header = () => {
     else document.body.style.overflow = "auto";
   }, [showMenu, isMobile]);
 
-  const handleMenuClick = () => setShowMenu(!showMenu);
+  const handleMenuClick = (status: boolean) => () => setShowMenu(status);
 
   return (
     <header
@@ -50,7 +50,7 @@ export const Header = () => {
       )}
     >
       <div className={styles.nav}>
-        <Link href="/">
+        <Link href="/" onClick={handleMenuClick(false)}>
           <Image
             src="/logo-light-background.svg"
             alt="Strapi community logo"
@@ -71,8 +71,8 @@ export const Header = () => {
         </nav>
 
         <button
-          className="sm:hidden h-11 w-11 flex justify-center items-center"
-          onClick={handleMenuClick}
+          className={styles.menu}
+          onClick={handleMenuClick(!showMenu)}
         >
           {!showMenu ? <BiMenu size={24} /> : <BiX size={24} />}
         </button>
@@ -83,7 +83,7 @@ export const Header = () => {
           <ul className={styles.links}>
             {LINKS.map(({ label, href }) => (
               <li className={styles.link} key={label}>
-                <Link href={href}>{label}</Link>
+                <Link href={href} onClick={handleMenuClick(false)}>{label}</Link>
               </li>
             ))}
           </ul>

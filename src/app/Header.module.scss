@@ -25,6 +25,11 @@
   }
 }
 
+.menu {
+  @apply sm:hidden h-11 w-11 flex justify-center items-center;
+  color: $primary-dark-color;
+}
+
 .links {
   @apply flex flex-col mb-6 sm:mb-0 sm:flex-row sm:gap-4 -mr-3;
 }
@@ -40,24 +45,4 @@
       padding: rem(5) rem(12);
     }
   }
-}
-
-.footerHead {
-  @apply flex flex-col items-center relative;
-  padding: rem(175) 0 rem(100);
-}
-
-.footerDecoration {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.footerLink {
-  font-size: rem(17);
-  line-height: 160%;
-}
-
-.footerLinkTypography {
-  color: #4a4a6a;
 }
