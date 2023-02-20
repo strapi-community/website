@@ -6,7 +6,7 @@
   min-width: rem(240);
 
   @media (min-width: rem(640)) {
-    max-width: unset;
+    min-width: unset;
   }
 }
 

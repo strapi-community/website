@@ -64,9 +64,9 @@
   transform: translateX(-50%);
 
   @media (min-width: rem(640)) {
+    @apply top-0 left-0;
     width: rem(125);
     height: auto;
-    top: rem(-47);
-    left: rem(-62);
+    transform: translate(-50%,-50%);
   }
 }

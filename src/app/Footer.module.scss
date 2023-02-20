@@ -3,9 +3,14 @@
 @import "base/_helpers.scss";
 
 .logo {
-  height: 32px;
+  @apply mb-12 sm:mb-20;
+  height: rem(28);
   width: auto;
   margin-right: rem(40);
+
+  @media (min-width: rem(640)) {
+    height: rem(32);
+  }
 }
 
 .head {
@@ -17,19 +22,26 @@
   @apply sc-decor--right;
   position: absolute;
   top: 0;
-}
+  height: auto;
+  width: rem(200);
 
-.quickLinksTypography {
-  @apply uppercase mb-8;
-  font-size: rem(15);
-  font-weight: 600;
-  line-height: 160%;
-  color: #a5a5ba;
+  @media (min-width: rem(640)) {
+    width: rem(298);
+  }
 }
 
 .link {
-  font-size: rem(17);
+  font-size: rem(15);
   line-height: 160%;
+
+  @media (min-width: rem(640)) {
+    font-size: rem(17);
+  }
+}
+
+.linkSmall {
+  @extend .link;
+  font-size: rem(15);
 }
 
 .linkTypography {
@@ -51,4 +63,9 @@
   &:hover {
     color: #000;
   }
+}
+
+.footer {
+  @extend .sc-grid;
+  @apply container gap-y-4 items-center mb-10;
 }

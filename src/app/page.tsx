@@ -181,7 +181,7 @@ export default function Home() {
             alt=""
             width={200}
             height={273}
-            className="absolute top-1/2 left-0 hidden sm:block"
+            className="absolute top-1/2 left-0 hidden lg:block"
           />
         </div>
       </section>
