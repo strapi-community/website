@@ -11,3 +11,26 @@
 .sc-grid {
   @apply grid grid-cols-12 gap-6;
 }
+
+/**
+ * Position decorations with respect to container padding
+ */
+.sc-decor {
+  @apply absolute;
+  
+  &--right {
+    @apply -right-4
+    sm:-right-8
+    lg:-right-16
+    xl:-right-20
+    2xl:-right-24;
+  }
+
+  &--left {
+    @apply -left-4
+    sm:-left-8
+    lg:-left-16
+    xl:-left-20
+    2xl:-left-24;
+  }
+}

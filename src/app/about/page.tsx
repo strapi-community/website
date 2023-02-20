@@ -1,5 +1,4 @@
 import Image from "next/image";
-import styles from "./page.module.scss";
 import {
   Gallery,
   MemberCard,
@@ -95,7 +94,7 @@ export default function About() {
             alt="image showing people working together"
             height={660}
             width={660}
-            className={styles.heroImage}
+            className="absolute top-0 sc-decor--right"
           />
 
           <div className="col-span-5 col-start-2">
@@ -109,30 +108,28 @@ export default function About() {
               grow.
             </p>
 
-            <button className="sc__btn">Join us on Discord</button>
+            <button className="sc__btn mb-12">Join us on Discord</button>
           </div>
-        </div>
-
-        <div className="relative">
+          
           <Image
             src="left-sided-dots-decor.svg"
             alt=""
             width={140}
             height={42}
-            className="absolute -bottom-14 left-16"
+            className="absolute -bottom-14 sc-decor--left ml-14"
           />
         </div>
       </section>
 
-      <section className="relative">
-        <Image
-          src="top-left-decor.svg"
-          alt=""
-          width={350}
-          height={350}
-          className="absolute -top-20 left-0"
-        />
+      <section className="relative pt-16">
         <div className="container sc-grid relative pb-40">
+          <Image
+            src="top-left-decor.svg"
+            alt=""
+            width={350}
+            height={350}
+            className="absolute -top-20 sc-decor--left"
+          />
           <div className="col-span-6 col-start-4">
             <h2 className="sc-heading--two text-center mb-14">
               Summarize what strapi community is
@@ -171,8 +168,8 @@ export default function About() {
         <Stats />
       </section>
 
-      <section className="relative mb-40">
-        <div className="container sc-grid">
+      <section className="container relative mb-40">
+        <div className="sc-grid">
           <div className="col-span-6 col-start-4 mb-24">
             <div className="sc-heading--tag text-center mb-4">
               Step by step process
@@ -200,7 +197,7 @@ export default function About() {
           alt=""
           width={200}
           height={271.5}
-          className="absolute -bottom-28 left-0 -z-10"
+          className="absolute -bottom-28 sc-decor--left -z-10"
         />
       </section>
 
@@ -220,15 +217,15 @@ export default function About() {
         </div>
       </section>
 
-      <section className="relative mb-40">
+      <section className="container relative mb-40">
         <Image
           src="/top-right-decor.svg"
           alt=""
           width={300}
           height={300}
-          className="absolute top-0 right-0"
+          className="absolute top-0 sc-decor--right"
         />
-        <div className="container sc-grid">
+        <div className="sc-grid">
           <div className="col-span-6 col-start-4">
             <h2 className="sc-heading--two text-center mb-4">Resources</h2>
             <p className="text-center mb-20">

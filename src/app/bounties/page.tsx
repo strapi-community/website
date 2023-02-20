@@ -85,17 +85,15 @@ export default function Bounty() {
 
   return (
     <>
-      <div className="relative">
+      <section className="sc-header-offset container relative mb-40">
         <Image
           src="/bounty/bounty-decor-1.svg"
           alt=""
           width={400}
           height={400}
-          className="absolute top-12 right-0 -z-10"
+          className="absolute top-12 sc-decor--right -z-10"
         />
-      </div>
 
-      <section className="sc-header-offset container mb-40">
         <h1 className="sc-heading--two text-center pt-16 mb-20">Bounty</h1>
 
         <div className="flex gap-40">
@@ -134,19 +132,15 @@ export default function Bounty() {
             </div>
           </div>
         </div>
-      </section>
 
-      <div className="relative">
         <Image
           src="/bottom-left-dotted-decor.svg"
           alt=""
           width={200}
           height={271.5}
-          className="absolute -bottom-8 left-0 -z-10"
+          className="absolute -bottom-40 sc-decor--left -z-10"
         />
-      </div>
-
-      <section className="mb-40"></section>
+      </section>
 
       <section className="container sc-grid mb-40">
         <div className="col-span-10 col-start-2 flex gap-16">
@@ -173,15 +167,15 @@ export default function Bounty() {
         </div>
       </section>
 
-      <section className="relative">
+      <section className="container relative">
         <Image
           src="top-left-decor.svg"
           alt=""
           width={350}
           height={350}
-          className="absolute -top-20 left-0"
+          className="absolute -top-20 sc-decor--left"
         />
-        <div className="container sc-grid">
+        <div className="sc-grid">
           <div className="col-span-6 col-start-4">
             <h2 className="sc-heading--two text-center mb-4">Any questions</h2>
 

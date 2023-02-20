@@ -1,5 +1,6 @@
 @import "abstracts/_variables.scss";
 @import "abstracts/_functions.scss";
+@import "base/_helpers.scss";
 
 .logo {
   height: 32px;
@@ -8,14 +9,14 @@
 }
 
 .head {
-  @apply flex flex-col items-center relative;
+  @apply flex flex-col items-center container relative;
   padding: rem(175) 0 rem(100);
 }
 
 .decoration {
+  @apply sc-decor--right;
   position: absolute;
   top: 0;
-  right: 0;
 }
 
 .quickLinksTypography {
