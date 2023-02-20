@@ -2,7 +2,11 @@
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
 .sc-header-offset {
-  padding-top: rem(96);
+  padding-top: rem(72);
+
+  @media (min-width: rem(640)) {
+    padding-top: rem(96);
+  }
 }
 
 /**
