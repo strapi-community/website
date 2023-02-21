@@ -2,7 +2,7 @@
 @import "abstracts/_functions.scss";
 
 .container {
-  @apply col-span-4 p-6;
+  @apply col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3 p-6;
   background: $off-white;
   border-radius: rem(10);
 }
