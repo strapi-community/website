@@ -2,7 +2,7 @@
 @import "abstracts/_functions.scss";
 
 .container {
-  @apply flex p-10 rounded-2xl gap-10;
+  @apply flex flex-col sm:flex-row p-10 rounded-2xl gap-8 sm:gap-10;
   background: $off-white;
 
   &:hover {
@@ -13,9 +13,14 @@
 }
 
 .image {
-  height: rem(120);
-  width: rem(120);
+  height: rem(80);
+  width: rem(80);
   border-radius: 50%;
+
+  @media (min-width: 640px) {
+    height: rem(120);
+    width: rem(120);
+  }
 }
 
 .link {

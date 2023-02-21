@@ -1,16 +1,28 @@
 @import "abstracts/_functions.scss";
 
 .container {
-  @apply grid gap-6 relative;
-  grid-template-columns: auto auto auto auto auto auto;
-  grid-template-rows: rem(280) rem(280);
+  @apply grid gap-2 sm:gap-6 relative;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(6, rem(232));
   grid-template-areas:
-    "img-1 img-2 img-2 img-3 img-3 img-4"
-    "img-5 img-5 img-6 img-7 img-7 img-8";
-} 
+    "img-2 img-2"
+    "img-1 img-4"
+    "img-3 img-3"
+    "img-5 img-5"
+    "img-6 img-8"
+    "img-7 img-7";
+
+  @media (min-width: rem(640)) {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, rem(280));
+    grid-template-areas:
+      "img-1 img-2 img-2 img-3 img-3 img-4"
+      "img-5 img-5 img-6 img-7 img-7 img-8";
+  }
+}
 
 .image {
-  @apply w-full object-cover;
+  @apply absolute top-0 left-0 w-full h-full object-center object-cover;
   border-radius: rem(10);
 }
 

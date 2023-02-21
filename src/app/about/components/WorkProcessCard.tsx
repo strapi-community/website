@@ -19,8 +19,24 @@ export const WorkProcessCard = ({
 }: Props) => {
   const isEven = step % 2 === 0;
   return (
-    <div className="sc-grid">
-      <div className={clsx("col-span-6", isEven && "col-start-7")}>
+    <div className={styles.container}>
+      <div
+        className={clsx([
+          "col-span-12 sm:col-span-4 flex flex-col justify-center",
+          isEven ? "sm:col-start-2" : "sm:order-last sm:col-start-8",
+        ])}
+      >
+        <div className={styles.step}>STEP {step}</div>
+        <h3 className="sc-heading--three mb-4">{title}</h3>
+        <p>{description}</p>
+      </div>
+
+      <div
+        className={clsx(
+          "col-span-12 sm:col-span-6",
+          isEven && "sm:col-start-7"
+        )}
+      >
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -28,17 +44,6 @@ export const WorkProcessCard = ({
           height={440}
           className={styles.image}
         />
-      </div>
-
-      <div
-        className={clsx([
-          "col-span-4 flex flex-col justify-center",
-          isEven ? "order-first col-start-2" : "col-start-8",
-        ])}
-      >
-        <div className={styles.step}>STEP {step}</div>
-        <h3 className="sc-heading--three mb-4">{title}</h3>
-        <p>{description}</p>
       </div>
     </div>
   );

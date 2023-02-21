@@ -7,8 +7,12 @@
 
 .image {
   @apply w-full object-cover mb-4;
-  min-height: rem(305);
+  min-height: rem(180);
   border-radius: rem(10);
+
+  @media (min-width: rem(640)) {
+    min-height: rem(305);
+  }
 }
 
 .name {
@@ -20,7 +24,7 @@
 }
 
 .socialLink {
-  color: #8E8EA9;
+  color: #8e8ea9;
 
   :hover {
     color: $primary-color;

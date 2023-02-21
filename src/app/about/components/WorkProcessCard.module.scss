@@ -1,6 +1,12 @@
 @import "abstracts/_variables.scss";
 @import "abstracts/_functions.scss";
 @import "base/_typography.scss";
+@import "base/_helpers.scss";
+
+.container{
+  @extend .sc-grid;
+  @apply gap-y-10;
+}
 
 .image {
   @apply w-full object-cover;

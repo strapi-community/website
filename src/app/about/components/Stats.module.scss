@@ -3,7 +3,7 @@
 @import "base/_typography.scss";
 
 .container {
-  @apply px-14 py-16 rounded-2xl;
+  @apply px-6 sm:px-14 py-12 sm:py-16 rounded-2xl;
   background: #f6fafe;
 }
 
@@ -15,5 +15,9 @@
 }
 
 .label {
-  font-size: rem(17);
+  font-size: rem(15);
+  
+  @media (min-width: rem(640)) {
+    font-size: rem(17);
+  }
 }

@@ -6,6 +6,7 @@ import {
   Stats,
   WorkProcessCard,
 } from "./components";
+import styles from "./page.module.scss";
 
 const HOW_WE_WORK = [
   {
@@ -94,12 +95,22 @@ export default function About() {
             alt="image showing people working together"
             height={660}
             width={660}
-            className="absolute top-0 sc-decor--right"
+            className={styles.heroImage}
           />
 
-          <div className="col-span-5 col-start-2">
-            <h1 className="sc-heading--one mb-8 pt-32 ">
-              Building a better Strapi, together
+          <Image
+            src="/about/hero-image-mobile.png"
+            alt="image showing people working together"
+            height={660}
+            width={660}
+            className={styles.heroImageMobile}
+          />
+
+          <div className="col-span-12 sm:col-span-5 sm:col-start-2">
+            <h1 className={styles.heroTitle}>
+              Building a <br />
+              better Strapi, <br />
+              together
             </h1>
 
             <p className="mb-10">
@@ -110,7 +121,7 @@ export default function About() {
 
             <button className="sc__btn mb-12">Join us on Discord</button>
           </div>
-          
+
           <Image
             src="left-sided-dots-decor.svg"
             alt=""
@@ -128,9 +139,18 @@ export default function About() {
             alt=""
             width={350}
             height={350}
-            className="absolute -top-20 sc-decor--left"
+            className="absolute -top-20 sc-decor--left hidden sm:block"
           />
-          <div className="col-span-6 col-start-4">
+
+          <Image
+            src="top-left-decor-mobile.svg"
+            alt=""
+            width={80}
+            height={80}
+            className="absolute -top-20 sc-decor--left sm:hidden"
+          />
+
+          <div className="col-span-12 sm:col-span-6 sm:col-start-4">
             <h2 className="sc-heading--two text-center mb-14">
               Summarize what strapi community is
             </h2>
@@ -159,18 +179,18 @@ export default function About() {
             alt=""
             width={177}
             height={151}
-            className="absolute bottom-20 right-0"
+            className={styles.decorBeforeStats}
           />
         </div>
       </section>
 
-      <section className="container mb-40">
+      <section className="sm:container mb-28 sm:mb-40">
         <Stats />
       </section>
 
       <section className="container relative mb-40">
         <div className="sc-grid">
-          <div className="col-span-6 col-start-4 mb-24">
+          <div className="col-span-12 sm:col-span-6 sm:col-start-4 mb-16 sm:mb-24">
             <div className="sc-heading--tag text-center mb-4">
               Step by step process
             </div>
@@ -186,7 +206,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="container flex flex-col gap-24">
+        <div className="container flex flex-col gap-20 sm:gap-24">
           {HOW_WE_WORK.map((step, i) => (
             <WorkProcessCard {...step} step={i + 1} key={step.title} />
           ))}
@@ -197,44 +217,52 @@ export default function About() {
           alt=""
           width={200}
           height={271.5}
-          className="absolute -bottom-28 sc-decor--left -z-10"
+          className="absolute -bottom-28 sc-decor--left -z-10 hidden sm:block"
+        />
+
+        <Image
+          src="/left-sided-dots-decor.svg"
+          alt=""
+          width={135}
+          height={41.75}
+          className="absolute -bottom-28 left-5 -z-10 sm:hidden"
         />
       </section>
 
-      <section className="container mb-40">
+      <section className="container mb-28 sm:mb-40">
         <Gallery images={GALLERY} />
       </section>
 
       <section className="container mb-20">
-        <h2 className="sc-heading--two text-center">Key members</h2>
-        <p className="mb-20 text-center">
+        <h2 className="sc-heading--two text-center mb-4">Key members</h2>
+        <p className="mb-12 sm:mb-20 text-center">
           Team members or community stars goes here
         </p>
-        <div className="grid grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-5 sm:gap-10">
           {KEY_MEMBERS.map((member, i) => (
             <MemberCard {...member} key={i} />
           ))}
         </div>
       </section>
 
-      <section className="container relative mb-40">
+      <section className="container relative mb-28 sm:mb-40">
         <Image
           src="/top-right-decor.svg"
           alt=""
           width={300}
           height={300}
-          className="absolute top-0 sc-decor--right"
+          className="absolute top-0 sc-decor--right hidden sm:block"
         />
         <div className="sc-grid">
-          <div className="col-span-6 col-start-4">
+          <div className="col-span-12 sm:col-span-6 sm:col-start-4">
             <h2 className="sc-heading--two text-center mb-4">Resources</h2>
-            <p className="text-center mb-20">
+            <p className="text-center mb-12 sm:mb-20">
               Vestibulum eu quam nec neque pellentesque efficitur id eget nisl.
               Proin porta est convallis lacus blandit pretium sed.
             </p>
           </div>
 
-          <div className="col-span-8 col-start-3 flex flex-col gap-10">
+          <div className="col-span-12 sm:col-span-8 sm:col-start-3 flex flex-col gap-6 sm:gap-10">
             {RESOURCES.map((resource, i) => (
               <ResourceCard {...resource} key={i} />
             ))}
