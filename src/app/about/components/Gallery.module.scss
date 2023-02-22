@@ -3,7 +3,7 @@
 .container {
   @apply grid gap-2 sm:gap-6 relative;
   grid-template-columns: auto;
-  grid-template-rows: repeat(6, rem(232));
+  grid-template-rows: repeat(6, auto);
   grid-template-areas:
     "img-2 img-2"
     "img-1 img-4"
@@ -12,13 +12,18 @@
     "img-6 img-8"
     "img-7 img-7";
 
-  @media (min-width: rem(640)) {
+  @media (min-width: rem(1024)) {
     grid-template-columns: auto;
-    grid-template-rows: repeat(2, rem(280));
+    grid-template-rows: repeat(2, auto);
     grid-template-areas:
       "img-1 img-2 img-2 img-3 img-3 img-4"
       "img-5 img-5 img-6 img-7 img-7 img-8";
   }
+}
+
+.imageContainer {
+  @apply w-full relative;
+  padding-top: 132%;
 }
 
 .image {
@@ -56,4 +61,8 @@
 
 .image8 {
   grid-area: img-8;
+}
+
+.image2, .image3, .image5, .image7{
+  padding-top: 66.66%;
 }

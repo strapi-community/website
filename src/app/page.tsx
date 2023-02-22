@@ -253,7 +253,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="col-span-12 sm:col-span-10 sm:col-start-2 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10">
+          <div className="col-span-12 md:col-span-10 md:col-start-2 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
             {GET_INVOLVED.map((data, i) => (
               <GetInvolvedCard {...data} key={i} />
             ))}

@@ -22,7 +22,7 @@ export const BountyCard = ({
 }: Props) => {
   return (
     <div className={styles.container}>
-      <div className="flex flex-col sm:flex-row items-center gap-x-5 gap-y-6">
+      <div className="flex flex-col lg:flex-row items-center gap-x-5 gap-y-6">
         <Image
           src={imageSrc}
           alt={imageAlt}

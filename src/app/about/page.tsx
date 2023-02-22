@@ -238,7 +238,7 @@ export default function About() {
         <p className="mb-12 sm:mb-20 text-center">
           Team members or community stars goes here
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-5 sm:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-5 sm:gap-10">
           {KEY_MEMBERS.map((member, i) => (
             <MemberCard {...member} key={i} />
           ))}
@@ -251,18 +251,18 @@ export default function About() {
           alt=""
           width={300}
           height={300}
-          className="absolute top-0 sc-decor--right hidden sm:block"
+          className="absolute top-0 sc-decor--right hidden md:block"
         />
         <div className="sc-grid">
-          <div className="col-span-12 sm:col-span-6 sm:col-start-4">
+          <div className="col-span-12 md:col-span-6 md:col-start-4">
             <h2 className="sc-heading--two text-center mb-4">Resources</h2>
-            <p className="text-center mb-12 sm:mb-20">
+            <p className="text-center mb-12 md:mb-20">
               Vestibulum eu quam nec neque pellentesque efficitur id eget nisl.
               Proin porta est convallis lacus blandit pretium sed.
             </p>
           </div>
 
-          <div className="col-span-12 sm:col-span-8 sm:col-start-3 flex flex-col gap-6 sm:gap-10">
+          <div className="col-span-12 md:col-span-8 md:col-start-3 flex flex-col gap-6 md:gap-10">
             {RESOURCES.map((resource, i) => (
               <ResourceCard {...resource} key={i} />
             ))}

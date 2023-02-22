@@ -29,10 +29,10 @@ export const Filters = ({
   sortOptions,
 }: Props) => {
   const [showFilters, setShowFilters] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  const [isTablet, setIsTablet] = useState(window.innerWidth < 1024);
 
   useEffect(() => {
-    const resizeListener = () => setIsMobile(window.innerWidth < 640);
+    const resizeListener = () => setIsTablet(window.innerWidth < 640);
 
     window.addEventListener("resize", resizeListener);
 
@@ -42,9 +42,9 @@ export const Filters = ({
   }, []);
 
   useEffect(() => {
-    if (showFilters && isMobile) document.body.style.overflow = "hidden";
+    if (showFilters && isTablet) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "auto";
-  }, [showFilters, isMobile]);
+  }, [showFilters, isTablet]);
 
   const openFilters = () => setShowFilters(true);
 
@@ -131,7 +131,7 @@ export const Filters = ({
         </button>
       </div>
 
-      {isMobile && showFilters && (
+      {isTablet && showFilters && (
         <div className="fixed top-0 left-0 w-screen h-screen bg-white z-20 p-5 flex flex-col justify-between">
           <div>
             <div className="flex justify-end">

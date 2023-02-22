@@ -3,7 +3,7 @@
 @import "components/_buttons.scss";
 
 .container {
-  @apply hidden sm:flex sm:flex-col sm:gap-10;
+  @apply hidden lg:flex lg:flex-col lg:gap-10;
   width: rem(224);
 }
 
@@ -22,7 +22,7 @@
 }
 
 .mobileContainer {
-  @apply sm:hidden;
+  @apply lg:hidden;
 }
 
 .button {

@@ -3,7 +3,7 @@
 @import "components/_buttons.scss";
 
 .container {
-  @apply flex flex-col sm:flex-row items-center justify-between p-6 sm:p-5;
+  @apply col-span-1 flex flex-col lg:flex-row items-center justify-between p-6 lg:p-5;
   border-radius: rem(10);
   background: #f6fafe;
 }
@@ -13,32 +13,32 @@
   width: rem(64);
   border-radius: rem(10);
 
-  @media (min-width: 640px) {
+  @media (min-width: 1024px) {
     height: rem(84);
     width: rem(84);
   }
 }
 
 .body {
-  @media (min-width: 640px) {
+  @media (min-width: 1024px) {
     max-width: rem(357);
   }
 }
 
 .title {
-  @apply text-center sm:text-start font-semibold mb-4 sm:mb-1;
+  @apply text-center lg:text-start font-semibold mb-4 lg:mb-1;
   font-size: rem(17);
   line-height: 160%;
   color: $primary-dark-color;
 }
 
 .description {
-  @apply text-center sm:text-start mb-8 sm:mb-0;
+  @apply text-center lg:text-start mb-8 lg:mb-0;
   font-size: rem(15);
 }
 
 .bounty {
-  @apply hidden sm:block;
+  @apply hidden lg:block;
   font-size: rem(17);
   color: #181826;
   font-weight: 500;
@@ -48,7 +48,7 @@
 
 .bountyMobile {
   @extend .bounty;
-  @apply text-center block sm:hidden mb-4;
+  @apply text-center block lg:hidden mb-4;
 }
 
 .button {
@@ -56,7 +56,7 @@
   @apply w-full;
   height: rem(44);
 
-  @media (min-width: 640px) {
+  @media (min-width: 1024px) {
     @apply w-auto;
     height: rem(48);
   }

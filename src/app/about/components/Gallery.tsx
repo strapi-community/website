@@ -10,13 +10,14 @@ export const Gallery = ({ images }: Props) => {
   return (
     <div className={styles.container}>
       {images.map(({ imageSrc, imageAlt }, i) => (
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          className={clsx(styles["image" + (i + 1)], styles.image)}
-          key={i}
-          fill={true}
-        />
+        <figure key={i} className={clsx(styles["image" + (i + 1)], styles.imageContainer)}>
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            className={styles.image}
+            fill={true}
+          />
+        </figure>
       ))}
     </div>
   );

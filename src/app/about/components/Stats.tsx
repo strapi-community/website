@@ -5,7 +5,7 @@ export const Stats = () => {
     <div className={styles.container}>
       <h2 className="sc-heading--two mb-10 sm:mb-16">Our story in numbers.</h2>
 
-      <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-x-10 gap-y-10 sm:grid-cols-4">
         <div className="col-span-1">
           <h3 className={styles.value}>2015</h3>
           <p className={styles.label}>Strapi founded</p>

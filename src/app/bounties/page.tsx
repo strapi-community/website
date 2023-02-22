@@ -105,14 +105,14 @@ export default function Bounty() {
           alt=""
           width={400}
           height={400}
-          className="absolute top-12 sc-decor--right hidden sm:block -z-10"
+          className="absolute top-12 sc-decor--right hidden lg:block -z-10"
         />
 
         <h1 className="sc-heading--two text-center pt-10 sm:pt-16 mb-10 sm:mb-20">
           Bounty
         </h1>
 
-        <div className="flex flex-col sm:flex-row gap-x-40 gap-y-8">
+        <div className="flex flex-col lg:flex-row gap-x-40 gap-y-8">
           <Filters
             filters={filters}
             onFilterSelect={handleFilterSelect}
@@ -128,7 +128,7 @@ export default function Bounty() {
             <div className="flex justify-between items-center mb-6 sm:mb-9">
               <div>6 of 65 results</div>
 
-              <div className="hidden sm:block">
+              <div className="hidden lg:block">
                 <Dropdown
                   prefix="Sort by:"
                   value={sortBy}
@@ -138,7 +138,7 @@ export default function Bounty() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-6 mb-8 sm:mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 mb-8 sm:mb-12">
               {BOUNTIES.map((bounty, i) => (
                 <BountyCard {...bounty} key={i} />
               ))}
@@ -169,10 +169,10 @@ export default function Bounty() {
           alt=""
           width={350}
           height={350}
-          className="absolute -top-20 sc-decor--left hidden sm:block"
+          className="absolute -top-20 sc-decor--left hidden lg:block"
         />
         <div className="sc-grid">
-          <div className="col-span-12 sm:col-span-6 sm:col-start-4">
+          <div className="col-span-12 lg:col-span-6 lg:col-start-4">
             <h2 className="sc-heading--two text-center mb-4">Any questions</h2>
 
             <p className="text-center mb-12 sm:mb-20">

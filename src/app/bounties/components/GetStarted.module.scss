@@ -15,11 +15,14 @@
   }
 }
 
+.imageContainer{
+  @apply order-last md:flex-[2] lg:flex-none;
+}
+
 .image {
   @apply w-full h-auto;
 
   @media (min-width: 640px) {
-    @apply order-last;
     width: rem(450);
     height: rem(286);
   }
