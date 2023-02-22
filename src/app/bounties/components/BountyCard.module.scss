@@ -1,36 +1,63 @@
 @import "abstracts/_variables.scss";
 @import "abstracts/_functions.scss";
+@import "components/_buttons.scss";
 
 .container {
-  @apply flex items-center justify-between p-5;
+  @apply flex flex-col sm:flex-row items-center justify-between p-6 sm:p-5;
   border-radius: rem(10);
   background: #f6fafe;
 }
 
 .image {
-  @apply mr-5;
+  height: rem(64);
+  width: rem(64);
   border-radius: rem(10);
+
+  @media (min-width: 640px) {
+    height: rem(84);
+    width: rem(84);
+  }
 }
 
 .body {
-  max-width: rem(357);
+  @media (min-width: 640px) {
+    max-width: rem(357);
+  }
 }
 
 .title {
+  @apply text-center sm:text-start font-semibold mb-4 sm:mb-1;
   font-size: rem(17);
-  font-weight: 600;
   line-height: 160%;
   color: $primary-dark-color;
 }
 
 .description {
+  @apply text-center sm:text-start mb-8 sm:mb-0;
   font-size: rem(15);
 }
 
 .bounty {
+  @apply hidden sm:block;
   font-size: rem(17);
   color: #181826;
   font-weight: 500;
   line-height: 130%;
   min-width: rem(120);
+}
+
+.bountyMobile {
+  @extend .bounty;
+  @apply text-center block sm:hidden mb-4;
+}
+
+.button {
+  @extend .sc__btn;
+  @apply w-full;
+  height: rem(44);
+
+  @media (min-width: 640px) {
+    @apply w-auto;
+    height: rem(48);
+  }
 }

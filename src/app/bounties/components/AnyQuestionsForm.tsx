@@ -13,7 +13,7 @@ export const AnyQuestionsForm = () => {
   };
 
   return (
-    <div className="flex flex-col gap-6 px-16">
+    <div className="flex flex-col gap-4  sm:gap-6 sm:px-16">
       <TextInput
         id="name"
         label="Name"

@@ -1,8 +1,7 @@
 import Select, { components } from "react-select";
 import { BiCaretDown } from "react-icons/bi";
-import { TextInput } from "../TextInput";
 
-type Option = {
+export type Option = {
   label: string;
   value: string;
 };
@@ -14,6 +13,7 @@ interface Props {
   options: Option[];
   value: Option;
   onChange: (option: Option) => void;
+  className?: string;
 }
 
 export const Dropdown = ({
@@ -23,6 +23,7 @@ export const Dropdown = ({
   options,
   value,
   onChange,
+  className = ""
 }: Props) => {
   return (
     <Select
@@ -92,6 +93,7 @@ export const Dropdown = ({
         }),
       }}
       isSearchable={false}
+      className={className}
     />
   );
 };

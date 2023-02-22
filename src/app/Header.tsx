@@ -14,7 +14,7 @@ const LINKS = [
 
 export const Header = () => {
   const [animateHeader, setAnimateHeader] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
   useEffect(() => {
     const scrollListener = () => {

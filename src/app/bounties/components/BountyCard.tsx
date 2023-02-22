@@ -22,7 +22,7 @@ export const BountyCard = ({
 }: Props) => {
   return (
     <div className={styles.container}>
-      <div className="flex">
+      <div className="flex flex-col sm:flex-row items-center gap-x-5 gap-y-6">
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -33,15 +33,18 @@ export const BountyCard = ({
 
         <div className={styles.body}>
           <h3 className={styles.title}>{title}</h3>
+
+          <p className={styles.bountyMobile}>${bountyAmt}</p>
+
           <p className={styles.description}>{description}</p>
         </div>
       </div>
 
       <p className={styles.bounty}>${bountyAmt}</p>
 
-      <Link href={linkTo} className="sc__btn sm">
+      <Link href={linkTo} className={styles.button}>
         <span className="mr-2">View Bounty</span>
-        <BiRightArrowAlt size={24} className="transition" data-arrow/>
+        <BiRightArrowAlt size={24} className="transition" data-arrow />
       </Link>
     </div>
   );
