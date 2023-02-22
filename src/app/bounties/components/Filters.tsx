@@ -10,6 +10,7 @@ export type Filter = { label: string; checked: boolean };
 interface Props {
   filters: Filter[];
   onFilterSelect: (label: string) => void;
+  onFiltersUpdate: (filter: Filter[]) => void;
   bountyState: string;
   onBountyStateSelect: (state: string) => void;
   sortValue: Option;
@@ -21,6 +22,7 @@ export const Filters = ({
   filters,
   bountyState,
   onFilterSelect,
+  onFiltersUpdate,
   onBountyStateSelect,
   sortValue,
   onSortChange,
@@ -46,7 +48,42 @@ export const Filters = ({
 
   const openFilters = () => setShowFilters(true);
 
-  const closeFilters = () => setShowFilters(false);
+  // reset inner filters to current ones when closing
+  const closeFilters = () => {
+    setInnerFilters(filters);
+    setInnerBountyState(bountyState);
+    setInnerSortBy(sortValue);
+    setShowFilters(false);
+  };
+
+  // Internal state to handle mobile's apply logic
+  const [innerFilters, setInnerFilters] = useState<Filter[]>(filters);
+  const [innerBountyState, setInnerBountyState] = useState(bountyState);
+  const [innerSortBy, setInnerSortBy] = useState(sortValue);
+
+  // update inner states when filters change
+  useEffect(() => {
+    setInnerFilters(filters);
+    setInnerBountyState(bountyState);
+    setInnerSortBy(sortValue);
+  }, [filters, bountyState, sortValue]);
+
+  const handleFilterSelect = (label: string) => {
+    setInnerFilters((prev) =>
+      prev.map((filter) =>
+        filter.label === label
+          ? { label: filter.label, checked: !filter.checked }
+          : filter
+      )
+    );
+  };
+
+  const handleApply = () => {
+    onFiltersUpdate(innerFilters);
+    onBountyStateSelect(innerBountyState);
+    onSortChange(innerSortBy);
+    setShowFilters(false);
+  };
 
   return (
     <>
@@ -94,61 +131,67 @@ export const Filters = ({
         </button>
       </div>
 
-      {showFilters && (
-        <div className="fixed top-0 left-0 w-screen h-screen bg-white z-20 p-5">
-          <div className="flex justify-end">
-            <button className="p-3" onClick={closeFilters}>
-              <BiX size={20} />
-            </button>
-          </div>
-
-          <h2 className="sc-heading--four mb-4">Sort Content</h2>
-
-          <div className="mb-10">
-            <Dropdown
-              prefix="Sort by:"
-              value={sortValue}
-              onChange={onSortChange}
-              options={sortOptions}
-            />
-          </div>
-
-          <h2 className="sc-heading--four mb-4">Filter</h2>
-
-          <div className="mb-10">
-            <h5 className={styles.titleMobile}>Workflow</h5>
-
-            <div className="flex flex-col gap-4 relative">
-              {filters.map(({ label, checked }) => (
-                <Checkbox
-                  label={label}
-                  checked={checked}
-                  onCheck={onFilterSelect}
-                  key={label}
-                />
-              ))}
-            </div>
-          </div>
-
+      {isMobile && showFilters && (
+        <div className="fixed top-0 left-0 w-screen h-screen bg-white z-20 p-5 flex flex-col justify-between">
           <div>
-            <h5 className={styles.titleMobile}>State</h5>
+            <div className="flex justify-end">
+              <button className="p-3" onClick={closeFilters}>
+                <BiX size={20} />
+              </button>
+            </div>
 
-            <div className="flex flex-col gap-4">
-              <RadioButton
-                id="radio-1"
-                label="ongoing"
-                checked={bountyState === "ongoing"}
-                onSelect={onBountyStateSelect}
-              />
+            <h2 className="sc-heading--four mb-4">Sort Content</h2>
 
-              <RadioButton
-                id="radio-2"
-                label="completed"
-                checked={bountyState === "completed"}
-                onSelect={onBountyStateSelect}
+            <div className="mb-10">
+              <Dropdown
+                prefix="Sort by:"
+                value={innerSortBy}
+                onChange={setInnerSortBy}
+                options={sortOptions}
               />
             </div>
+
+            <h2 className="sc-heading--four mb-4">Filter</h2>
+
+            <div className="mb-10">
+              <h5 className={styles.titleMobile}>Workflow</h5>
+
+              <div className="flex flex-col gap-4 relative">
+                {innerFilters.map(({ label, checked }) => (
+                  <Checkbox
+                    label={label}
+                    checked={checked}
+                    onCheck={handleFilterSelect}
+                    key={label}
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h5 className={styles.titleMobile}>State</h5>
+
+              <div className="flex flex-col gap-4">
+                <RadioButton
+                  id="radio-1"
+                  label="ongoing"
+                  checked={innerBountyState === "ongoing"}
+                  onSelect={setInnerBountyState}
+                />
+
+                <RadioButton
+                  id="radio-2"
+                  label="completed"
+                  checked={innerBountyState === "completed"}
+                  onSelect={setInnerBountyState}
+                />
+              </div>
+            </div>
           </div>
+
+          <button className="sc__btn" onClick={handleApply}>
+            Apply
+          </button>
         </div>
       )}
     </>

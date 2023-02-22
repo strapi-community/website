@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   AnyQuestionsForm,
   BountyCard,
@@ -72,7 +72,7 @@ const SORT_BY_OPTIONS = [
   { label: "Oldest", value: "date-asc" },
   { label: "Bounty (Low to High)", value: "bounty-asc" },
   { label: "Bounty (High to Low)", value: "bounty-desc" },
-]
+];
 
 export default function Bounty() {
   const [filters, setFilters] = useState<Filter[]>([
@@ -95,6 +95,8 @@ export default function Bounty() {
     );
   };
 
+  console.log(filters)
+
   return (
     <>
       <section className="sc-header-offset container relative mb-28 sm:mb-40">
@@ -114,6 +116,7 @@ export default function Bounty() {
           <Filters
             filters={filters}
             onFilterSelect={handleFilterSelect}
+            onFiltersUpdate={setFilters}
             bountyState={bountyState}
             onBountyStateSelect={setBountyState}
             sortValue={sortBy}
