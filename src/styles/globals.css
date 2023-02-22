@@ -3,9 +3,29 @@
 @tailwind utilities;
 
 html{
-  @apply scroll-smooth;
+  @apply scroll-smooth font-sans;
 }
 body {
-  font-family: 'Poppins', sans-serif, Segoe UI, Roboto, Oxygen, Fira Sans, Droid Sans;
   overflow-x: hidden;
+  @apply bg-white dark:bg-darkBg overflow-hidden overflow-y-auto transition
+}
+
+.clipTriangle{
+  -webkit-clip-path: polygon(50% 0, 0 50%, 50% 97%);
+clip-path: polygon(50% 0, 0 50%, 50% 97%);
+}
+
+.clipTriangleTopLeft{
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+
+.clipTriangleBottomRight{
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0);
+  clip-path: polygon(0 100%, 100% 100%, 100% 0);
+}
+
+.clipTriangleTopRight{
+  -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
 }

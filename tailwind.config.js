@@ -6,8 +6,23 @@ module.exports = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode:"class",
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        primary:"#4945ff",
+        title:"#212067",
+        text:"#344b80",
+        darkCard:"#121214",
+        darkBg:"#0c0c0d"
+      },
+      screens:{
+        xs:"330px"
+      },
+      zIndex:{
+        600:"600"
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/line-clamp'), 
