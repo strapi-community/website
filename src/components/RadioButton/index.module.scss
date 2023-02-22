@@ -2,7 +2,36 @@
 @import "abstracts/_functions.scss";
 
 .input {
-  accent-color: $primary-color;
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+
+  /* Custom styling */
+  border-radius: 50%;
+  border: 1px solid #c0c0cf;
   height: rem(24);
   width: rem(24);
+  display: grid;
+  place-content: center;
+
+  &:before {
+    content: "";
+    display: block;
+    height: rem(14);
+    width: rem(14);
+    transform: scale(0);
+    transition: 60ms transform ease-in;
+  }
+
+  &:checked {
+    border-color: $primary-color;
+  }
+
+  &:checked:before {
+    border-radius: 50%;
+    background: $primary-color;
+    transform: scale(1);
+  }
+  /* Custom styling */
+  accent-color: $primary-color;
 }
