@@ -12,7 +12,7 @@ function ThemeSwitcher() {
                 }
                 return setTheme("light");
             }}
-            className="outline-none rounded-md p-3.5 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-50 dark:text-gray-200">
+            className="outline-none rounded-md  p-1.5 sm:p-2.5 hover:bg-gray-100 dark:hover:bg-darkCard text-gray-500 dark:text-gray-200">
             <span className="sr-only">Switch Theme</span>
             {theme === "light"
                 ?

@@ -20,7 +20,7 @@ function getBtnClasses(variant:"primary"|"secondary"){
 export default function BtnLink({href, text, variant, className, externalLink}:Props) {
   return (
     <Link href={href === "" ? "#" : href} target={externalLink?"_blank":""} className={`
-        px-6 py-3 rounded-md transition
+        px-6 py-3 rounded-lg transition
         ${getBtnClasses(variant)}
         ${className}
     `}>
