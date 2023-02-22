@@ -32,7 +32,7 @@ export const Filters = ({
   const [isTablet, setIsTablet] = useState(window.innerWidth < 1024);
 
   useEffect(() => {
-    const resizeListener = () => setIsTablet(window.innerWidth < 640);
+    const resizeListener = () => setIsTablet(window.innerWidth < 1024);
 
     window.addEventListener("resize", resizeListener);
 
@@ -132,11 +132,11 @@ export const Filters = ({
       </div>
 
       {isTablet && showFilters && (
-        <div className="fixed top-0 left-0 w-screen h-screen bg-white z-20 p-5 flex flex-col justify-between">
+        <div className="fixed top-0 left-0 w-full h-full bg-white z-20 p-5 flex flex-col justify-between">
           <div>
             <div className="flex justify-end">
               <button className="p-3" onClick={closeFilters}>
-                <BiX size={20} />
+                <BiX size={24} />
               </button>
             </div>
 
