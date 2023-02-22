@@ -17,9 +17,10 @@ module.exports = {
         darkBg:"#0c0c0d"
       },
       screens:{
-        xs:"330px"
+        xs:"380px"
       },
       zIndex:{
+        550:"550",
         600:"600"
       },
     },
