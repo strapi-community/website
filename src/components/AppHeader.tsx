@@ -1,12 +1,47 @@
-import { useWindowScroll } from "@/hooks/useWindowScroll";
-import { useTheme } from "next-themes";
+import { useCallback, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useState } from "react";
+
+import { useWindowScroll } from "@/hooks/useWindowScroll";
+
 import AppContainer from "./atoms/AppContainer";
-import { FacebookIco, TwitterIcon, GithubIcon, YoutubeIcon, DiscordIcon } from "@/components/icons/social";
+import { GithubIcon, DiscordIcon } from "@/components/icons/social";
 import NavItem from "./atoms/NavItem";
 import ThemeSwitcher from "./elements/ThemeSwitcher";
+
+
+const navLinks = [
+  {
+    text: "Home",
+    href: "/",
+    externalLink: false
+  },
+  {
+    text: "About",
+    href: "/about-community",
+    externalLink: false
+  },
+  {
+    text: "Showcases",
+    href: "/showcases",
+    externalLink: false
+  },
+  {
+    text: "Articles",
+    href: "/articles",
+    externalLink: false
+  },
+  {
+    text: "Bounty",
+    href: "/bounty",
+    externalLink: false
+  },
+  {
+    text: "Forum",
+    href: "https://forum.strapi.io/",
+    externalLink: true
+  },
+]
 
 
 export default function AppHeader() {
@@ -37,7 +72,6 @@ export default function AppHeader() {
     [],
   )
 
-  const { theme } = useTheme()
 
 
   return (
@@ -70,25 +104,23 @@ export default function AppHeader() {
             ${navOpen ? "!-left-0 transition-all" : "-left-full lg:-left-0"}`
             }>
               <ul onClick={closeNav} className="flex flex-col lg:flex-row lg:items-center gap-y-3 lg:gap-x-4 text-title dark:text-gray-100">
-                <NavItem text="Home" href="/" />
-                <NavItem text="About" href="/about-community" />
-                <NavItem text="Showcases" href="/showcases" />
-                <NavItem text="Articles" href="/articles" />
-                <NavItem text="Bounty" href="/bounty" />
-                <NavItem text="Forum" href="#" externalLink />
+                {navLinks.map((navlink, index)=>(
+                  <NavItem key={index} {...navlink} />
+                ))
+                }
               </ul>
             </div>
 
 
-            {/* nav actions */}
+            {/* action links */}
             <div className="flex items-center gap-3 min-w-max">
               <div className="flex gap-2">
-                <a href={"#"} target="_blank" rel="noreferrer" className="outline-none rounded-md p-1.5 sm:p-2.5 hover:bg-gray-100 dark:hover:bg-darkCard text-gray-500 dark:text-gray-200">
+                <a href={"https://github.com/strapi-community/"} target="_blank" rel="noreferrer" className="outline-none rounded-md p-1.5 sm:p-2.5 hover:bg-gray-100 dark:hover:bg-darkCard text-gray-500 dark:text-gray-200">
                   <span className="sr-only">Github</span>
                   <GithubIcon />
                 </a>
 
-                <a href={"#"} target="_blank" rel="noreferrer" className="outline-none rounded-md p-1.5 sm:p-2.5 hover:bg-gray-100 dark:hover:bg-darkCard text-gray-500 dark:text-gray-200">
+                <a href={"https://discord.com/invite/strapi"} target="_blank" rel="noreferrer" className="outline-none rounded-md p-1.5 sm:p-2.5 hover:bg-gray-100 dark:hover:bg-darkCard text-gray-500 dark:text-gray-200">
                   <span className="sr-only">Discord</span>
                   <DiscordIcon />
                 </a>
@@ -99,23 +131,28 @@ export default function AppHeader() {
                 <button
                   onClick={toggleNavBar}
                   className="outline-none w-7 h-auto flex flex-col relative">
+
                   <span className="sr-only">toggle navbar</span>
+
                   <span className={
                     `w-6 h-0.5 rounded-full bg-gray-500 dark:bg-gray-200 transition-all 
-                  duration-300 ease-linear
-                  ${navOpen ? "translate-y-1.5 rotate-[40deg] scale-x-100" : "scale-x-50 origin-left"}`
-                  }></span>
+                      duration-300 ease-linear
+                      ${navOpen ? "translate-y-1.5 rotate-[40deg] scale-x-100" : "scale-x-50 origin-left"}`
+                  }>
+                  </span>
+
                   <span className={
                     `w-6 mt-1 h-0.5 rounded-full bg-gray-500 dark:bg-gray-200
-                  transition-all duration-300 ease-linear scale-75 origin-left
-                  ${navOpen ? "scale-x-0 opacity-0" : ""}`
-                  }></span>
+                      transition-all duration-300 ease-linear scale-75 origin-left
+                      ${navOpen ? "scale-x-0 opacity-0" : ""}`
+                  }>
+                  </span>
+
                   <span className={
                     `w-6 mt-1 h-0.5 rounded-full bg-gray-500 dark:bg-gray-200 transition-all
-                  duration-300 ease-linear
-                  ${navOpen ? "-translate-y-1.5 -rotate-[40deg] scale-x-100" : "scale-x-75 origin-left"}
-                  `
-                  }></span>
+                      duration-300 ease-linear
+                      ${navOpen ? "-translate-y-1.5 -rotate-[40deg] scale-x-100" : "scale-x-75 origin-left"}
+                  `}></span>
                 </button>
               </div>
             </div>

@@ -12,6 +12,7 @@ module.exports = {
       colors:{
         primary:"#4945ff",
         title:"#212067",
+        title1:"#171693",
         text:"#344b80",
         darkCard:"#121214",
         darkBg:"#0c0c0d"
