@@ -30,6 +30,14 @@
     2xl:right-24;
   }
 
+  &--right-negative {
+    @apply -right-1
+    sm:-right-8
+    lg:-right-16
+    xl:-right-20
+    2xl:-right-24;
+  }
+
   &--left {
     @apply -left-4
     sm:-left-8

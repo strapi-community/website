@@ -103,7 +103,7 @@ export default function Bounty() {
           alt=""
           width={400}
           height={400}
-          className="absolute top-12 sc-decor--right hidden lg:block -z-10"
+          className="absolute top-12 sc-decor--right-negative hidden lg:block -z-10"
         />
 
         <h1 className="sc-heading--two text-center pt-10 sm:pt-16 mb-10 sm:mb-20">
