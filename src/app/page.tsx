@@ -145,7 +145,9 @@ export default function Home() {
           <div className="col-span-12 sm:col-span-8 sm:col-start-3 sm:text-center z-10">
             <div className="flex flex-col items-start sm:items-center sm:px-8 mb-14 sm:mb-20">
               <h1 className="sc-heading--one mb-6 sm:mb-8">
-                Build for Strapi.
+                Build for{" "}
+                <br className="sm:hidden" />
+                Strapi.
                 <br />
                 Get paid.
               </h1>
