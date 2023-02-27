@@ -1,0 +1,53 @@
+.siteCredit {
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 0;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #000;
+
+  &:hover {
+    .icon {
+      opacity: 1;
+      transform: translateY(-50%) scale(1) rotate(0deg);
+    }
+
+    .name::after {
+      transform: translateY(140%) skewY(30deg);
+    }
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.name {
+  display: inline-flex;
+  opacity: 1;
+  color: transparent;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    @apply ease-in-out;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000;
+    transition: transform 0.8s;
+  }
+}
+
+.icon {
+  @apply ease-in-out;
+  height: 32px;
+  width: auto;
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%) scale(0.9) rotate(16deg);
+  transition: transform 1s, opacity 0.4s;
+}

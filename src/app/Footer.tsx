@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   BsDiscord,
   BsFacebook,
@@ -12,11 +12,26 @@ import {
   BsTwitter,
   BsYoutube,
 } from "react-icons/bs";
-import { TextInput } from "@/components";
+import { TextInput, SiteCredit } from "@/components";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
   const [email, setEmail] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.console.log.apply(console, [
+        "\n %c Made with \u2665 by ottr %c %c %c https://www.ottr.com.np/ %c %c \n",
+        "color: #fff; background: #ff3c1c; padding:5px 8px;",
+        "background: #131419; padding:5px 0;",
+        "background: #131419; padding:5px 0;",
+        "color: #fff; background: #1c1c1c; padding:5px 0;",
+        "background: #000; padding:5px 0;",
+        "color: #ff3c1c; background: #000; padding:5px 0;",
+      ]);
+    }
+  }, []);
+
   return (
     <footer>
       <div className={styles.head}>
@@ -139,9 +154,9 @@ export const Footer = () => {
           © 2023, Strapi. All rights reserved
         </p>
 
-        <p className="col-span-12 text-center sm:text-start sm:col-start-11 sm:col-span-2">
-          Designed by Ottr
-        </p>
+        <div className="col-span-12 sm:col-start-11 sm:col-span-2 flex justify-center sm:justify-start">
+          <SiteCredit />
+        </div>
       </div>
     </footer>
   );
