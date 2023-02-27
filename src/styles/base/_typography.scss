@@ -30,7 +30,7 @@
       @extend .sc-heading;
       font-size: rem(24);
       line-height: 130%;
-      letter-spacing: -0.02em; 
+      letter-spacing: -0.02em;
 
       @media (min-width: rem(640)) {
         font-size: rem(32);
@@ -53,6 +53,7 @@
       font-size: rem(13);
       font-weight: 700;
       line-height: 100%;
+      letter-spacing: rem(1);
       color: $secondary-color;
     }
   }

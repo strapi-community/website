@@ -42,8 +42,9 @@
   font-size: rem(17);
   color: #181826;
   font-weight: 500;
-  line-height: 130%;
+  line-height: rem(13);
   min-width: rem(120);
+  letter-spacing: rem(1);
 }
 
 .bountyMobile {

@@ -165,7 +165,7 @@ export default function Home() {
 
             <div className="mb-12 sm:mb-24">
               <p className="mb-4 sm:mb-6">Trusted by developers from</p>
-              <div className="flex flex-wrap gap-5 sm:gap-10 justify-around">
+              <div className="flex flex-wrap gap-5 sm:gap-10 justify-around lg:justify-between">
                 {TRUSTED_BY.map((image, index) => (
                   <Image
                     src={image}
@@ -183,7 +183,7 @@ export default function Home() {
             alt=""
             width={200}
             height={273}
-            className="absolute top-1/2 left-0 hidden lg:block"
+            className="absolute top-[36%] left-0 hidden lg:block"
           />
         </div>
       </section>
@@ -271,7 +271,7 @@ export default function Home() {
         />
       </section>
 
-      <section className="container relative pt-8 sm:pt-24 pb-28 sm:pb-40">
+      <section className="container relative pt-8 sm:pt-0 pb-28 sm:pb-40">
         <div className="sc-grid">
           <div className="col-span-12 sm:col-span-6 sm:col-start-4 mb-12 sm:mb-20">
             <div className="sc-heading--tag text-center mb-4">Bounties</div>
@@ -288,7 +288,7 @@ export default function Home() {
             {BOUNTIES.map((bounty, i) => (
               <BountyCard {...bounty} key={i} />
             ))}
-            <div className="col-span-1 sm:col-span-3 flex justify-center">
+            <div className="col-span-1 sm:col-span-3 flex justify-center sm:mt-4">
               <Link href="/bounties" className="sc__btn--outline">
                 View all bounties
               </Link>
