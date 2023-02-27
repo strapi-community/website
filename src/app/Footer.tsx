@@ -19,17 +19,15 @@ export const Footer = () => {
   const [email, setEmail] = useState("");
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.console.log.apply(console, [
-        "\n %c Designed by ottr %c %c %c https://www.ottr.com.np/ %c %c \n",
-        "color: #fff; background: #ff3c1c; padding:5px 8px;",
-        "background: #131419; padding:5px 0;",
-        "background: #131419; padding:5px 0;",
-        "color: #fff; background: #1c1c1c; padding:5px 0;",
-        "background: #000; padding:5px 0;",
-        "color: #ff3c1c; background: #000; padding:5px 0;",
-      ]);
-    }
+    window.console.log.apply(console, [
+      "\n %c Designed by ottr %c %c %c https://www.ottr.com.np/ %c %c \n",
+      "color: #fff; background: #ff3c1c; padding:5px 8px;",
+      "background: #131419; padding:5px 0;",
+      "background: #131419; padding:5px 0;",
+      "color: #fff; background: #1c1c1c; padding:5px 0;",
+      "background: #000; padding:5px 0;",
+      "color: #ff3c1c; background: #000; padding:5px 0;",
+    ]);
   }, []);
 
   return (

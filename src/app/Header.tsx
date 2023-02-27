@@ -14,7 +14,9 @@ const LINKS = [
 
 export const Header = () => {
   const [animateHeader, setAnimateHeader] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" && window.innerWidth < 640
+  );
 
   useEffect(() => {
     const scrollListener = () => {
@@ -70,10 +72,7 @@ export const Header = () => {
           </ul>
         </nav>
 
-        <button
-          className={styles.menu}
-          onClick={handleMenuClick(!showMenu)}
-        >
+        <button className={styles.menu} onClick={handleMenuClick(!showMenu)}>
           {!showMenu ? <BiMenu size={24} /> : <BiX size={24} />}
         </button>
       </div>
@@ -83,7 +82,9 @@ export const Header = () => {
           <ul className={styles.links}>
             {LINKS.map(({ label, href }) => (
               <li className={styles.link} key={label}>
-                <Link href={href} onClick={handleMenuClick(false)}>{label}</Link>
+                <Link href={href} onClick={handleMenuClick(false)}>
+                  {label}
+                </Link>
               </li>
             ))}
           </ul>

@@ -29,7 +29,9 @@ export const Filters = ({
   sortOptions,
 }: Props) => {
   const [showFilters, setShowFilters] = useState(false);
-  const [isTablet, setIsTablet] = useState(window.innerWidth < 1024);
+  const [isTablet, setIsTablet] = useState(
+    typeof window !== "undefined" && window.innerWidth < 1024
+  );
 
   useEffect(() => {
     const resizeListener = () => setIsTablet(window.innerWidth < 1024);
