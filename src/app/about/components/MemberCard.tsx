@@ -29,7 +29,7 @@ export const MemberCard = ({
 
       <h3 className={styles.name}>{name}</h3>
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 sm:gap-3">
         {!!twitter && (
           <a
             href={twitter}

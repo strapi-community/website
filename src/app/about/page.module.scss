@@ -10,6 +10,11 @@
   height: rem(420);
 
   @media (min-width: 1024px) {
+    width: rem(520);
+    height: rem(520);
+  }
+
+  @media (min-width: 1440px) {
     width: rem(660);
     height: rem(660);
   }

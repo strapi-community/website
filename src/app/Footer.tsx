@@ -21,7 +21,7 @@ export const Footer = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.console.log.apply(console, [
-        "\n %c Made with \u2665 by ottr %c %c %c https://www.ottr.com.np/ %c %c \n",
+        "\n %c Designed by ottr %c %c %c https://www.ottr.com.np/ %c %c \n",
         "color: #fff; background: #ff3c1c; padding:5px 8px;",
         "background: #131419; padding:5px 0;",
         "background: #131419; padding:5px 0;",

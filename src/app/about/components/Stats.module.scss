@@ -9,7 +9,7 @@
 
 .value {
   @extend .sc-heading--two;
-  @apply mb-4;
+  @apply font-medium mb-4;
   line-height: 119%;
   letter-spacing: -0.03em;
 }

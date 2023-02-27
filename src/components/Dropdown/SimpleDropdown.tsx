@@ -42,7 +42,7 @@ export const SimpleDropdown = ({
           className={clsx(styles.select, value === "" && styles.placeholder)}
         >
           {!!placeholder && (
-            <option value="" disabled selected hidden>
+            <option value="" disabled hidden>
               {placeholder}
             </option>
           )}

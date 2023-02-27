@@ -95,8 +95,6 @@ export default function Bounty() {
     );
   };
 
-  console.log(filters)
-
   return (
     <>
       <section className="sc-header-offset container relative mb-28 sm:mb-40">
@@ -112,7 +110,7 @@ export default function Bounty() {
           Bounty
         </h1>
 
-        <div className="flex flex-col lg:flex-row gap-x-40 gap-y-8">
+        <div className="flex flex-col lg:flex-row gap-x-16 gap-y-8">
           <Filters
             filters={filters}
             onFilterSelect={handleFilterSelect}

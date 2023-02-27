@@ -253,10 +253,10 @@ export default function About() {
           height={300}
           className="absolute top-0 sc-decor--right hidden md:block"
         />
-        <div className="sc-grid">
+        <div className="sc-grid md:pt-24">
           <div className="col-span-12 md:col-span-6 md:col-start-4">
             <h2 className="sc-heading--two text-center mb-4">Resources</h2>
-            <p className="text-center mb-12 md:mb-20">
+            <p className="text-center mb-6 md:mb-20">
               Vestibulum eu quam nec neque pellentesque efficitur id eget nisl.
               Proin porta est convallis lacus blandit pretium sed.
             </p>
