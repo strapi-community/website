@@ -13,7 +13,7 @@ git clone URL
 2. CD into the folder and run NPM install
 
 ```
-npm i 
+npm i --force
 ```
 3. Open port 300:
 ```
