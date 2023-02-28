@@ -51,7 +51,7 @@ export default function WhyJoinUs() {
                                 <span className="absolute w-full h-full -left-4 -top-4 skew-y-6 bg-gradient-to-br from-purple-600 rounded-3xl"></span>
                                 <span className="absolute w-full h-full left-4 top-4 skew-y-6 bg-primary/30 rounded-3xl"></span>
                                 <Image
-                                    src="/images/community-img2.webp"
+                                    src="/images/community-img1.webp"
                                     alt="Illustratuin about"
                                     width={1500}
                                     height={750}
