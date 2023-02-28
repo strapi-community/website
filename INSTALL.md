@@ -27,3 +27,6 @@ or
 ```shell
 npm run dev
 ```
+
+## Live Demo Available
+https://ottr-strapi-community.netlify.app/
