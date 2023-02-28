@@ -3,12 +3,40 @@ import {
   Typography, Button, Divider, Box, TextInput, Textarea, Tooltip,
 } from '@strapi/design-system';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { Carousel } from 'react-responsive-carousel';
+import ReactPlayer from 'react-player';
 import upstairs from '../assets/images/upstairs.png';
 import plane from '../assets/images/plane.svg';
 import triangleCenter from '../assets/images/triangle-center.svg';
 import dotted from '../assets/images/dotted.svg';
 import multikite from '../assets/images/multikite.svg';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
+function YoutubeSlide({ url, isSelected }) {
+  return <ReactPlayer width="100%" url={url} playing={isSelected} />;
+}
+
+function YoutubeAutoplayWithCustomThumbs() {
+  const customRenderItem = (item, props) => <item.type {...item.props} {...props} />;
+
+  const getVideoThumb = (videoId) => `https://img.youtube.com/vi/${videoId}/default.jpg`;
+
+  const getVideoId = (url) => url.substr('https://www.youtube.com/embed/'.length, url.length);
+
+  const customRenderThumb = (children) => children.map((item) => {
+    const videoId = getVideoId(item.props.url);
+    return <img alt="youtube video" src={getVideoThumb(videoId)} />;
+  });
+
+  return (
+    <Carousel renderItem={customRenderItem} renderThumbs={customRenderThumb}>
+      <YoutubeSlide key="youtube-1" url="https://www.youtube.com/embed/8IE8-EbzCx4" />
+      <YoutubeSlide key="youtube-2" url="https://www.youtube.com/embed/Ge-dDLgafP8" />
+      <YoutubeSlide key="youtube-3" url="https://www.youtube.com/embed/VP4AOpECkbc" />
+      <YoutubeSlide key="youtube-4" url="https://www.youtube.com/embed/Ge-dDLgafP8" />
+    </Carousel>
+  );
+}
 export default function About() {
   const [message, setMessage] = useState('');
   return (
@@ -22,6 +50,9 @@ export default function About() {
               Esse cillum amet aliqua velit. Consequat ipsum mollit commodo incididunt magna. Culpa eiusmod occaecat dolor ad sunt elit enim adipisicing. Cillum ea aliquip esse est nisi aute consequat nisi cillum id eiusmod excepteur cupidatat. Do nostrud commodo et et amet eiusmod Lorem. Ea consequat qui est officia ea sit quis mollit officia ex cillum esse.
             </p>
           </Typography>
+        </div>
+        <div className="my-10">
+          <YoutubeAutoplayWithCustomThumbs />
         </div>
       </div>
       <div className="my-20 md:my-40 flex flex-col justify-center items-center">

@@ -42,5 +42,6 @@ module.exports = {
     'no-unsafe-optional-chaining': 'off',
     'react/no-unescaped-entities': 'off',
     'no-nested-ternary': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 };

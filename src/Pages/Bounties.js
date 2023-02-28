@@ -18,6 +18,7 @@ export default function Bounties() {
       <div className="flex flex-col sm:flex-row sm:justify-between items-center relative z-10 my-10">
         <div className="w-full sm:w-1/2 ">
           <Typography variant="alpha"><p className="mt-5 text-defaultcol text-center sm:text-left dark:text-white">Community Bounty Page</p></Typography>
+          <Typography>Build and ship a plugin and get paid!</Typography>
         </div>
         <div className="my-5 w-full sm:w-5/6 flex flex-col sm:flex-row justify-center sm:justify-end items-center">
           <div className="relative w-full sm:w-1/2">
