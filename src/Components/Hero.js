@@ -108,7 +108,7 @@ export default function Hero() {
                   'Various diversities',
                   5000,
                   () => {
-                  // Place optional callbacks anywhere in the array
+                    // Place optional callbacks anywhere in the array
                   },
                 ]}
                 wrapper="div"
@@ -143,7 +143,7 @@ export default function Hero() {
         </div>
       </div>
       <img alt="hero" src={topRightSvg} className="absolute  top-0 right-0 md:right-10 w-40 z-0" />
-      <img alt="hero" src={bottomLeftSvg} className="absolute  bottom-28 md:bottom-10 w-40 h-40 left-0 md:left-5 z-0" />
+      <img alt="hero" src={bottomLeftSvg} className="absolute z-0  bottom-28 md:bottom-10 w-40 h-40 -left-7 md:left-5" />
     </div>
   );
 }
