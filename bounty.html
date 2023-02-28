@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strapi</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+    <style>* {
+      box-sizing: border-box;
+    }
+
+    .navbar1 ul li a {
+      font-size: 20px;
+    }
+
+    .navbar1 ul li a:hover {
+      background-color: #271fe0;
+      color: white;
+    }
+
+    .logo img {
+      float: left;
+      width: 200px;
+      height: auto;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .banner {
+      position: relative;
+    }
+
+    .btn1 {
+      position: absolute;
+      top: 80%;
+      left: 200px;
+    }
+
+    .btn1 button {
+      background-color: #E6E6FA;
+      color: black;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form {
+      border: 1px solid gray;
+      border-radius: 5px;
+    }
+
+    .form:hover {
+      box-shadow: 4px, 2px, 0, 0, #f1f1f1
+    }
+
+    /* Create 5 equal columns that floats next to each other */
+    .column1 {
+      float: left;
+      width: 20%;
+      padding: 15px;
+      margin-top: 25px;
+    }
+
+    .row1 {
+      background-image: linear-gradient(to right, #553c9a, #b393d3);
+      color: #fff;
+      line-height: 30px;
+    }
+
+    .fa {
+      padding: 10px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+
+    .fa-skype {
+      background: #00aff0;
+      color: white;
+    }
+
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+
+    .fa-yahoo {
+      background: #430297;
+      color: white;
+    }
+
+    /* Clear floats after the columns */
+    .row1:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    @media screen and (max-width:600px) {
+      .column1 {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .container {
+      padding: 64px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both
+    }
+
+    .column-66 {
+      float: left;
+      width: 50%;
+      padding: 20px;
+    }
+
+    .column-33 {
+      float: left;
+      width: 50%;
+      padding: 20px;
+    }
+
+    .large-font {
+      font-size: 48px;
+    }
+
+    .xlarge-font {
+      font-size: 64px
+    }
+
+    .button {
+      border: none;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #271fe0;
+    }
+
+    .column-33 img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+
+
+    @media screen and (max-width: 1000px) {
+
+      .column-66,
+      .column-33 {
+        width: 100%;
+        text-align: center;
+      }
+
+      .column-33 img {
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">
+        <div class="logo"><img src="strapilogo.png"></div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar1" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="MyProject.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bounty.html">Bounty</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+
+
+  <div class="banner">
+    <img src="Strapi.png" alt="strapi" width="100%" height="600px">
+    <div class="btn1"><button><a
+          href="https://strapi.io/blog/strapi-community-organization-announces-first-web-dev-competition?utm_campaign=ProductMarketing-StrapiBlog&utm_content=236394782&utm_medium=social&utm_source=linkedin&hss_channel=lcp-11251903"
+          style="text-decoration:none;">Explore Now</a></button></div>
+  </div>
+
+
+
+
+  <!-- Clarity Section -->
+  <div class="container" style="background-color:#f1f1f1">
+    <div class="row">
+      <div class="column-33">
+        <img src="strapicommunity.png" alt="strapicommunity" width="600px" height="471px" style="margin-top:40px;">
+      </div>
+      <div class="column-66">
+
+        <h1 class="large-font" style="color:#271fe0;"><b>Bringing the community together at Strapi meetups!</b></h1>
+        <p style="font-size:25px"> Due to the unfortunate events related to COVID-19, in-person community events are
+          being put on hold for the next few months. We feel the pain of all the conference and meetup organizers who
+          are forced to cancel their events and want to send them our support in this difficult and stressful time.</p>
+        <button class="button" style="background-color:#271fe0;border-radius:10px;"><a
+            href="https://strapi.io/blog/bringing-community-together-strapi-meetups"
+            style="text-decoration:none;color:white;border-radius:10px;">Explore Now</button></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- The App Section -->
+  <div class="container">
+    <div class="row">
+      <div class="column-66">
+
+        <h1 class="large-font" style="color:#271fe0;"><b>IRL events</b></h1>
+        <p style="font-size:25px"> As you all know, meetups are a key medium to meet, share, learn from and collaborate
+          with other members of open-source communities. As Strapi community members start to reach out and volunteer to
+          create local Strapi user groups, we think now is the time to officially support this kind of initiative.</p>
+        <button class="button" style="border-radius:10px;"><a
+            href="https://strapi.io/blog/bringing-community-together-strapi-meetups"
+            style="text-decoration:none;color:white;">Explore Now</button></a>
+      </div>
+      <div class="column-33">
+        <img src="strapi6.png" width="600px" height="471px" style="margin-top:40px;" class="zoom">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="col-lg-6">
+      <form class="container p-5 form2" id="contactform" name="contactform"
+        action="https://script.google.com/macros/s/AKfycbzxRw03hfQYj2zI1ij2Kye8byhA6l0gQJqepG0HVBcvmV0tBLX2TC9Q2LvAczl5OMng/exec">
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" name="Name"> plugin Name</label>
+          <input type="text" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" name="Number">Phone Number</label>
+          <input type="number" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" name="EmailID">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1">
+
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" name="Message">Text Area</label>
+          <textarea class="form-control" id="exampleInputPassword1" name="subject" placeholder="Enter plugin details.."
+            style="height:200px"></textarea>
+        </div>
+        <div class="mb-3">
+
+          <input type="radio" id="exampleInputEmail1" name="option" value="Category One">
+          <label for="exampleInputEmail1">Category One</label><br>
+          <input type="radio" id="exampleInputEmail1" name="option" value="Category Two">
+          <label for="exampleInputEmail1">Category Two</label><br>
+          <input type="radio" id="exampleInputEmail1" name="option" value="Category Three">
+          <label for="exampleInputEmail1">Category Three</label>
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Agree to the terms and conditions</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbwqY3tKzLSq7YBdJtJYJJrUSXFmIRDO0ZSiAT-nPKAoHw5wltTcXeBv7jK6SJZMCOA/exec'
+          const form = document.forms['formName']
+
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+              .then(response => alert("Thank you! your form is submitted successfully."))
+              .then(() => { window.location.reload(); })
+              .catch(error => console.error('Error!', error.message))
+          })
+        </script>
+      </form>
+    </div>
+    <footer style="background-color:#E6E6FA;">
+      <div class="row1">
+        <div class="column1">
+          <img src="strapilogo.png" alt="logo" width="150px" height="auto"><br>
+          <br>
+          <p style="font-size:15px;">Strapi is the leading open-source Headless CMS. Strapi gives developers the freedom
+            to use their favorite tools .</p>
+        </div>
+        <div class="column1">
+          <a class="nav-link " aria-current="page" href="MyProject.html">Home</a>
+        </div>
+        <div class="column1">
+          <a class="nav-link" href="aboutus.html">About Us</a>
+        </div>
+        <div class="column1">
+          <a class="nav-link" href="bounty.html">Bounty</a>
+        </div>
+        <ul style="list-style-type:none; font-size:15px;padding-left:25px;">
+          <li style="font-size:20px;color:#fff;">Media Kit</li><br>
+          <li>
+            <a href="https://www.facebook.com/" class="fa fa-facebook">
+
+            </a>
+            <a href="https:twitter.com" class="fa fa-twitter">
+
+            </a>
+            <a href="https://www.instagram.com/" class="fa fa-linkedin">
+
+            </a>
+            <a href="https://www.youtube.com/" class="fa fa-youtube">
+
+            </a>
+        </ul>
+      </div>
+  </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

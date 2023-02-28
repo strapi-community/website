@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strapi</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+
+
+    .logo img {
+      float: left;
+      width: 200px;
+      height: auto;
+    }
+
+    .navbar1 ul li a {
+      font-size: 20px;
+    }
+
+    .navbar1 ul li a:hover {
+      background-color: #271fe0;
+      color: white;
+    }
+
+
+    .banner {
+      position: relative;
+    }
+
+    .btn1 {
+      position: absolute;
+      top: 80%;
+      left: 200px;
+    }
+
+    .btn1 button {
+      background-color: #E6E6FA;
+      color: black;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+
+    .card-row {
+      margin-top: 30px;
+    }
+
+
+
+    /* Create 5 equal columns that floats next to each other */
+    .column1 {
+      float: left;
+      width: 20%;
+      padding: 15px;
+      margin-top: 25px;
+    }
+
+    .row1 {
+      background-image: linear-gradient(to right, #553c9a, #b393d3);
+      color: #fff;
+      line-height: 30px;
+      margin-top: 20px;
+    }
+
+    .card {
+      /* Add shadows to create the "card" effect */
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+    }
+
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    /* Clear floats after the columns */
+    .row1:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .fa {
+      padding: 10px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+
+
+    @media screen and (max-width:400px) {
+      .column1 {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <div class="logo"><img src="strapilogo.png"></div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar1" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link nav-bar" aria-current="page" href="MyProject.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bounty.html">Bounty</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+
+
+  <div class="banner">
+    <img src="Strapi.png" alt="strapi" width="100%" height="600px">
+    <div class="btn1"><button><a
+          href="https://strapi.io/blog/strapi-community-organization-announces-first-web-dev-competition?utm_campaign=ProductMarketing-StrapiBlog&utm_content=236394782&utm_medium=social&utm_source=linkedin&hss_channel=lcp-11251903"
+          style="text-decoration:none;">Explore Now</a></button></div>
+  </div>
+  <div class="container px-4 text-center">
+    <div class="row gx-5 card-row">
+      <div class="col">
+        <div class="p-3">
+          <div class="card" style="width: 18rem;">
+            <img src="strapi7.jpg" class="card-img-top" alt="strapi">
+            <div class="card-body">
+              <h5 class="card-title">Strapi</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="https://strapi.io/blog/strapi-community-organization-announces-first-web-dev-competition?utm_campaign=ProductMarketing-StrapiBlog&utm_content=236394782&utm_medium=social&utm_source=linkedin&hss_channel=lcp-11251903"
+                class="btn btn-primary">Explore Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-3">
+          <div class="card" style="width: 18rem;">
+            <img src="strapi6.png" class="card-img-top" alt="strapi">
+            <div class="card-body">
+              <h5 class="card-title">Strapi</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="https://strapi.io/blog/strapi-community-organization-announces-first-web-dev-competition?utm_campaign=ProductMarketing-StrapiBlog&utm_content=236394782&utm_medium=social&utm_source=linkedin&hss_channel=lcp-11251903"
+                class="btn btn-primary">Explore Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-3">
+          <div class="card" style="width: 18rem;">
+            <img src="strapi4.jpg" class="card-img-top" alt="strapi">
+            <div class="card-body">
+              <h5 class="card-title">Strapi</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="https://strapi.io/blog/strapi-community-organization-announces-first-web-dev-competition?utm_campaign=ProductMarketing-StrapiBlog&utm_content=236394782&utm_medium=social&utm_source=linkedin&hss_channel=lcp-11251903"
+                class="btn btn-primary"> Explore Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-3">
+          <div class="card" style="width: 18rem;">
+            <img src="images.jfif" class="card-img-top" alt="strapi">
+            <div class="card-body">
+              <h5 class="card-title">Strapi</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="https://strapi.io/blog/strapi-community-organization-announces-first-web-dev-competition?utm_campaign=ProductMarketing-StrapiBlog&utm_content=236394782&utm_medium=social&utm_source=linkedin&hss_channel=lcp-11251903"
+                class="btn btn-primary">Explore Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-3">
+          <div class="card" style="width: 18rem;">
+            <img src="strapi.png" class="card-img-top" alt="strapi">
+            <div class="card-body">
+              <h5 class="card-title">Strapi</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="https://strapi.io/blog/strapi-community-organization-announces-first-web-dev-competition?utm_campaign=ProductMarketing-StrapiBlog&utm_content=236394782&utm_medium=social&utm_source=linkedin&hss_channel=lcp-11251903"
+                class="btn btn-primary"> Explore Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-3">
+          <div class="card" style="width: 18rem;">
+            <img src="strapi6.png" class="card-img-top" alt="strapi">
+            <div class="card-body">
+              <h5 class="card-title">Strapi</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="https://strapi.io/blog/strapi-community-organization-announces-first-web-dev-competition?utm_campaign=ProductMarketing-StrapiBlog&utm_content=236394782&utm_medium=social&utm_source=linkedin&hss_channel=lcp-11251903"
+                class="btn btn-primary"> Explore Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background-color:#E6E6FA;">
+    <div class="row1">
+      <div class="column1">
+        <img src="strapilogo.png" alt="logo" width="150px" height="auto"><br>
+        <br>
+        <p style="font-size:15px;">Strapi is the leading open-source Headless CMS. Strapi gives developers the freedom
+          to use their favorite tools .</p>
+      </div>
+      <div class="column1">
+        <a class="nav-link " aria-current="page" href="MyProject.html">Home</a>
+      </div>
+      <div class="column1">
+        <a class="nav-link" href="aboutus.html">About Us</a>
+      </div>
+      <div class="column1">
+        <a class="nav-link" href="bounty.html">Bounty</a>
+      </div>
+      <form>
+        <ul style="list-style-type:none; font-size:15px;padding-left:25px;">
+          <li style="font-size:20px;color:#fff;">Media Kit</li><br>
+
+
+
+          <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https:twitter.com" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-linkedin"></a>
+
+            <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+
+        </ul>
+      </form>
+    </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
