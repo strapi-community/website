@@ -114,36 +114,53 @@ export default function Bounties() {
           </div>
         </div>
         <div className="w-full md:w-2/3  p-1 sm:p-5">
-          {bounties.map((bounty) => (
-            <div className="my-10 py-10 p-5 md:p-10 w-full shadow-2xl flex flex-col md:flex-row items-start relative">
-              <div className="w-full sm:w-1/6">
-                <div>
-                  <img alt="sample" className="" src={imageSample} />
+          {bounties.find((bounty) => bounty.title.toLowerCase().includes(key.trim().toLowerCase())) ? null
+            : (
+              <div className="text-center p-20">
+                <Typography><p className="text-red-500">No Bounty found!</p></Typography>
+              </div>
+            )}
+          {bounties
+            .filter((bounty, index) => {
+              if (key.trim() === '') {
+                return bounty;
+              }
+              if (bounty.title.toLowerCase().includes(key.trim().toLowerCase())) {
+                return bounty;
+              }
 
+              return null;
+            })
+            .map((bounty) => (
+              <div className="my-10 py-10 p-5 md:p-10 w-full shadow-2xl flex flex-col md:flex-row items-start relative">
+                <div className="w-full sm:w-1/6">
+                  <div>
+                    <img alt="sample" className="" src={imageSample} />
+
+                  </div>
                 </div>
-              </div>
-              <div className="w-full md:w-5/6 h-full ml-0 md:ml-5 flex flex-col">
-                <div className="h-full my-2"><Typography variant="beta">{bounty.title}</Typography></div>
-                <div>
-                  <Typography>{bounty.content}</Typography>
+                <div className="w-full md:w-5/6 h-full ml-0 md:ml-5 flex flex-col">
+                  <div className="h-full my-2"><Typography variant="beta">{bounty.title}</Typography></div>
+                  <div>
+                    <Typography>{bounty.content}</Typography>
+                  </div>
                 </div>
+                <div className="absolute right-0 top-0">
+                  <Badge>{bounty.tag}</Badge>
+                </div>
+                <div className="absolute bottom-0 right-0">
+                  <Badge>
+                    <Typography>
+                      <span className="p-4">
+                        $
+                        {bounty.prize}
+                      </span>
+                    </Typography>
+                  </Badge>
+                </div>
+                <Link className="absolute bottom-0 left-0 border" to="/bounty-submission"><Button>Submit</Button></Link>
               </div>
-              <div className="absolute right-0 top-0">
-                <Badge>{bounty.tag}</Badge>
-              </div>
-              <div className="absolute bottom-0 right-0">
-                <Badge>
-                  <Typography>
-                    <span className="p-4">
-                      $
-                      {bounty.prize}
-                    </span>
-                  </Typography>
-                </Badge>
-              </div>
-              <Link className="absolute bottom-0 left-0 border" to="/bounty-submission"><Button>Submit</Button></Link>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
 
