@@ -120,7 +120,7 @@ export default function AppFooter() {
       <div className="py-2 bg-gray-100 dark:bg-darkBg">
         <AppContainer>
           <Paragraph className="text-center mx-auto max-w-3xl text-sm text-title dark:text-white">
-          © {new Date().getFullYear()}, Strapi-Community. All rights reserved. Designed By <a href={"#"} rel="noreferrer" target="_blank" className="text-purple-600">John Kat-Mj</a>
+          © {new Date().getFullYear()}, Strapi-Community. All rights reserved. Designed By <a href={"https://github.com/Johnkat-Mj"} rel="noreferrer" target="_blank" className="text-purple-600">John Kat-Mj</a>
           </Paragraph>
         </AppContainer>
       </div>

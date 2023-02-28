@@ -10,7 +10,7 @@ export default function Hero() {
         <section className="relative pt-24 sm:pt-32 lg:pt-36 w-full">
             <div className="absolute -left-32 -top-28 w-2/5 aspect-square rounded-full border-[2rem] border-primary/10"></div>
             <AppContainer >
-                <div className="grid  lg:items-center lg:grid-cols-2 gap-12 lg:gap-8 xl:gap-12 w-full relative">
+                <div className="grid pt-6 lg:items-center lg:grid-cols-2 gap-12 lg:gap-8 xl:gap-12 w-full relative">
                     <div className="absolute top-0 w-full left-0">
                         <div className="w-full max-w-7xl bg-gradient-to-tr from-primary h-20 blur-3xl dark:opacity-80"></div>
                     </div>
