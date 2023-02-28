@@ -26,7 +26,7 @@
   width: rem(200);
 
   @media (min-width: rem(640)) {
-    @apply sc-decor--right-negative;
+    right: 0;
     width: rem(298);
   }
 }
