@@ -24,7 +24,7 @@ export default function Header() {
   const location = useLocation();
 
   const scrollTo = (elmId) => {
-    setIsSubNavOpen(!isSubNavOpen);
+    setIsSubNavOpen(false);
     scrollSmooth.to(document.querySelector(elmId), {
       duration: 1500,
       offset: -140,
