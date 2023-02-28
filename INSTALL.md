@@ -15,7 +15,7 @@ git clone https://github.com/Theodore-Kelechukwu-Onyejiaku/strapi-community-webs
 ```
 npm i --force
 ```
-3. Open port 300:
+3. Open port 3000
 ```
 http://localhost:3000/
 ```
