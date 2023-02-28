@@ -45,7 +45,6 @@ export default function Articles() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {items.map((item, index) => (
             <div key={contents[index]?.id} className="relative">
-              {contents[index]?.id}
               <div className="w-full">
                 <LazyLoadImage
                   width="100%"
