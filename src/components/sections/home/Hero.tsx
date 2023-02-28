@@ -1,9 +1,8 @@
 import AppContainer from "@/components/atoms/AppContainer";
 import BtnLink from "@/components/atoms/BtnLink";
 import IconLink from "@/components/atoms/IconLink";
-import { FacebookIco, TwitterIcon, GithubIcon, YoutubeIcon, DiscordIcon } from "@/components/icons/social";
+import { FacebookIco, TwitterIcon, GithubIcon, YoutubeIcon } from "@/components/icons/social";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Hero() {
     return (
