@@ -1,0 +1,13 @@
+@use "../TextInput/index.module.scss";
+@import "abstracts/_functions.scss";
+
+.container {
+  @apply flex flex-col;
+}
+
+.textarea {
+  @extend .input;
+  padding-top: rem(16);
+  min-height: rem(96);
+  line-height: 160%;
+}

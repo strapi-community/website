@@ -1,0 +1,33 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+
+.input {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  
+  /* Custom styling */
+  @apply rounded cursor-pointer;
+  width: rem(24);
+  height: rem(24);
+  border: 1px solid #c0c0cf;
+  transition: all ease-in-out 300ms;
+
+  &:checked {
+    background-color: $primary-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: rem(20);
+      height: rem(20);
+      background-image: url("/icons/check.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: rem(12);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

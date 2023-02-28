@@ -1,0 +1,48 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+
+.header {
+  @apply fixed flex flex-col items-center justify-center z-20;
+  width: 100%;
+}
+
+.nav {
+  @apply container flex justify-between items-center;
+  height: rem(72);
+
+  @media (min-width: rem(640)) {
+    height: rem(96);
+  }
+}
+
+.logo {
+  height: rem(25);
+  width: auto;
+  margin-right: rem(40);
+
+  @media (min-width: rem(640)) {
+    height: rem(32);
+  }
+}
+
+.menu {
+  @apply sm:hidden h-11 w-11 flex justify-center items-center;
+  color: $primary-dark-color;
+}
+
+.links {
+  @apply flex flex-col mb-6 sm:mb-0 sm:flex-row sm:gap-4 -mr-3;
+}
+
+.link {
+  font-weight: 600;
+  & > a {
+    display: block;
+    color: $primary-dark-color;
+    padding: rem(14) rem(20);
+
+    @media (min-width: rem(640)) {
+      padding: rem(5) rem(12);
+    }
+  }
+}

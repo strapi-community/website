@@ -1,0 +1,32 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+@import "components/_buttons.scss";
+
+.container {
+  @apply hidden lg:flex lg:flex-col lg:gap-10;
+  width: rem(224);
+}
+
+.title {
+  @apply uppercase mb-6;
+  font-size: rem(13);
+  font-weight: 700;
+  line-height: 100%;
+  color: $primary-dark-color;
+  letter-spacing: rem(1);
+}
+
+.titleMobile {
+  @extend .title;
+  color: $primary-color;
+}
+
+.mobileContainer {
+  @apply lg:hidden;
+}
+
+.button {
+  @extend .sc__btn--outline;
+  @apply w-full gap-x-2;
+  color: $primary-dark-color;
+}

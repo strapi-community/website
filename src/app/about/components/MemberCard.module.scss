@@ -1,0 +1,32 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+
+.container {
+  @apply col-span-1;
+}
+
+.image {
+  @apply w-full object-cover mb-4;
+  min-height: rem(180);
+  border-radius: rem(10);
+
+  @media (min-width: rem(640)) {
+    min-height: rem(305);
+  }
+}
+
+.name {
+  @apply font-semibold mb-2;
+  color: $primary-dark-color;
+  font-size: rem(17);
+  line-height: 130%;
+  letter-spacing: -0.01em;
+}
+
+.socialLink {
+  color: #8e8ea9;
+
+  :hover {
+    color: $primary-color;
+  }
+}

@@ -1,0 +1,67 @@
+.sc__btn {
+  @apply flex items-center justify-center rounded-lg;
+  background-color: $primary-color;
+  height: rem(51);
+  padding: 0 rem(40);
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.15s ease-in-out;
+  white-space: nowrap;
+
+  &.bg-secondary {
+    background-color: $secondary-color;
+
+    &:hover {
+      background-color: #d4b2ff;
+    }
+  }
+
+  &:hover {
+    background-color: #7b79ff;
+  }
+
+  &:active {
+    background-color: #271fe0;
+  }
+
+  &:hover {
+    [data-arrow] {
+      transform: translateX(rem(4));
+    }
+  }
+}
+
+.sc__btn--outline {
+  @extend .sc__btn;
+  color: $primary-color;
+  background-color: transparent;
+  border: 2px solid #d9d8ff;
+
+  &:hover {
+    background-color: #f6f6ff;
+  }
+
+  &:active {
+    background-color: #f6f6ff;
+    border: 1px solid #271fe0;
+  }
+}
+
+.sc__btn--circular {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: rem(40);
+  width: rem(40);
+  border-radius: 50%;
+  background-color: #f6f6f9;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    background-color: $primary-color;
+
+    svg {
+      fill: #fff;
+    }
+  }
+}

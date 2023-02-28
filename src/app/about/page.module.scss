@@ -1,0 +1,51 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+@import "base/_helpers.scss";
+@import "base/_typography.scss";
+
+.heroImage {
+  @apply absolute top-0 hidden md:block;
+  @extend .sc-decor--right;
+  width: rem(420);
+  height: rem(420);
+
+  @media (min-width: 1024px) {
+    width: rem(520);
+    height: rem(520);
+  }
+
+  @media (min-width: 1440px) {
+    width: rem(660);
+    height: rem(660);
+  }
+}
+
+.heroImageMobile {
+  @apply absolute top-0 md:hidden;
+  @extend .sc-decor--right;
+  width: rem(250);
+  height: rem(250);
+}
+
+.heroTitle {
+  @apply mb-6 pt-44;
+  @extend .sc-heading--two;
+
+  @media (min-width: rem(1024)) {
+    @apply mb-8 pt-32;
+    font-size: rem(72);
+    line-height: 96%;
+    letter-spacing: -0.02em;
+  }
+}
+
+.decorBeforeStats {
+  @apply absolute bottom-9 right-9;
+  height: rem(100);
+  width: auto;
+
+  @media (min-width: rem(640)) {
+    @apply right-0 bottom-20;
+    height: rem(151);
+  }
+}

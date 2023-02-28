@@ -1,0 +1,35 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+
+.container {
+  @apply flex flex-col sm:flex-row p-10 rounded-2xl gap-8 sm:gap-10;
+  background: $off-white;
+
+  &:hover {
+    [data-arrow] {
+      transform: translateX(rem(4));
+    }
+  }
+}
+
+.image {
+  height: rem(80);
+  width: rem(80);
+  border-radius: 50%;
+
+  @media (min-width: 640px) {
+    height: rem(120);
+    width: rem(120);
+  }
+}
+
+.link {
+  @apply flex items-center gap-1;
+  color: $secondary-color;
+  font-size: rem(17);
+  font-weight: 500;
+
+  [data-arrow] {
+    transition: all 0.15s ease-in;
+  }
+}

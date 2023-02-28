@@ -1,0 +1,23 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+@import "base/_typography.scss";
+
+.container {
+  @apply px-6 sm:px-14 py-12 sm:py-16 rounded-2xl;
+  background: #f6fafe;
+}
+
+.value {
+  @extend .sc-heading--two;
+  @apply font-medium mb-4;
+  line-height: 119%;
+  letter-spacing: -0.03em;
+}
+
+.label {
+  font-size: rem(15);
+  
+  @media (min-width: rem(640)) {
+    font-size: rem(17);
+  }
+}

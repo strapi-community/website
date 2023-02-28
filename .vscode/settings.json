@@ -1,0 +1,9 @@
+{
+  "typescript.tsdk": "node_modules\\.pnpm\\typescript@4.9.4\\node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "cSpell.words": [
+    "clsx",
+    "Strapi"
+  ],
+  "typescript.preferences.quoteStyle": "double"
+}

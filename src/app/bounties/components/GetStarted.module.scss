@@ -1,0 +1,29 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+@import "components/_buttons.scss";
+
+.container {
+  @apply col-span-12 sm:col-span-10 sm:col-start-2 flex flex-col sm:flex-row gap-x-16 gap-y-12;
+}
+
+.button {
+  @extend .sc__btn;
+  @apply w-full;
+
+  @media (min-width: 640px) {
+    @apply w-auto;
+  }
+}
+
+.imageContainer{
+  @apply order-last md:flex-[2] lg:flex-none;
+}
+
+.image {
+  @apply w-full h-auto;
+
+  @media (min-width: 640px) {
+    width: rem(450);
+    height: rem(286);
+  }
+}

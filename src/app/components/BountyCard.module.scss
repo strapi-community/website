@@ -1,0 +1,63 @@
+@import "abstracts/_variables.scss";
+@import "abstracts/_functions.scss";
+
+.container {
+  @apply col-span-1 flex flex-col items-center rounded-xl;
+  background: #f6fafe;
+
+  &:hover {
+    [data-arrow] {
+      transform: translateX(rem(4));
+    }
+  }
+}
+
+.image {
+  @apply object-cover mt-10;
+  width: rem(72);
+  height: rem(72);
+  border-radius: rem(10);
+
+  @media (min-width: rem(640)) {
+    width: rem(84);
+    height: rem(84);
+  }
+}
+
+.body {
+  @apply flex flex-col text-center;
+  padding: rem(24);
+
+  @media (min-width: rem(640)) {
+    padding: rem(24) rem(24) rem(32);
+  }
+}
+
+.bounty {
+  @apply mb-4;
+  font-size: rem(17);
+  color: #181826;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+.footer {
+  padding: rem(16) 0 rem(32);
+
+  @media (min-width: rem(640)) {
+    padding: rem(24) 0 rem(40);
+  }
+}
+
+.link {
+  @apply flex items-center uppercase;
+  font-size: rem(13);
+  font-weight: 700;
+  line-height: 100%;
+  color: $secondary-color;
+  padding-left: rem(13);
+
+  [data-arrow] {
+    transition: all 0.15s ease-in;
+  }
+}
