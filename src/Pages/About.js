@@ -13,7 +13,7 @@ import multikite from '../assets/images/multikite.svg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
 function YoutubeSlide({ url, isSelected }) {
-  return <ReactPlayer width="100%" url={url} playing={isSelected} />;
+  return <ReactPlayer volume={0.1} muted width="100%" url={url} controls playing={isSelected} />;
 }
 
 function YoutubeAutoplayWithCustomThumbs() {
@@ -29,7 +29,7 @@ function YoutubeAutoplayWithCustomThumbs() {
   });
 
   return (
-    <Carousel renderItem={customRenderItem} renderThumbs={customRenderThumb}>
+    <Carousel className="w-full" renderItem={customRenderItem} renderThumbs={customRenderThumb}>
       <YoutubeSlide key="youtube-1" url="https://www.youtube.com/embed/8IE8-EbzCx4" />
       <YoutubeSlide key="youtube-2" url="https://www.youtube.com/embed/Ge-dDLgafP8" />
       <YoutubeSlide key="youtube-3" url="https://www.youtube.com/embed/VP4AOpECkbc" />
