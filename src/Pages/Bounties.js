@@ -47,7 +47,7 @@ function NoImages() {
       </div>
       <div key="slide2" className="p-20 bg-transparent h-52">
         <div className="p-5 w-fit shadow-2xl dark:shadow-black absolute top-0">
-          <Typography>Particpate</Typography>
+          <Typography>Successful?!</Typography>
         </div>
         <div className="flex items-center justify-center">
           <Typography><GiMoneyStack size={40} /></Typography>
@@ -56,7 +56,7 @@ function NoImages() {
         </div>
         <div className="p-5  flex flex-col items-end justify-end w-full absolute top-0 right-0 bottom-0">
           <div className=" shadow-2xl dark:shadow-black p-5">
-            <Typography>Build and Ship Plugins</Typography>
+            <Typography>Win Amazing Prizes</Typography>
           </div>
         </div>
       </div>
