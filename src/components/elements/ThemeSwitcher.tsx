@@ -14,7 +14,7 @@ function ThemeSwitcher() {
             }}
             className="outline-none rounded-md  p-1.5 sm:p-2.5 hover:bg-gray-100 dark:hover:bg-darkCard text-gray-500 dark:text-gray-200">
             <span className="sr-only">Switch Theme</span>
-            {theme === "light"
+            {theme === "dark"
                 ?
                 (
                     <span className="transition animate-spin-icon ease-out text-gray-500 dark:text-gray-300">

@@ -12,11 +12,6 @@ import ThemeSwitcher from "./elements/ThemeSwitcher";
 
 const navLinks = [
   {
-    text: "Home",
-    href: "/",
-    externalLink: false
-  },
-  {
     text: "About",
     href: "/about-community",
     externalLink: false
@@ -80,10 +75,10 @@ export default function AppHeader() {
       <div className={`fixed h-screen z-50 backdrop-filter backdrop-blur-md bg-white dark:bg-darkBg !bg-opacity-40 inset-x-0 top-0 ${navOpen ? "flex" : "hidden"}`} onClick={closeNav}></div>
 
       <header className={`
-        flex items-center h-20 lg:h-[5.5rem] fixed top-0 w-full left-0 z-50 transition-all ease-linear
-        ${scrollY > 20 ? " shadow-lg shadow-gray-200/20 dark:shadow-darkCard/50 bg-white dark:bg-darkBg" : ""}
+        flex items-center h-20 lg:h-[5.5rem] fixed top-0 w-full left-0 z-50 transition-all ease-linear duration-300 border-b
+        ${scrollY > 20 ? " shadow-lg shadow-gray-200/50 dark:shadow-darkCard/50 bg-white border-b-transparent dark:bg-darkBg dark:border-b dark:border-b-gray-700" : " border-b-transparent"}
       `}>
-        <AppContainer className="relative">
+        <AppContainer className="relative lg:!px-6 xl:!px-4">
 
           <nav className="flex items-center justify-between">
 
