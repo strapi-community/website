@@ -1,0 +1,56 @@
+<svg width="277" height="332" viewBox="0 0 277 332" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<rect x="55.2148" y="0.00012207" width="55.2141" height="55.2141" fill="#1B0255"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="55" y="0" width="56" height="56">
+<rect x="55.2148" y="0.00012207" width="55.2141" height="55.2141" fill="#1B0255"/>
+</mask>
+<g mask="url(#mask0)">
+<circle cx="55.2156" cy="55.2141" r="55.2141" fill="#482D9E"/>
+</g>
+<rect width="55.2141" height="55.2141" transform="matrix(-1 0 0 1 55.2148 55.2144)" fill="#1B0255"/>
+<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="55" width="56" height="56">
+<rect width="55.2141" height="55.2141" transform="matrix(-1 0 0 1 55.2148 55.2144)" fill="#1B0255"/>
+</mask>
+<g mask="url(#mask1)">
+<circle r="55.2141" transform="matrix(-1 0 0 1 55.2141 110.428)" fill="#4700C9"/>
+</g>
+<rect x="220.857" y="55.2144" width="55.2141" height="55.2141" fill="#482D9E"/>
+<path d="M276.072 55.2144V110.428H220.857L276.072 55.2144Z" fill="#1B0255"/>
+<g opacity="0.4">
+<rect width="55.2141" height="55.2141" transform="matrix(-1 0 0 1 165.645 55.2144)" fill="#886DFF"/>
+<rect width="27.6071" height="27.6071" transform="matrix(-1 0 0 1 165.645 82.822)" fill="#1B0255"/>
+</g>
+<g opacity="0.4">
+<rect x="165.884" y="165.885" width="55.2141" height="55.2141" transform="rotate(-180 165.884 165.885)" fill="#4700C9"/>
+<rect x="165.884" y="138.277" width="27.6071" height="27.6071" transform="rotate(-180 165.884 138.277)" fill="#1B0255"/>
+</g>
+<g opacity="0.4">
+<rect width="55.2141" height="55.2141" transform="matrix(1 0 0 -1 166.41 55.2144)" fill="#886DFF"/>
+<rect width="27.6071" height="27.6071" transform="matrix(1 0 0 -1 166.411 27.6077)" fill="#1B0255"/>
+</g>
+<rect x="55.2148" y="55.2144" width="55.2141" height="55.2141" fill="#1B0255"/>
+<rect width="55.2141" height="55.2141" fill="#886DFF"/>
+</g>
+<g opacity="0.15">
+<rect width="55.3131" height="55.3131" transform="matrix(1 0 0 -1 110.626 332)" fill="#1B0255"/>
+<path d="M165.94 332V276.687H110.626L165.94 332Z" fill="#4700C9"/>
+<rect width="55.3131" height="55.3131" transform="matrix(-1 0 0 1 55.313 111.685)" fill="#1B0255"/>
+<path d="M-0.000137329 111.685V166.998H55.313L-0.000137329 111.685Z" fill="#4700C9"/>
+<rect width="55.3131" height="55.3131" transform="matrix(1 0 0 -1 165.941 332)" fill="#886DFF"/>
+<rect width="55.3131" height="55.3131" transform="matrix(1 0 0 -1 54.9038 221.988)" fill="#482D9E"/>
+<rect width="55.3131" height="55.3131" transform="matrix(1 0 0 -1 221.252 276.687)" fill="#886DFF"/>
+<rect width="55.3131" height="55.3131" transform="matrix(1 0 0 -1 165.941 276.687)" fill="#4700C9"/>
+<rect width="55.3131" height="55.3131" transform="matrix(1 0 0 -1 110.626 276.687)" fill="#150241"/>
+<rect width="55.3131" height="55.3131" transform="matrix(1 0 0 -1 55.3115 332)" fill="#150241"/>
+<rect width="55.3131" height="55.3131" transform="matrix(1 0 0 -1 0 332)" fill="#482D9E"/>
+<circle r="27.6566" transform="matrix(1 0 0 -1 27.6566 304.343)" fill="#1B0255"/>
+<circle r="12.2918" transform="matrix(1 0 0 -1 27.6565 304.343)" fill="#886DFF"/>
+<rect x="0.000976562" y="221.373" width="55.3131" height="55.3131" fill="#1B0255"/>
+<mask id="mask2" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="221" width="56" height="56">
+<rect x="0.000976562" y="221.373" width="55.3131" height="55.3131" fill="#1B0255"/>
+</mask>
+<g mask="url(#mask2)">
+<circle cx="0.00403976" cy="276.686" r="55.3131" fill="#4700C9"/>
+</g>
+</g>
+</svg>

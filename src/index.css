@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("animations.css");
+
+html,
+body {
+  height: 100%;
+  background-color: #f5f7ff !important;
+}
+
+body #rooot {
+  height: 100%;
+}
+
+.hero-card {
+  backdrop-filter: blur(4px) saturate(189%);
+  -webkit-backdrop-filter: blur(4px) saturate(189%);
+  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+
+.gradient-bg {
+  background-color: hsla(234, 100%, 50%, 0.12);
+  background-image:
+    radial-gradient(at 29% 38%, hsla(340, 22%, 44%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(240, 95%, 71%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
+}
+
+/* .custom-shadow {
+  box-shadow:
+    6.9px 4.8px 3.5px -19px rgba(0, 0, 0, 0.018),
+    15.9px 11.2px 8.2px -19px rgba(0, 0, 0, 0.026),
+    28.6px 20px 14.7px -19px rgba(0, 0, 0, 0.032),
+    47.5px 33.2px 24.4px -19px rgba(0, 0, 0, 0.038),
+    78.3px 54.8px 40.2px -19px rgba(0, 0, 0, 0.044),
+    136.8px 95.7px 70.3px -19px rgba(0, 0, 0, 0.052),
+    296px 207px 152px -19px rgba(0, 0, 0, 0.07);
+} */
+
+.custom-shadow-1 {
+  border-radius: 50%;
+  background: #f6f6fb;
+  box-shadow: 5px 5px 9px #c0c0c4,
+    -5px -5px 9px #ffffff;
+}
+
+.custom-shadow-2 {
+  border-radius: 0px;
+  background: #f6f6fb;
+  box-shadow: 5px 5px 9px #c0c0c4,
+    -5px -5px 9px #ffffff;
+}
+
+
+.sd {
+  background: transparent;
+  background-image: url("./assets/images/sd.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.sbg {
+  background: transparent;
+  background-image: url("./assets/images/strapi.hero.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.scatter-bg {
+  background-image: url("./assets/images/sd2.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.screen-height {
+  height: 90vh !important;
+}
+
+.feature-bg {
+  background-image: url("./assets/images/feature.jpg")
+}
+
+
+@media (max-width: 640px) {
+  .content-image {
+    height: 196px;
+    width: 100% !important;
+    /* display: inline-block; */
+    /* object-fit: cover; */
+  }
+}
+
+
+/* From uiverse.io by @Ali-Tahmazi99 */
+.button {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+ }
+ 
+ .button::before,
+ .button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+ }
+ 
+ .button::before {
+  left: -10px;
+  background: #240046;
+ }
+ 
+ .button::after {
+  right: -10px;
+  background: #5a189a;
+ }
+ 
+ .button:hover::before,
+ .button:hover::after {
+  width: 58%;
+ }
+ 
+ .button:hover span {
+
+  transition: 0.3s;
+ }
+ 
+ .button span {
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+ }
+
+ .form-bg{
+  background-image: url("../src/assets/images/form-bg.svg");
+ }
