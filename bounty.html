@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strapi competition page</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+   <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Bounty Page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"><img style=" width:60px; height: 60px;"src="https://handbook.strapi.io/_next/image?url=https%3A%2F%2Fsuper-static-assets.s3.amazonaws.com%2Fe7c0f16c-8bd3-4c76-8075-4c86f986e1b2%2Fimages%2F7c7167ab-35ce-4daf-8927-ddf7ba69552c.png&w=1920&q=80"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">HOME </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bounty.html">BOUNTY</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+    
+      <section class="bounty">
+       <div class="container animate">
+        <h1>BOUNTY</h1>
+        <p style="margin-bottom: 70px;">A bounty page is a webpage dedicated to offering rewards for completing specific tasks or achieving certain goals. The content of a bounty page typically includes a clear description of the task or goal, the amount of the reward offered, and any requirements or guidelines for completing the task. Additionally, the bounty page may include information about the sponsoring organization or individual, the deadline for completing the task, and any rules or regulations governing the competition.</p>
+       <center><a href="#form" class="btn btn-primary my-2">Know More</a></center> 
+      </div>
+      </section>
+      <div class="container my-5">
+        <h2 class="text-center"style="color:#432460;">Welcome to the Bounty Program</h2>
+        <p>Our bounty program rewards individuals who contribute to our project. Whether it's finding bugs, improving features, or promoting our platform, we appreciate your efforts and want to reward you for your hard work.</p>
+        <hr>
+        <h3 style="color:#432460;">Available Bounties</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr style="color:#432460;">
+              <th>Bounty Name</th>
+              <th>Reward</th>
+              <th>Deadline</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bug Hunting</td>
+              <td>$500</td>
+              <td>March 31, 2023</td>
+              <td>Open</td>
+            </tr>
+            <tr>
+              <td>Feature Improvement</td>
+              <td>$1000</td>
+              <td>April 30, 2023</td>
+              <td>Open</td>
+            </tr>
+            <tr>
+              <td>Referral Program</td>
+              <td>$200 per referral</td>
+              <td>Ongoing</td>
+              <td>Open</td>
+            </tr>
+          </tbody>
+          </table>
+          </div>
+        
+
+
+<section id="form" class="bounty-page row">
+  <div class="column">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRAtfNDrdMkdHaOnu5eyIKVxIuFW_j8UV-Pw&usqp=CAU" style="height:400px; width:500px; margin-top: 150px; margin-left: 50px;">
+</div>
+<div class="column" style="border:3px solid white; border-radius: 50px; padding:20px; width:50%; background-color: #d0d0e0; color:#292875;">  
+  <div style="text-align: center;">
+      <h1 style=" width:max-content;">Want to Participate?</h1>
+    </div>
+          
+      <div class="container ">
+        <form method="post" name="contact" id="contact">
+          <div class="form-group">
+            <label for="inputName">Name</label>
+            <input style="width:100%;" type="text" class="form-control"name="Name" id="inputName" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input style="width:100%;" type="email" class="form-control" id="inputEmail"name="Email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <h5>Gender</h5>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Gender" id="Male" value="Male" required>
+              <label class="form-check-label" for="inlineRadio1">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio"  name="Gender" id="Female" value="Female" required>
+              <label class="form-check-label" for="inlineRadio2">Female</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <h5>Choose bounty</h5>
+            <div class="form-check ">
+              <input class="form-check-input" type="checkbox"name="Choose Bounty" id="Bug Hunting" value="Bug Hunting" required>
+              <label class="form-check-label" for="checkbox1">Bug Hunting</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="Choose Bounty" id="Feature Improvement" value="Feature Improvement" >
+              <label class="form-check-label" for="checkbox2">Feature Improvement</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="Choose Bounty" id="Referral Program" value="Referral Program" >
+              <label class="form-check-label" for="checkbox3">Referral Program</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="textarea">Your knowledge in brief</label>
+            <textarea style="width:100%;" class="form-control" id="textarea" name="Your knowledge in brief" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+    </section>
+
+   
+
+
+    <footer class="scroll-from-right">
+      <div class="container">
+     
+     
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Follow Us</h3>
+            <ul class="social-links">
+              <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+            <p style="color:whitesmoke;">&copy; 2023 Strapi Competition. All rights reserved.</p>
+  
+          </div>
+       
+          <div class="col-md-6">
+            <h3>Know more</h3>
+            <ul class="quick-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="About.html">About Us</a></li>
+              <li><a href="bounty.html">Bounty</a></li>
+            </ul>
+            <ul class="links">   
+              <li><a href="http://www.smksolns.com/">www.smksolns.com</a></li>
+              <li><a href="https://www.anyonecancode.in/">anyonecancode.in</a></li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-left: 20px; font-size: 22px;">
+          <img style=" width:60px; height: 60px; border:10px solid white; border-radius: 20px;"src="https://handbook.strapi.io/_next/image?url=https%3A%2F%2Fsuper-static-assets.s3.amazonaws.com%2Fe7c0f16c-8bd3-4c76-8075-4c86f986e1b2%2Fimages%2F7c7167ab-35ce-4daf-8927-ddf7ba69552c.png&w=1920&q=80">
+          Strapi Community
+        </div>
+      </div>
+      
+    </footer>
+
+    <script>
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbwy-Bk3JS6D0SZAmccJMmS-wLmlPLK148JwrwGZBPPh4AH3AsI5mnCoPfR9EkYmEMA/exec'
+			const form = document.forms['contact']
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => alert("Thank you! your form is submitted successfully." ))
+				.then(() => {  window.location.reload(); })
+				.catch(error => console.error('Error!', error.message))
+			})
+		  </script>
+
+      
+<script>
+  // Create a new IntersectionObserver object
+  const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+  if (entry.isIntersecting) {
+    // Add the animate-active class to the element to trigger the animation
+    entry.target.classList.add('animate-active');
+    
+    // Stop observing the element to prevent the animation from playing again
+    observer.unobserve(entry.target);
+  }
+});
+});
+
+// Get the element you want to animate
+const element = document.querySelector('.animate');
+
+// Observe the element
+observer.observe(element);
+
+
+</script>
+    </body>
+</html>

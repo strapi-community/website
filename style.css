@@ -1,0 +1,444 @@
+body{
+  overflow-x: hidden;
+}
+
+
+nav ul li a {
+  color: #292875 !important;
+  font-weight: 500;
+}
+
+
+.hero{
+    background: url('data:image/png;base64,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');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero h1{
+ color: white;
+}
+.about{
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-pQRw75YJYmjDL-MY0AFqsBwAo_Sf54_uTQcuynP4ClFWTgNThXmPSiyF60zr9UBEXQ&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:80vh;
+  }
+	.aboutcard {
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+  .bounty{
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQThm-ILOWW3YOrVVMA9kZP2-ch7M3pLUHu7g&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:80vh;
+  }
+  .bounty p{
+    color: white;
+    padding: 5px;
+    font-size: 24px;
+  }
+
+  .bounty h1{
+    color:white;
+    text-align: center;
+  }
+  .aboutcard:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .aboutcard .aboutcard-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .aboutcard .aboutcard-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+p{
+  font-size: 22px;
+}
+
+
+
+
+
+/*----  Main Style  ----*/
+#cards_landscape_wrap-2{
+  text-align: center;
+  background: #F7F7F7;
+}
+#cards_landscape_wrap-2 .container{
+  padding-top: 80px; 
+  padding-bottom: 100px;
+}
+#cards_landscape_wrap-2 a{
+  text-decoration: none;
+  outline: none;
+}
+#cards_landscape_wrap-2 .card-flyer {
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box{
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box img{
+  -webkit-transition:all .9s ease; 
+  -moz-transition:all .9s ease; 
+  -o-transition:all .9s ease;
+  -ms-transition:all .9s ease; 
+  width: 100%;
+  height: 200px;
+}
+#cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+  opacity: 0.7;
+  -webkit-transform:scale(1.15);
+  -moz-transform:scale(1.15);
+  -ms-transform:scale(1.15);
+  -o-transform:scale(1.15);
+  transform:scale(1.15);
+}
+#cards_landscape_wrap-2 .card-flyer .text-box{
+  text-align: center;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box .text-container{
+  padding: 30px 18px;
+}
+#cards_landscape_wrap-2 .card-flyer{
+  background: #FFFFFF;
+  margin-top: 50px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+}
+#cards_landscape_wrap-2 .card-flyer:hover{
+  background: #fff;
+  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin-top: 50px;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box p{
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px; 
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box h6{
+  margin-top: 0px;
+  margin-bottom: 4px; 
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Black', sans-serif;
+  letter-spacing: 1px;
+  color: #432460;
+}
+
+
+
+/* ---------------------about page-------------------------- */
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+#team {
+  background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #108d6f;
+  border-color: #108d6f;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007b5e;
+  border-color: #007b5e;
+}
+
+section {
+  padding: 60px 0;
+}
+
+section .section-title {
+  text-align: center;
+  color: #007b5e;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+#team .card {
+  border: none;
+  background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-radius: 0.25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.frontside {
+  position: relative;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 1s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+  min-height: 312px;
+}
+
+.backside .card a {
+  font-size: 18px;
+  color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+
+
+
+ /* Define the animation styles */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+ /* Define the CSS class that applies the animation */
+.fade-in {
+  animation: fade-in 3s;
+}
+
+
+.animate {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.animate.animate-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.right.right-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.bounty-page {
+  /* background-image: url('https://www.silentcircle.com/blog/importance-of-bug-bounty-programs/images/gold-trophy.png'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+}
+.column{
+  /* margin: 20px; */
+  margin-left: 50px;
+}
+
+.scroll-from-left {
+  animation: scroll-from-left 1s ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+@keyframes scroll-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.scroll-from-right {
+  animation: scroll-from-right 1s ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+@keyframes scroll-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+
+
+/* ------------------------------------footer section---------------------------- */
+
+footer {
+    background-color: #292875;
+    color:white;
+    padding: 50px 0;
+  }
+  
+  footer h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .social-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .social-links a:hover {
+    background-color: white;
+  }
+  
+  .quick-links li {
+    /* margin: 10px; */
+    /* display: inline-block; */
+    list-style-type: none;
+
+  }
+  
+  .quick-links a {
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    color: white;
+  }
+  
+  .quick-links a:hover {
+    color: yellow;
+  }
+  .links{
+    color: white;
+    font-size: larger;
+    font-weight: 400;
+    list-style-type: none;
+  }
+  .links li{
+    list-style-type: none;
+  }
+  .links li a{
+    color:white;
+  }
+  .links li a:hover{
+    color:yellow;
+  }
