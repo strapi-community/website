@@ -154,7 +154,7 @@ export default function Header() {
 
         </div>
       </div>
-      <div className={`${isSubNavOpen ? 'block translate-x-0' : ' hidden '}  absolute z-50 left-0 p-5 w-full bg-black bg-opacity-80 h-screen -translate-x-0`}>
+      <div onClick={() => { setIsSubNavOpen(false); }} className={`${isSubNavOpen ? 'block translate-x-0' : ' hidden '}  absolute z-50 left-0 p-5 w-full bg-black bg-opacity-80 h-screen -translate-x-0`}>
         <button type="button" onClick={() => setIsSubNavOpen(!isSubNavOpen)}><AiOutlineCloseCircle size={35} fill="white" /></button>
       </div>
       <div className={`${isSubNavOpen ? 'block' : 'invisible translate-x-full'} block md:hidden fixed top-0 z-50 right-0 transition-all duration-100`}>
