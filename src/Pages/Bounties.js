@@ -1,12 +1,68 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Carousel } from 'react-responsive-carousel';
 import {
   Typography, Checkbox, Button, Badge,
 } from '@strapi/design-system';
 import { BsSearch } from 'react-icons/bs';
+import { FaMoneyBillAlt } from 'react-icons/fa';
+import { GiClockwork, GiMoneyStack, GiPayMoney } from 'react-icons/gi';
+import { FcWorkflow, FcMoneyTransfer } from 'react-icons/fc';
+import { MdOutlineAttachMoney } from 'react-icons/md';
 import bounties from '../utils/bounties';
 import hunters from '../utils/names';
 import imageSample from '../assets/images/image-sample.png';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
+function NoImages() {
+  return (
+    <Carousel className="flex flex-col items-center w-full justify-center">
+      <div key="slide1" className="p-20 bg-transparent h-52 relative">
+        <div className="p-5 w-fit shadow-2xl dark:shadow-black absolute top-0">
+          <Typography>Bounty Plugins</Typography>
+        </div>
+        <div className="flex items-center justify-center">
+          <Typography><FaMoneyBillAlt size={40} /></Typography>
+          <Typography><MdOutlineAttachMoney size={40} /></Typography>
+        </div>
+        <div className="p-5  flex flex-col items-end justify-end w-full absolute top-0 right-0 bottom-0">
+          <div className=" shadow-2xl dark:shadow-black p-5">
+            <Typography>Can you Build?</Typography>
+          </div>
+        </div>
+      </div>
+      <div key="slide2" className="p-20 bg-transparent h-52">
+        <div className="p-5 w-fit shadow-2xl dark:shadow-black absolute top-0">
+          <Typography>Particpate</Typography>
+        </div>
+        <div className="flex items-center justify-center">
+          <Typography><FcWorkflow size={40} /></Typography>
+          <Typography><GiClockwork size={40} /></Typography>
+        </div>
+        <div className="p-5  flex flex-col items-end justify-end w-full absolute top-0 right-0 bottom-0">
+          <div className=" shadow-2xl dark:shadow-black p-5">
+            <Typography>Build and Ship Plugins</Typography>
+          </div>
+        </div>
+      </div>
+      <div key="slide2" className="p-20 bg-transparent h-52">
+        <div className="p-5 w-fit shadow-2xl dark:shadow-black absolute top-0">
+          <Typography>Particpate</Typography>
+        </div>
+        <div className="flex items-center justify-center">
+          <Typography><GiMoneyStack size={40} /></Typography>
+          <Typography><FcMoneyTransfer size={40} /></Typography>
+          <Typography><GiPayMoney size={40} /></Typography>
+        </div>
+        <div className="p-5  flex flex-col items-end justify-end w-full absolute top-0 right-0 bottom-0">
+          <div className=" shadow-2xl dark:shadow-black p-5">
+            <Typography>Build and Ship Plugins</Typography>
+          </div>
+        </div>
+      </div>
+    </Carousel>
+  );
+}
 
 export default function Bounties() {
   const [key, setkey] = useState('');
@@ -15,11 +71,17 @@ export default function Bounties() {
 
   return (
     <div className=" my-20 relative px-8 md:px-10 lg:px-32">
-      <div className="flex flex-col sm:flex-row sm:justify-between items-center relative z-10 my-10">
-        <div className="w-full sm:w-1/2 ">
-          <Typography variant="alpha"><p className="mt-5 text-defaultcol text-center sm:text-left dark:text-white">Community Bounty Page</p></Typography>
-          <Typography>Build and ship a plugin and get paid!</Typography>
+      <div className="w-full sm:w-1/2 ">
+        <Typography variant="alpha"><p className="mt-5 text-defaultcol text-center sm:text-left dark:text-white">Community Bounty Page</p></Typography>
+        <Typography>Build and ship a plugin and get paid!</Typography>
+      </div>
+      <div className="flex justify-center">
+        <div className="mt-10 w-full sm:w-1/2 flex flex-col items-center justify-center">
+          <NoImages />
         </div>
+      </div>
+      <div className="flex flex-col sm:flex-row sm:justify-between items-center relative z-10 my-10">
+
         <div className="my-5 w-full sm:w-5/6 flex flex-col sm:flex-row justify-center sm:justify-end items-center">
           <div className="relative w-full sm:w-1/2">
             <input onChange={(e) => { setkey(e.target.value); }} className="p-2 pr-5 w-full rounded-md " placeholder="search for bounty" />
