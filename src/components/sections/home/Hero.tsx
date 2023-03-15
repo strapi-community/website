@@ -3,8 +3,9 @@ import BtnLink from "@/components/atoms/BtnLink";
 import IconLink from "@/components/atoms/IconLink";
 import { FacebookIco, TwitterIcon, GithubIcon, YoutubeIcon } from "@/components/icons/social";
 import Image from "next/image";
-
-export default function Hero() {
+import {getStrapiURL} from "@/lib/api";
+export default function Hero({data}) {
+    console.log(data)
     return (
         <section className="relative pt-24 sm:pt-32 lg:pt-36 w-full">
             <div className="absolute -left-32 -top-28 w-2/5 aspect-square rounded-full border-[2rem] border-primary/10"></div>
@@ -16,37 +17,25 @@ export default function Hero() {
                     <div className="lg:pt-5 text-center lg:text-left mx-auto lg:mx-0 max-w-2xl lg:max-w-none relative">
                         <div>
                             <h1 className="font-bold leading-snug text-title dark:text-white text-4xl sm:text-5xl md:text-6xl xl:text-7xl">
-                                Empower your Next Strapi <span className="text-transparent bg-clip-text bg-gradient-to-tr from-primary to-purple-600">Project.</span>
+                                {data.title}
                             </h1>
                         </div>
                         <p className="text-text pt-6 md:text-lg dark:text-gray-200">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis iusto error dicta in voluptates.
+                            {data.description}
                         </p>
                         <div className="flex pt-8 w-full sm:w-max mx-auto lg:mx-0 justify-center lg:justify-start">
-                            <BtnLink text="Join On Discord" href="#" variant="primary" className="sm:w-max w-full flex justify-center" />
-                        </div>
-                        <div className="pt-6 flex items-center lg:items-start gap-4 flex-col mx-auto lg:mx-0">
-                            
-                            <p className="text-text dark:text-gray-200">
-                                Let{"'"}s connect on our social media
-                            </p>
-                            <div className="flex justify-center lg:justify-start items-center gap-2 text-text dark:text-gray-300">
-                                <IconLink href="#" title="Faceboock" icon={ <FacebookIco/> }/>
-                                <IconLink href="#" title="Github" icon={ <GithubIcon/> }/>
-                                <IconLink href="#" title="Twitter" icon={ <TwitterIcon/> }/>
-                                <IconLink href="#" title="Youtube" icon={ <YoutubeIcon/> }/>
-                            </div>
+                            {  data.button !== undefined && <BtnLink text={data.button.text} href={data.button.href} variant={data.button.variant} type={data.button.type}  />}
                         </div>
                     </div>
                     <div className="relative hidden md:flex max-w-2xl lg:max-w-none mx-auto lg:mx-0 lg:h-full items-start">
                         <div className="w-full lg:h-[90%] rounded-2xl -skew-x-6  bg-white shadow-lg shadow-gray-200/60 border-4 border-gray-100/40">
-                            <Image
-                                src="/images/working-from-home.webp"
+                            {  data.image !== undefined &&<Image
+                                src={getStrapiURL(data.image.data.attributes.url)}
                                 alt="Illustratuin about"
                                 width={1500}
                                 height={450}
                                 className="w-full h-auto lg:h-full object-cover rounded-xl skew-x-0"
-                            />
+                            /> }
                         </div>
                         <div className="p-6 -skew-x-6 bg-gray-100 rounded-2xl absolute -bottom-12 lg:bottom-0 left-4 shadow-lg shadow-gray-200/60 dark:shadow-transparent border-4 border-gray-200 dark:border-white">
                             <h4 className="skew-x-6 text-title pb-1">Join amazing people</h4>

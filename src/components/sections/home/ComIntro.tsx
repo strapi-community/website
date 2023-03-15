@@ -48,7 +48,7 @@ export default function ComIntro() {
                             <ComStat text="Members" stat="+5K" />
                         </div>
                         <div className="pt-6 flex">
-                            <BtnLink text="Know more" href="/about-community" variant="primary" />
+                            <BtnLink text="Know more" href="/about-community" type="fill" variant="primary" />
                         </div>
                     </div>
                 </div>
