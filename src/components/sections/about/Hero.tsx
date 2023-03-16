@@ -30,8 +30,8 @@ export default function Hero() {
               </h1>
             </div>
             <div className="flex flex-col sm:flex-row pt-10 w-full sm:w-max mx-auto justify-center gap-4">
-              <BtnLink text="Submit my project" href="#" variant="primary" className="sm:w-max w-full flex justify-center" />
-              <BtnLink text="Explore Github" href="https://github.com/strapi-community/" variant="secondary" className="sm:w-max w-full flex justify-center" externalLink/>
+              <BtnLink text="Submit my project" href="#" variant="primary" type="fill" className="sm:w-max w-full flex justify-center" />
+              <BtnLink text="Explore Github" href="https://github.com/strapi-community/" variant="secondary" type="fill" className="sm:w-max w-full flex justify-center" externalLink/>
             </div>
             <div className="pt-6 flex items-center gap-4 flex-col mx-auto">
 

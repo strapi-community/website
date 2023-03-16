@@ -27,7 +27,7 @@ export default function CtaBounty() {
                     </Paragraph>
 
                     <div className="pt-16">
-                        <BtnLink text="Submit my plugin" href="/submit-plugin" variant="primary" />
+                        <BtnLink text="Submit my plugin" href="/submit-plugin" variant="primary" type="fill" />
                     </div>
                 </div>
             </div>

@@ -40,7 +40,7 @@ export default function WhyJoinUs() {
                             />
                         </div>
                         <div className="pt-8 flex">
-                            <BtnLink text="Join on discord" href="/about-community" variant="primary" />
+                            <BtnLink text="Join on discord" href="/about-community" variant="primary" type="fill" />
                         </div>
                     </div>
                     <div className="flex md:h-full py-10 md:py-0">

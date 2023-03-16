@@ -16,7 +16,7 @@ export default function Bounty() {
       </Head>
       <PageHeaderWithChildren headtext="Bounty" title="Build plugins and get paid" subtext="">
         <div className="mx-auto pt-12 w-max">
-          <BtnLink variant="primary" text="Submit my plugin" href="/submit-plugin" />
+          <BtnLink variant="primary" type="fill" text="Submit my plugin" href="/submit-plugin" />
         </div>
       </PageHeaderWithChildren>
       <AppContainer>
