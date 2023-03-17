@@ -46,8 +46,13 @@ export async function getServerSideProps() {
     }
   } )
 
+  const headerData = await fetchAPI("/header",
+  {
+    populate: "*"
+  })
+
   // Pass data to the page via props
-  return { props: { data } }
+  return { props: { data,headerData }}
 }
 
 /*

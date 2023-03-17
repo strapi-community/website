@@ -23,7 +23,7 @@ export default function Hero({data}) {
                             {data.description}
                         </p>
                         <div className="flex pt-8 w-full sm:w-max mx-auto lg:mx-0 justify-center lg:justify-start">
-                            {  data.button !== undefined && <BtnLink text={data.button.text} href={data.button.href} variant={data.button.variant} type={data.button.type}  />}
+                            {  data.button !== undefined && <BtnLink {...data.button}   />}
                         </div>
                     </div>
                     <div className="relative hidden md:flex max-w-2xl lg:max-w-none mx-auto lg:mx-0 lg:h-full items-start">
@@ -53,6 +53,7 @@ export default function Hero({data}) {
                                         width={500}
                                         height={500}
                                         className="hover:z-10"
+                                        key={i}
                                     />
                                 })}
 

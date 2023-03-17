@@ -46,11 +46,11 @@ export default function ComIntro({data}) {
                         </Paragraph>
                         <div className="grid grid-cols-3 gap-4 max-w-2xl pt-10">
                             {data.stats !== undefined && data.stats.map((stat, i: number) => {
-                                return <ComStat text={stat.text} stat={stat.stat}  key={i} />
+                                return <ComStat {...stat} key={i} />
                             })}
                         </div>
                         <div className="pt-6 flex">
-                            {  data.button !== undefined && <BtnLink text={data.button.text} href={data.button.href} variant={data.button.variant} type={data.button.type}  />}
+                            {  data.button !== undefined && <BtnLink {...data.button}  />}
                         </div>
                     </div>
                 </div>

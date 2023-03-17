@@ -29,7 +29,7 @@ export default function CtaBounty({data}) {
                         </Paragraph>
 
                         <div className="pt-16">
-                            {  data.button !== undefined && <BtnLink text={data.button.text} href={data.button.href} variant={data.button.variant} type={data.button.type}  />}
+                            {  data.button !== undefined && <BtnLink {...data.button}  />}
                         </div>
                     </div>
                 </div>

@@ -84,7 +84,7 @@ const footerNavEl = [
   }
 ]
 
-export default function AppFooter() {
+export default function AppFooter({data}) {
   return (
     <footer className="pt-20">
       <div className="relative overflow-auto pb-10  pt-10 sm:pt-12 lg:pt-16 bg-[#f6fafe] dark:bg-darkCard border-t-2 border-gray-200/50 dark:border-t-gray-700/50">

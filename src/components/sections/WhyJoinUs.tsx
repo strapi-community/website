@@ -31,7 +31,7 @@ export default function WhyJoinUs({data}) {
                             })}
                         </div>}
                         <div className="pt-8 flex">
-                            {  data.button !== undefined && <BtnLink text={data.button.text} href={data.button.href} variant={data.button.variant} type={data.button.type}  />}
+                            {  data.button !== undefined && <BtnLink {...data.button}  />}
                         </div>
                     </div>
                     <div className="flex md:h-full py-10 md:py-0">

@@ -8,6 +8,7 @@ import AppContainer from "./atoms/AppContainer";
 import { GithubIcon, DiscordIcon } from "@/components/icons/social";
 import NavItem from "./atoms/NavItem";
 import ThemeSwitcher from "./elements/ThemeSwitcher";
+import { getStrapiURL } from "@/lib/api";
 
 
 const navLinks = [
@@ -39,7 +40,7 @@ const navLinks = [
 ]
 
 
-export default function AppHeader() {
+export default function AppHeader({data}) {
   const [navOpen, setNavOpen] = useState<boolean>(false)
 
   const { scrollY } = useWindowScroll()
@@ -85,9 +86,9 @@ export default function AppHeader() {
             {/* site logo */}
             <div>
               <Link href={"/"}>
-                <Image width={80} height={40} alt="Strapi" src="/Strapi-logo.svg" className="w-auto h-8 hidden xs:flex dark:hidden" />
-                <Image width={80} height={40} alt="Strapi" src="/Strapi-logo-light.svg" className="w-auto h-8 hidden xs:dark:flex" />
-                <Image width={80} height={40} alt="Strapi" src="/Strapi-mono.svg" className="w-auto h-8 xs:hidden" />
+                <Image width={80} height={40} alt="Strapi" src={getStrapiURL(data.data.attributes.logoLight.data.attributes.url)} className="w-auto h-8 hidden xs:flex dark:hidden" />
+                <Image width={80} height={40} alt="Strapi" src={getStrapiURL(data.data.attributes.logoDark.data.attributes.url)} className="w-auto h-8 hidden xs:dark:flex" />
+                <Image width={80} height={40} alt="Strapi" src={getStrapiURL(data.data.attributes.logoMono.data.attributes.url)} className="w-auto h-8 xs:hidden" />
               </Link>
             </div>
 
@@ -99,7 +100,7 @@ export default function AppHeader() {
             ${navOpen ? "!-left-0 transition-all" : "-left-full lg:-left-0"}`
             }>
               <ul onClick={closeNav} className="flex flex-col lg:flex-row lg:items-center gap-y-3 lg:gap-x-4 text-title dark:text-gray-100">
-                {navLinks.map((navlink, index)=>(
+                {data.data.attributes.links.map((navlink, index)=>(
                   <NavItem key={index} {...navlink} />
                 ))
                 }
