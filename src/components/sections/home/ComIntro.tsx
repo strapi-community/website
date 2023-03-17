@@ -4,8 +4,10 @@ import Paragraph from "@/components/atoms/Paragraph";
 import Title from "@/components/atoms/Title";
 import ComStat from "@/components/cards/ComStat";
 import Image from "next/image";
+import {getStrapiURL} from "@/lib/api";
 
-export default function ComIntro() {
+export default function ComIntro({data}) {
+
     return (
         <section className="relative pt-20">
             <div className="absolute top-0 right-0">
@@ -17,7 +19,7 @@ export default function ComIntro() {
                         <div className="w-full flex items-center md:h-full relative">
                             <div className="w-[44%] h-5/6 absolute top-1/2 -translate-y-1/2 right-0">
                                 <Image
-                                    src="/images/working-from-home.webp"
+                                    src={getStrapiURL(data.image1.data.attributes.url)}
                                     alt="Illustratuin about"
                                     width={1500}
                                     height={800}
@@ -26,7 +28,7 @@ export default function ComIntro() {
                             </div>
                             <div className="relative w-4/5 lg:w-3/5 h-full rounded-3xl bg-white shadow-lg shadow-gray-200/60 border-4 border-gray-100/40 dark:bg-darkBg dark:shadow-darkBg dark:border-darkCard">
                                 <Image
-                                    src="/images/remote-working.webp"
+                                    src={getStrapiURL(data.image1.data.attributes.url)}
                                     alt="Illustratuin about"
                                     width={1500}
                                     height={750}
@@ -37,18 +39,18 @@ export default function ComIntro() {
                     </div>
                     <div className="">
                         <Title>
-                            A space for developers to collaborate, innovate, and learn togheter.
+                            {data.title}
                         </Title>
                         <Paragraph className="pt-8 line-clamp-4">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, provident. Facilis, alias nulla architecto similique pariatur vel, natus voluptates a adipisci rem, obcaecati totam modi praesentium asperiores fugit voluptatibus dignissimos!
+                            {data.description}
                         </Paragraph>
                         <div className="grid grid-cols-3 gap-4 max-w-2xl pt-10">
-                            <ComStat text="Members" stat="+5K" />
-                            <ComStat text="Members" stat="+5K" />
-                            <ComStat text="Members" stat="+5K" />
+                            {data.stats !== undefined && data.stats.map((stat, i: number) => {
+                                return <ComStat {...stat} key={i} />
+                            })}
                         </div>
                         <div className="pt-6 flex">
-                            <BtnLink text="Know more" href="/about-community" type="fill" variant="primary" />
+                            {  data.button !== undefined && <BtnLink {...data.button}  />}
                         </div>
                     </div>
                 </div>

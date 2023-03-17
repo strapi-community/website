@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
 
-    <AppLayout>
+    <AppLayout {...pageProps} >
       <Component {...pageProps} />
     </AppLayout>
   </>

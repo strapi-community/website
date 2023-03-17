@@ -4,8 +4,9 @@ import { ReactNode } from "react";
 import AppFooter from "@/components/AppFooter";
 import AppHeader from "@/components/AppHeader";
 import Head from "next/head";
+import { fetchAPI } from "@/lib/api";
 
-export default function AppLayout({ children }: { children: ReactNode }) {
+export default function AppLayout({ children,headerData,footerData }: { children: ReactNode, headerData: any, footerData: any }) {
   return (
     <>
       <Head>
@@ -13,9 +14,9 @@ export default function AppLayout({ children }: { children: ReactNode }) {
         <meta name="keywords" content="commmunity, strapi, devcommunity" />
       </Head>
       <ThemeProvider attribute="class">
-        <AppHeader />
+        <AppHeader data={headerData} />
         {children}
-        <AppFooter />
+        <AppFooter data={footerData} />
       </ThemeProvider>
     </>
   )

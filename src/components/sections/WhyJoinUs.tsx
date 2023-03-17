@@ -4,8 +4,8 @@ import BtnLink from "../atoms/BtnLink";
 import Paragraph from "../atoms/Paragraph";
 import Title from "../atoms/Title";
 import WhyJoin from "../cards/WhyJoin";
-
-export default function WhyJoinUs() {
+import {getStrapiURL} from "@/lib/api";
+export default function WhyJoinUs({data}) {
     return (
         <section className="relative mt-16">
             <div className="absolute top-0 left-0">
@@ -15,32 +15,23 @@ export default function WhyJoinUs() {
                 <div className="grid md:items-center md:grid-cols-2 gap-12 md:gap-8 xl:gap-12">
                     <div className="">
                         <Title>
-                            Why you should Join the community
+                            {data.title}
                         </Title>
                         <Paragraph className="pt-8 ">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, provident.
+                            {data.description}
                         </Paragraph>
-                        <div className="mt-6 space-y-6 p-5 rounded-lg bg-[#f6fafe] dark:bg-darkCard border lg:border-2 border-gray-200/50 dark:border-gray-700">
-                            <WhyJoin
-                                icoUrl="/svg/grow.svg"
-                                title="Grow your skills"
-                                description=" Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-                            />
-
-                            <WhyJoin
-                                icoUrl="/svg/save.svg"
-                                title="Share Your Passion"
-                                description="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-                            />
-
-                            <WhyJoin
-                                icoUrl="/svg/tag.svg"
-                                title="An other reason"
-                                description="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-                            />
-                        </div>
+                         { data.whyJoin.length !== 0 && <div className="mt-6 space-y-6 p-5 rounded-lg bg-[#f6fafe] dark:bg-darkCard border lg:border-2 border-gray-200/50 dark:border-gray-700">
+                            {data.whyJoin.map((stat, i: number) => {
+                                return <WhyJoin
+                                    icoUrl={getStrapiURL(stat.icon.data.attributes.url)}
+                                    title={stat.title}
+                                    description={stat.description}
+                                    key={i}
+                                />
+                            })}
+                        </div>}
                         <div className="pt-8 flex">
-                            <BtnLink text="Join on discord" href="/about-community" variant="primary" type="fill" />
+                            {  data.button !== undefined && <BtnLink {...data.button}  />}
                         </div>
                     </div>
                     <div className="flex md:h-full py-10 md:py-0">
@@ -51,7 +42,7 @@ export default function WhyJoinUs() {
                                 <span className="absolute w-full h-full -left-4 -top-4 skew-y-6 bg-gradient-to-br from-purple-600 rounded-3xl"></span>
                                 <span className="absolute w-full h-full left-4 top-4 skew-y-6 bg-primary/30 rounded-3xl"></span>
                                 <Image
-                                    src="/images/community-img1.webp"
+                                    src={getStrapiURL(data.image.data.attributes.url)}
                                     alt="Illustratuin about"
                                     width={1500}
                                     height={750}
