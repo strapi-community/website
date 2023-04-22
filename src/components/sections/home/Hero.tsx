@@ -3,7 +3,7 @@ import BtnLink from "@/components/atoms/BtnLink";
 import IconLink from "@/components/atoms/IconLink";
 import { FacebookIco, TwitterIcon, GithubIcon, YoutubeIcon } from "@/components/icons/social";
 import Image from "next/image";
-import {fetchAPI, getStrapiURL} from "@/lib/api";
+import {fetchAPI, getStrapiURL} from "@/utils/api";
 export default function Hero({data}) {
     return (
         <section className="relative pt-24 sm:pt-32 lg:pt-36 w-full">
@@ -38,14 +38,7 @@ export default function Hero({data}) {
                         </div>
                         <div className="p-6 -skew-x-6 bg-gray-100 rounded-2xl absolute -bottom-12 lg:bottom-0 left-4 shadow-lg shadow-gray-200/60 dark:shadow-transparent border-4 border-gray-200 dark:border-white">
                             <h4 className="skew-x-6 text-title pb-1">{data.peopleTitle}</h4>
-                            <div className="flex -space-x-2.5 
-                                        children:h-10 children:w-10 
-                                        children:rounded-full 
-                                        children:object-cover
-                                        children:ring-1
-                                        children:ring-gray-200 
-                                        children:z-0
-                                        children:duration-300 skew-x-6">
+                            <div className="flex -space-x-2.5 children:h-10 children:w-10 children:rounded-full children:object-cover children:ring-1 children:ring-gray-200 children:z-0 children:duration-300 skew-x-6">
                                 {data.people !== undefined && data.people.data.map((person, i: number) => {
                                     return <Image
                                         src={getStrapiURL(person.attributes.url)}

@@ -1,7 +1,7 @@
 
-import Head from 'next/head'
+/*import Head from 'next/head'
 import Sections from '@/components/sections'
-import {fetchAPI} from '@/lib/api'
+import {fetchAPI} from '@/utils/api'
 export default function Home({data}) {
   return (
     <>
