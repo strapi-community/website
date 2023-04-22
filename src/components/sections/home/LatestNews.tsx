@@ -19,7 +19,7 @@ export default function LatestNews() {
                     <Blog href="#" imgUrl="/images/working-from-home.webp" category="front-end" publishedAt="02-02-2023" title="Best plugins for quick development" description=" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt repellendus voluptates distinctio"/>
                 </div>
                 <div className="pt-12 flex justify-center">
-                    <BtnLink href="/articles" variant="secondary" text="Discover more"/>
+                    <BtnLink href="/articles" variant="secondary" type="fill" text="Discover more"/>
                 </div>
             </div>
         </AppContainer>

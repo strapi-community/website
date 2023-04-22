@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import AppLayout from '@/layouts/AppLayout'
 import Head from 'next/head'
 
-import localFont from '@next/font/local'
+import localFont from 'next/font/local'
 export const poppins = localFont({
   src: [
     {
@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
 
-    <AppLayout>
+    <AppLayout {...pageProps} >
       <Component {...pageProps} />
     </AppLayout>
   </>

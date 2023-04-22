@@ -45,7 +45,7 @@ export default function AboutCom() {
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, provident. Facilis, alias nulla architecto similique pariatur vel, natus voluptates a adipisci rem, obcaecati totam modi praesentium asperiores fugit voluptatibus dignissimos!
                         </Paragraph>
                         <div className="pt-8 flex">
-                            <BtnLink text="Check The Roadmap" href="#" variant="secondary"/>
+                            <BtnLink text="Check The Roadmap" href="#" variant="secondary" type="fill"/>
                         </div>
                     </div>
                 </div>

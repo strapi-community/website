@@ -4,16 +4,20 @@ type Props = {
     href: string,
     text: string,
     variant: "primary" | "secondary",
+    type: "fill" | "outline",
     className?: string,
     externalLink?: boolean
 }
-function getBtnClasses(variant: "primary" | "secondary") {
-    if (variant === "primary") {
+function getBtnClasses(variant: "primary" | "secondary",type: "fill" | "outline") {
+    if (variant === "primary" && type == "fill") {
         return "bg-primary border-2 border-transparent text-white hover:bg-opacity-90"
-    } else if (variant === "secondary") {
+    } else if (variant === "secondary" && type == "fill") {
+        return "border-2 border-primary/30 text-primary hover:bg-primary/5"
+    } else if (variant === "secondary" && type == "outline") {
+        return "border-2 border-primary/30 text-primary hover:bg-primary/5"
+    } else if (variant === "secondary" && type == "outline") {
         return "border-2 border-primary/30 text-primary hover:bg-primary/5"
     }
-
     return ""
 }
 function LinkComponent({ href, text, className }: Props) {
@@ -31,18 +35,18 @@ function NxtLink({ href, text,  className, externalLink }: Props) {
         </Link>
     )
 }
-export default function BtnLink({ href, text, variant, className, externalLink }: Props) {
+export default function BtnLink({ href, text, variant, type, className, externalLink }: Props) {
     const clName = `px-6 py-3 rounded-lg transition
-    ${getBtnClasses(variant)} ${className}`
+    ${getBtnClasses(variant,type)} ${className}`
     return (
         <>
             {!externalLink ? (
-                <NxtLink href={href} text={text} variant={variant} className={clName} />
+                <NxtLink href={href} text={text} variant={variant} type={type} className={clName} />
             ) : null
             }
 
             {externalLink ? (
-                <LinkComponent href={href} text={text} variant={variant} className={clName} />
+                <LinkComponent href={href} text={text} variant={variant} type={type} className={clName} />
             ) : null
 
             }

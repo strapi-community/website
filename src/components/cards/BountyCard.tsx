@@ -26,7 +26,7 @@ export default function BountyCard({ href, icourl, title, description, reward }:
                     {description}
                 </Paragraph>
                 <div className="pt-7">
-                    <BtnLink href="/submit-plugin" variant="primary" text="Know More" className="!px-3 !py-2.5 !text-sm"/>
+                    <BtnLink href="/submit-plugin" variant="primary"  type="fill" text="Know More" className="!px-3 !py-2.5 !text-sm"/>
                 </div>
             </div>
         </div>

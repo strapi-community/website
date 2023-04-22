@@ -9,7 +9,6 @@ export const useWindowScroll = () => {
     [],
   )
 
-
   useEffect(() => {
     document.addEventListener("load",handleScroll)
     document.addEventListener("scroll",handleScroll)

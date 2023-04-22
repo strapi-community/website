@@ -34,7 +34,7 @@ export default function RelevantTopics() {
         </div>
 
         <div className="pt-12 flex justify-center">
-          <BtnLink href="/blog" variant="secondary" text="Discover more" />
+          <BtnLink href="/blog" variant="secondary" type="fill" text="Discover more" />
         </div>
       </div>
     </AppContainer>

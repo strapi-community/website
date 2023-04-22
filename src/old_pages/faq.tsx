@@ -3,7 +3,7 @@ import Question from "@/components/atoms/question";
 import PageHeader from "@/components/elements/PageHeader";
 import Head from "next/head";
 import { useCallback, useState } from "react";
-import AppContainer from "../components/atoms/AppContainer";
+import AppContainer from "../app/components/atoms/AppContainer";
 
 export default function Faq() {
   const [open, setOpen] = useState<string>("")
