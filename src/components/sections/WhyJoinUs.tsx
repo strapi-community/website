@@ -4,7 +4,7 @@ import BtnLink from "../atoms/BtnLink";
 import Paragraph from "../atoms/Paragraph";
 import Title from "../atoms/Title";
 import WhyJoin from "../cards/WhyJoin";
-import {getStrapiURL} from "@/lib/api";
+import {getStrapiURL} from "@/utils/api";
 export default function WhyJoinUs({data}) {
     return (
         <section className="relative mt-16">

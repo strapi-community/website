@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import AppLayout from '@/layouts/AppLayout'
 import Head from 'next/head'
 
-import localFont from '@next/font/local'
+import localFont from 'next/font/local'
 export const poppins = localFont({
   src: [
     {

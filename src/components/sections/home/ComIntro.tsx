@@ -4,7 +4,7 @@ import Paragraph from "@/components/atoms/Paragraph";
 import Title from "@/components/atoms/Title";
 import ComStat from "@/components/cards/ComStat";
 import Image from "next/image";
-import {getStrapiURL} from "@/lib/api";
+import {getStrapiURL} from "@/utils/api";
 
 export default function ComIntro({data}) {
 

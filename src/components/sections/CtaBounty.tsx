@@ -1,7 +1,7 @@
 import Image from "next/image";
 import BtnLink from "../atoms/BtnLink";
 import Paragraph from "../atoms/Paragraph";
-import {getStrapiURL} from "@/lib/api";
+import {getStrapiURL} from "@/utils/api";
 
 export default function CtaBounty({data}) {
     return (
