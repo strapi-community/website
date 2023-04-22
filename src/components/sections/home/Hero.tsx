@@ -4,7 +4,8 @@ import IconLink from "@/components/atoms/IconLink";
 import { FacebookIco, TwitterIcon, GithubIcon, YoutubeIcon } from "@/components/icons/social";
 import Image from "next/image";
 import {fetchAPI, getStrapiURL} from "@/utils/api";
-export default function Hero({data}) {
+export default async function Hero({data}) {
+    //const members = await fetchAPI("/api/members")
     return (
         <section className="relative pt-24 sm:pt-32 lg:pt-36 w-full">
             <div className="absolute -left-32 -top-28 w-2/5 aspect-square rounded-full border-[2rem] border-primary/10"></div>

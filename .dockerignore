@@ -2,4 +2,3 @@ node_modules/
 .next/
 .env.local
 .env.template
-src/old_pages/
