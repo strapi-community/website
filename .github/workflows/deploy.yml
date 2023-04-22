@@ -1,0 +1,20 @@
+name: Deployment
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    name: Deploy to Dokku
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Dokku Deployment
+        uses: dokku/github-action@master
+        with:
+          git_remote_url: "ssh://dokku@${{ secrets.HOST }}:22/backend"
+          ssh_private_key: ${{ secrets.SECRET_KEY }}
+          git_push_flags: "--force"
+        env:
+          BUILDER_ENV: production
