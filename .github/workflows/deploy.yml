@@ -13,7 +13,7 @@ jobs:
       - name: Dokku Deployment
         uses: dokku/github-action@master
         with:
-          git_remote_url: "ssh://dokku@${{ secrets.HOST }}:22/backend"
+          git_remote_url: "ssh://dokku@${{ secrets.HOST }}:22/website"
           ssh_private_key: ${{ secrets.SECRET_KEY }}
           git_push_flags: "--force"
         env:
