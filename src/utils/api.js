@@ -27,6 +27,10 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
     ...options,
   };
 
+  const token = process.env.NEXT_STRAPI_API_TOKEN;
+  if (token) {
+    mergedOptions.headers.Authorization = `Bearer ${token}`;
+  }
   // Build request URL
   const queryString = qs.stringify(urlParamsObject);
   const requestUrl = `${getStrapiURL(
