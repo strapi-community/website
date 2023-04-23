@@ -2,10 +2,10 @@ import Link from "next/link";
 
 type Props = {
     title: string,
-    items: { text: string, href: string, externallink?: boolean }[]
+    links: { text: string, href: string, externallink?: boolean }[]
 }
 export default function FooterNavBloc(
-    { title, items }: Props
+    { title, links }: Props
 ) {
     return (
         <div>
@@ -13,7 +13,7 @@ export default function FooterNavBloc(
                 {title}
             </h2>
             <ul className="pt-6 space-y-3 text-sm md:text-base">
-                {items.map((item, index) => (
+                {links.map((item, index) => (
                     <li key={index}>
                         <Link
                             href={item.href}
